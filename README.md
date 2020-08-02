@@ -1,8 +1,8 @@
 # Interview Preparation
 
-## Progress Planning
+## [General](./General/GENERAL.md)
 
-## LeetCode 
+## LeetCode
 
 ## System Design
 
