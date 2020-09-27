@@ -6,7 +6,7 @@
 
 ## [General](./General/GENERAL.md)
 
-## LeetCode
+## [LeetCode](./LeetCode/)
 
 ## System Design
 
