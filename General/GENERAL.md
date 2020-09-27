@@ -7,10 +7,10 @@
     * Contraints?
 * Practice speaking and presenting your thought process
 * Work out the examples
-    * The most optimal solution may not always be clear, start simple with Bruteforce
+    * The most optimal solution may not always be clear, start simple with bruteforce
     * Check for edge cases, any exceptions
     * Implement any known algorithm that can help the problem (be sure to vocalize the reasonings)
-* What if the solution has bugs?
+* Debugging
     * Divide and Conquer
         * Start small, trace back and isolate each component
-* Understand time/space complexity ([for the lazy](https://www.bigocheatsheet.com/))
+* Understand time/space complexity ([Cheat Sheet](https://www.bigocheatsheet.com/))

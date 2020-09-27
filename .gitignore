@@ -1,0 +1,45 @@
+# Executables and debug files
+main
+*.exe
+*.dSYM
+*.stackdump
+
+# Visual debugger configurations
+.vscode/
+.vs/
+*.vcxproj
+*.vcxproj.*
+*.xcodeproj/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+
+# macOS system files
+*.DS_Store
+
+# Xcode
+# https://github.com/github/gitignore/blob/master/Global/Xcode.gitignore
+# User settings
+xcuserdata/
+*.idea/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+
+# MC Files
+*.mc
