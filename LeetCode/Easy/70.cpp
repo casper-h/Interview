@@ -1,5 +1,5 @@
 /*
-* 509. Fibonacci Number
+* 70. Climbing Stairs
 */
 #include <iostream>
 #include <vector>
@@ -8,15 +8,14 @@ using std::vector;
 
 class Solution {
 public:
-    int fib(int N) {
-        if (N < 2) { return N; }
+    int climbStairs(int n) {
         vector<int> dp;
-        dp.rezie(N + 1);
-        dp[0] = 0;
+        dp.resize(n + 1);
+        dp[0] = 1;
         dp[1] = 1;
-        for (int i = 2; i <= N; i++) {
+        for (int i = 2; i <= n; i++) {
             dp[i] = dp[i - 1] + dp[i - 2];
         }
-        return dp[N];
+        return dp[n];
     }
 };
