@@ -31,7 +31,7 @@ public:
     double getAverageTime(string startStation, string endStation) {
         string fullTrip = startStation + "->" + endStation;
         pair<int, int> totalStats = checkOuts[fullTrip];
-        return static_cast<double>(totalStats.first / totalStats.second);
+        return (double) totalStats.first / totalStats.second;
     }
 
 private:
