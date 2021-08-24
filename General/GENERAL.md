@@ -13,4 +13,7 @@
 * Debugging
     * Divide and Conquer
         * Start small, trace back and isolate each component
+* Testing
+    * How would the code be tested? Can it be tested?
+    * What are some things to consider for testing?
 * Understand time/space complexity ([Cheat Sheet](https://www.bigocheatsheet.com/))
