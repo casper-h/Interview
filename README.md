@@ -1,10 +1,5 @@
 # Interview Prelude
-* How many iterations have your resume gone through? If it's < 3, don't apply to any companies until that statement is true.
-* Start thinking of companies that you may interest you
-  * Research about different companies, understand their culture, and most importantly, what they do!
-  * Are you willing to relocate?
-* Reach out to recruiters, it might be rought at first, but getting a job is difficult.
-  * Maybe even consider reaching out to managers, a lot of the times they post about hiring as well!
+UNDER CONSTRUCTION
 
 ## [General](./General/GENERAL.md)
 
@@ -22,9 +17,7 @@
 
 ## Apply, Apply, and Apply
 ### Curated Lists
-* [New Grad 2022](https://github.com/coderQuad/New-Grad-Positions-2022)
-* [New Grad 2021](https://github.com/pittcsc/NewGrad-2021)
-* [Easy Application](https://github.com/j-delaney/easy-application)
+* [New Grad Positions](https://github.com/SimplifyJobs/New-Grad-Positions)
 
 ## Numbers & Negotiating
 ### Helpful Articles
