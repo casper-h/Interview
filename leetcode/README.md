@@ -6,7 +6,7 @@ An extended, categorized list of LeetCode problems to master the fundamentals â€
 ### ðŸ“† Arrays & Hashing
 
 - [x] [Two Sum](https://leetcode.com/problems/two-sum/)
-- [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+- [x] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 - [ ] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 - [ ] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
