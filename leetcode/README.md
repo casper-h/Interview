@@ -7,9 +7,9 @@ An extended, categorized list of LeetCode problems to master the fundamentals â€
 
 - [x] [Two Sum](https://leetcode.com/problems/two-sum/)
 - [x] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
-- [ ] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
-- [ ] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+- [x] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+- [x] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+- [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 - [ ] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 - [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
