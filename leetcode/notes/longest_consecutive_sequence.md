@@ -1,0 +1,8 @@
+- Constraints:
+    - Time Complexity: `O(n)`
+- Initial attempt solved the problem with using Heap, however:
+    - `heapify` is `O(n)`
+    - `heappop` is `O(logn)`
+- The overall complexity using a Heap becomes `O(nlogn)`, which is worst than the constraint of `O(n)` time
+- The idea is pretty much the same, we still are interested in tracking a local maximum against a global maximum
+    - What if we don't need to actually sort the underlying list?

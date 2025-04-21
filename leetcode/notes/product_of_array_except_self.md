@@ -1,0 +1,4 @@
+- Constraints:
+    - Time Complexity: `O(n)`
+    - Space Complexity: `O(1)` (output array excluded)
+- Using the idea behind prefix and suffix sums
