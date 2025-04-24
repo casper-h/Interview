@@ -4,7 +4,7 @@
 * [ ] [Impossibility of Distributed Consensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)
 
 #### Database
-* [ ] [BigTable](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable*osdi06.pdf)
+* [ ] [BigTable](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 * [ ] [Cassandra](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf)
 * [ ] [Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
 * [ ] [F1](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf)

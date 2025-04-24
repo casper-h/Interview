@@ -5,5 +5,5 @@
     - Imagine: `[3, 3, 2, 5]`
     - `pre = [1, 3, 9, 18]`
     - `suff = [30, 10, 5, 1]`
-- What if we only need to count at each point the prefix and suffix, directly using the output array?
-    - Instead of constructing the array, what if we keep track of the prefix and suffix as we traverse?
+- How about using just the output array?
+    - Instead of constructing the prefix and suffix arrays, what if we keep track of the prefix and suffix as we traverse?
