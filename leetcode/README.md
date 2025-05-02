@@ -13,7 +13,6 @@ An extended, categorized list of LeetCode problems to master the fundamentals â€
 - [x] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 - [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 - [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
-- [x] [Push Dominoes](https://leetcode.com/problems/push-dominoes/)
 
 ---
 
@@ -23,7 +22,8 @@ An extended, categorized list of LeetCode problems to master the fundamentals â€
 - [x] [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [x] [3Sum](https://leetcode.com/problems/3sum/)
 - [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
-- [ ] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [x] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [x] [Push Dominoes](https://leetcode.com/problems/push-dominoes/)
 
 ---
 
