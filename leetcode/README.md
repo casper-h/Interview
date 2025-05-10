@@ -39,9 +39,9 @@ An extended, categorized list of LeetCode problems to master the fundamentals �
 
 ### 🛡️ Stack / Monotonic Stack
 
-- [ ] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-- [ ] [Min Stack](https://leetcode.com/problems/min-stack/)
-- [ ] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+- [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+- [x] [Min Stack](https://leetcode.com/problems/min-stack/)
+- [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 - [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 - [ ] [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
 
@@ -49,7 +49,7 @@ An extended, categorized list of LeetCode problems to master the fundamentals �
 
 ### ⚖️ Binary Search
 
-- [ ] [Binary Search](https://leetcode.com/problems/binary-search/)
+- [x] [Binary Search](https://leetcode.com/problems/binary-search/)
 - [ ] [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 - [ ] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 - [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)

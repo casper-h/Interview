@@ -12,5 +12,5 @@
                     dist += 1
             ```
     - Then it's trivial to figure out the conditions
-        - Note: comparing `right[i]` against `left[i]` the "smallest" wins, as it's the closest to a falling dominoe
+        - Note: comparing `right[i]` against `left[i]` the "smallest" wins, as it's the closest to a falling domino
 - Can we break the problem down to using two pointers?
