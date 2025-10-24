@@ -42,8 +42,12 @@ An extended, categorized list of LeetCode problems to master the fundamentals â€
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 - [x] [Min Stack](https://leetcode.com/problems/min-stack/)
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-- [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
-- [ ] [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
+- [x] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+- [x] [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
+- [x] [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+- [x] [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
+- [x] [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/)
+
 
 ---
 
