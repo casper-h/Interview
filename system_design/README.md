@@ -1,4 +1,4 @@
-### The following have been superseded, please see the better structured [plan](./plan/README.md).
+### The following have been superseded, please see the structured [plan](./plan/README.md).
 
 ### Introduction
 * [The System Design Primer](https://github.com/donnemartin/system-design-primer)
