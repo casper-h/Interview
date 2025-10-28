@@ -1,3 +1,5 @@
+### The following have been superceded, please see the better structured [plan](./plan/README.md).
+
 ### Introduction
 * [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 * [Grokking the System Design Interview](https://www.designgurus.io/course/grokking-the-system-design-interview)
