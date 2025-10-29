@@ -41,6 +41,8 @@
 
 **Tip:** Create a System Design Concept Log (one page per topic: replication, partitioning, CAP) and update weekly.
 
+---
+
 ## Month 2 — December: Deep Internals + Database Systems
 
 **Goal:** Move from architecture reasoning to internal design: storage, consensus, replication, and consistency models.
@@ -85,6 +87,8 @@
   - [TAO](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf)
 
 **Tip:** Create a Replication Trade-offs Matrix (synchronous vs async, leader-based vs quorum) with real-world examples.
+
+---
 
 ## Month 3 — January: Distributed Computation + Reliability
 
@@ -131,6 +135,8 @@
   - [Online Controlled Experiments](https://exp-platform.com/Documents/puzzlingOutcomesInControlledExperiments.pdf)
 
 **Tip:** Simulate failure modes (node failure, duplication, network partition) and document recovery approaches.
+
+---
 
 ## Month 4 — February: Advanced Systems + Senior Hiring Readiness
 
