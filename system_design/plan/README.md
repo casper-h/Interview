@@ -1,5 +1,7 @@
 # 4-Month Senior System Design Plan (Nov → Feb)
 
+---
+
 ## Month 1 — November: Core Foundations + DDIA
 
 **Goal:** Build strong mental models of distributed system fundamentals. Focus on architecture patterns, storage, replication, and trade-offs.
