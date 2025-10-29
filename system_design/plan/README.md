@@ -1,7 +1,5 @@
 # 4-Month Senior System Design Plan (Nov → Feb)
 
----
-
 ## Month 1 — November: Core Foundations + DDIA
 
 **Goal:** Build strong mental models of distributed system fundamentals. Focus on architecture patterns, storage, replication, and trade-offs.
@@ -39,9 +37,7 @@
 - [Why Distributed Computing?](https://www.artima.com/weblogs/viewpost.jsp?thread=4247)
 - Notes on Distributed Systems for Young Bloods - Jeff Hodges
 
-**Study Tip:** Create a System Design Concept Log (one page per topic: replication, partitioning, CAP) and update weekly.
-
----
+**Tip:** Create a System Design Concept Log (one page per topic: replication, partitioning, CAP) and update weekly.
 
 ## Month 2 — December: Deep Internals + Database Systems
 
@@ -86,9 +82,7 @@
   - [Spanner](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf)
   - [TAO](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf)
 
-**Practice Tip:** Create a Replication Trade-offs Matrix (synchronous vs async, leader-based vs quorum) with real-world examples.
-
----
+**Tip:** Create a Replication Trade-offs Matrix (synchronous vs async, leader-based vs quorum) with real-world examples.
 
 ## Month 3 — January: Distributed Computation + Reliability
 
@@ -119,8 +113,6 @@
 2. Recommendation Engine - batch + stream pipelines
 3. Large-Scale Messaging System - SLA guarantees, replication, recovery
 
-**Practice Tip:** Simulate failure modes (node failure, duplication, network partition) and document recovery approaches.
-
 **Whitepapers**
 - **Distributed Computation**
   - [Dremel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
@@ -136,7 +128,7 @@
 - **Experimentation**
   - [Online Controlled Experiments](https://exp-platform.com/Documents/puzzlingOutcomesInControlledExperiments.pdf)
 
----
+**Tip:** Simulate failure modes (node failure, duplication, network partition) and document recovery approaches.
 
 ## Month 4 — February: Advanced Systems + Senior Hiring Readiness
 
@@ -188,9 +180,7 @@
   - [RCFile](https://scispace.com/pdf/rcfile-a-fast-and-space-efficient-data-placement-structure-2kq37wcjl0.pdf)
   - [XORing Elephants](https://arxiv.org/pdf/1301.3791)
 
----
-
-## Supplemental Reference Library
+## More Reading
 
 - [The Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)
 - [Unreliable Failure Detectors for Reliable Distributed Systems](https://s3.amazonaws.com/systemsandpapers/papers/ChandraToueg.pdf)
@@ -199,9 +189,7 @@
 - [SWIM](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf)
 - [Pastry](https://www.cs.rice.edu/Conferences/IPTPS02/109.pdf)
 
----
-
-## Revised Weekly Cadence
+## Weekly Cadence
 
 | Day | Focus | Duration |
 |-----|--------|-----------|
@@ -216,8 +204,6 @@
 - End each week with 3-5 “teach-back” bullets (in your own words)
 - Cross-link concepts between topics — builds true architectural fluency
 
----
-
 ## Notes on Timeline
 
 - Consistency beats intensity: Two hours daily over months builds lasting reasoning ability — missing a few sessions doesn’t derail progress.
@@ -225,7 +211,5 @@
 - Reinforce with retrospectives: End each month with a one-page reflection: “What can I design now that I couldn’t before?”
 - Depth over breadth: Mastering Raft, Dynamo, and Spanner thoroughly outweighs reading everything superficially.
 - Outcome: By February, you’ll think in trade-offs — the hallmark of a true senior-level systems engineer.
-
----
 
 > Even completing 70-80% of this plan with consistent reflection will put you ahead of most senior candidates. You’ll not only be interview-ready — you’ll *think like a distributed systems architect*.
