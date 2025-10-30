@@ -198,23 +198,66 @@
 
 | Day | Focus | Duration |
 |-----|--------|-----------|
-| Mon-Wed | Core Reading - DDIA, Database Internals, or Understanding Distributed Systems | 1.5-2 hrs/day |
-| Thu | Lecture or White Paper Deep Dive - MIT/CMU lecture or one key paper | 1-1.5 hrs |
-| Fri | Light Review / Reflection - summarize readings or record short voice recap | 1 hr |
-| Sat | System Design Practice - one scenario (e.g., “Design Dropbox”) + self-evaluation | 1.5-2 hrs |
-| Sun | Synthesis / Case Study Review - diagram or relate systems (e.g., Raft ↔ Kafka) | 1.5 hrs |
+| Mon–Wed | Core Reading | 1.5–2 hrs/day |
+| Thu | Lecture / White Paper Deep Dive | 1–1.5 hrs |
+| Fri | Weekly Reflection | 1 hr |
+| Sat | System Design Practice | 1.5–2 hrs |
+| Sun | Concept Synthesis / Case Study Review | 1.5 hrs |
 
-**Enhancements**
-- Use a Paper Annotation Template: Problem → Design → Trade-offs → Takeaways
-- End each week with 3-5 “teach-back” bullets (in your own words)
-- Cross-link concepts between topics — builds true architectural fluency
+### Weekly Process
+
+**Reading Comprehension**
+- Break readings into small conceptual chunks; aim for understanding, not completion
+- Track recurring trade-offs (latency vs consistency, throughput vs correctness)
+- When concepts feel unclear, trace them back to fundamental models (Lamport’s happens-before, Raft’s log replication, CAP trade-offs)
+
+**Paper Annotation**
+- Use a structured template for every paper:
+  - **Problem → Design → Trade-offs → Takeaways**  
+- Capture 1–2 core insights and relate them to a real-world system (e.g., Spanner, Kafka, Dynamo)
+
+**Teach-Back Summary**
+- End each week with 3–5 concise bullets summarizing key insights
+- Write as if explaining the concept aloud; clarity reveals depth of understanding
+
+**Cross-Linking**
+- Connect ideas across systems and theories:  
+  - Paxos ↔ Raft — consensus lineage
+  - Lamport clocks ↔ Vector clocks ↔ Dynamo causality
+  - State machine replication ↔ Fault tolerance and recovery mechanisms
+
+**Reflection**
+- Maintain a short log titled *“What changed in understanding this week?”*
+- Capture insights, confusions, and moments of conceptual clarity. These form the intuition base for design reasoning
+
+---
 
 ## Notes on Timeline
 
-- Consistency beats intensity: Two hours daily over months builds lasting reasoning ability — missing a few sessions doesn’t derail progress.
-- Non-linear learning is normal: Topics like consensus or CAP take time. Patience compounds understanding.
-- Reinforce with retrospectives: End each month with a one-page reflection: “What can I design now that I couldn’t before?”
-- Depth over breadth: Mastering Raft, Dynamo, and Spanner thoroughly outweighs reading everything superficially.
-- Outcome: By February, you’ll think in trade-offs — the hallmark of a true senior-level systems engineer.
+**Consistency**
+- Maintain steady daily progress rather than bursts of effort
+- Distributed reasoning compounds through repetition
+- Missing sessions occasionally is not a setback; long-term consistency builds lasting understanding
 
-> Even completing 70-80% of this plan with consistent reflection will put you ahead of most senior candidates. You’ll not only be interview-ready — you’ll *think like a distributed systems architect*.
+**Depth Over Breadth**
+- Deep comprehension of a few systems outweighs shallow familiarity with many
+- Core focus: Raft, Paxos, Dynamo, Spanner, Kafka
+
+**Nonlinear Progress**
+- Expect to revisit Consensus, Replication, and CAP multiple times
+- Each pass should strengthen intuition and improve reasoning precision
+
+**Retrospectives**
+- End each month with a short reflection:  
+  *“What can be designed now that couldn’t be reasoned about before?”*
+- Capture new trade-offs understood, design instincts gained, and unresolved questions
+
+**Integration**
+- Relate theoretical insights to practical systems design:
+  - Lamport → Paxos → Raft
+  - DDIA → Real-World Architectures (Spanner, DynamoDB)
+  - White Papers → Decision Frameworks/Trade-Off Reasonings
+
+**Outcome**
+- The goal is architectural fluency: reasoning in trade-offs, articulating design constraints, and evaluating correctness under failure
+- Progress is measured by clarity of thought and design precision, not by volume of materials completed.
