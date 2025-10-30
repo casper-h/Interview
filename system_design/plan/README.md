@@ -222,9 +222,9 @@
 
 **Cross-Linking**
 - Connect ideas across systems and theories:  
-  - Paxos ↔ Raft — consensus lineage
-  - Lamport clocks ↔ Vector clocks ↔ Dynamo causality
-  - State machine replication ↔ Fault tolerance and recovery mechanisms
+  - Paxos ↔ Raft — Consensus Lineage
+  - Lamport clocks ↔ Vector clocks ↔ Dynamo Causality
+  - State Machine Replication ↔ Fault Tolerance and Recovery Mechanisms
 
 **Reflection**
 - Maintain a short log titled *“What changed in understanding this week?”*
