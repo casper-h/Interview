@@ -20,24 +20,25 @@
 **Supplement / Lectures**
 - MIT 6.824 Lectures 1-3: Introductions, RPC and Threads, GFS
 - CMU 15-445 Lectures 1-5: Relational Model, Storage I & II, Compression
-- [System Design Primer (GitHub)](https://github.com/donnemartin/system-design-primer) - Caching, load balancing, consistency
-- ByteByteGo videos - URL shortener, news feed, rate limiter
+- [System Design Primer](https://github.com/donnemartin/system-design-primer) - Caching, Load Balancing, Consistency
+- ByteByteGo - URL Shortener, News Feed, Rate Limiter
 - [Harvest, Yield, and Scalable Tolerant Systems](https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf)
-- [On Designing and Deploying Internet Scale Services](https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf)
+- [On Designing and Deploying Internet-Scale Services](https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf)
 - [The Tail at Scale](https://dl.acm.org/doi/pdf/10.1145/2408776.2408794)
 - [Data on the Outside versus Data on the Inside](https://www.cidrdb.org/cidr2005/papers/P12.pdf)
-- Optional: Networking Basics for Distributed Systems - RPCs, timeouts, latency (MIT 6.824 Intro + [SRE Networking chapter](https://sre.google/sre-book/monitoring-distributed-systems/))
+- Optional: [SRE Networking Chapter](https://sre.google/sre-book/monitoring-distributed-systems/)
 
 **Practice**
-1. URL Shortener - hashing, storage model, replication
-2. News Feed - fan-out trade-offs
-3. Distributed Cache - consistency, eviction, TTL
+1. URL Shortener - Hashing, Storage Model, Replication
+2. News Feed - Fan-Out
+3. Distributed Cache - Consistency, Eviction, TTL
 
-**Whitepapers**
+**White Papers**
 - [GFS](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf)
-- [CAP Twelve Years Later](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/)
+- [CAP Twelve Years Later: How the "Rules" Have Changed ](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/)
 - [Why Distributed Computing?](https://www.artima.com/weblogs/viewpost.jsp?thread=4247)
-- Notes on Distributed Systems for Young Bloods - Jeff Hodges
+- [Notes on Distributed Systems for Young Bloods](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
+- [Time, Clocks, and the Ordering of Events in a Distributed System](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
 
 **Tip:** Create a System Design Concept Log (one page per topic: replication, partitioning, CAP) and update weekly.
 
@@ -54,7 +55,7 @@
 - **Understanding Distributed Systems**
   - Ch. 6-10: Replication, Partitioning, Consensus, Consistency
 - **System Design Interview (Vol. 1 & 2)**
-  - Messaging, caching, DB scaling
+  - Messaging, Caching, DB Scaling
 - **Database System Concepts**
   - Ch. 12-16: Storage, Indexing, Concurrency Control
 
@@ -63,21 +64,23 @@
 - MIT 6.824 Lectures 4-6: Primary-Backup, Fault Tolerance, Raft
 - [Consistency, Availability, and Convergence](https://www.cs.cornell.edu/lorenzo/papers/cac-tr.pdf)
 - [Life Beyond Distributed Transactions](https://queue.acm.org/detail.cfm?id=3025012)
-- [Eventual Consistency](https://www.allthingsdistributed.com/2008/12/eventually_consistent.html)
+- [Eventually Consistent - Revisited](https://www.allthingsdistributed.com/2008/12/eventually_consistent.html)
 - [Avoiding Two-Phase Commit](https://web.archive.org/web/20180821165044/http://www.addsimplicity.com/adding_simplicity_an_engi/2006/12/avoiding_two_ph.html)
 - [The Log: What Every Software Engineer Should Know About Real-time Data’s Unifying Abstraction](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
 
 **Practice**
-1. Kafka-like Message Queue - log segmentation, offsets
-2. Dropbox / Google Drive - metadata vs blob storage
-3. Slack / WhatsApp - real-time messaging and delivery guarantees
+1. Kafka-like Message Queue - Log Segmentation, Offsets
+2. Dropbox / Google Drive - Metadata vs Blob Storage
+3. Slack / WhatsApp - Real-Time Messaging
 
-**Whitepapers**
+**White Papers**
 - **Consensus**
   - [Raft](https://raft.github.io/raft.pdf)
+  - [The Part-Time Parliament](https://lamport.azurewebsites.net/pubs/lamport-paxos.pdf)
+  - [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
   - [Impossibility of Distributed Consensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)
 - **Database**
-  - [BigTable](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
+  - [Bigtable](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
   - [Cassandra](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf)
   - [Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
   - [F1](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf)
@@ -107,19 +110,15 @@
 **Supplement / Lectures**
 - MIT 6.824 Lectures 7-10: MapReduce, Fault-Tolerant Services, Transactions, Dremel
 - CMU 15-445 Lectures 11-16: Sorting, Joins, Execution, Concurrency
-- [MapReduce](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
-- [Dremel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
-- [Photon](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41318.pdf)
-- [Megastore](https://research.google/pubs/pub36971/)
-- [Principles of Robust Timing over the Internet](https://www.hpl.hp.com/techreports/2004/HPL-2004-83.pdf)
-- [The Tail at Scale](https://research.google/pubs/pub40801/)
+- [Megastore](https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper32.pdf)
+- [Principles of Robust timing over the internet](https://dl.acm.org/doi/pdf/10.1145/1735223.1735241)
 
 **Practice**
-1. Real-Time Analytics / Metrics Platform - stream processing, monitoring
-2. Recommendation Engine - batch + stream pipelines
-3. Large-Scale Messaging System - SLA guarantees, replication, recovery
+1. Real-Time Analytics / Metrics Platform - Stream Processing, Monitoring
+2. Recommendation Engine - Batch + Stream Pipelines
+3. Large-Scale Messaging System - SLA, Replication, Recovery
 
-**Whitepapers**
+**White Papers**
 - **Distributed Computation**
   - [Dremel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
   - [FlumeJava](https://pages.cs.wisc.edu/~akella/CS838/F12/838-CloudPapers/FlumeJava.pdf)
@@ -155,23 +154,21 @@
   - Production SRE practices that tie into architecture
 
 **Supplement / Case Studies**
-- MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores, Final Review
+- MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores
 - CMU 15-445 Lectures 20-24: Logging, Recovery, Distributed Databases
 - Meta TAO, Uber Michelangelo, Pinterest Real-Time Systems
-- Netflix TechBlog - Resilience and chaos engineering
-- [Building on Quicksand](https://s3.amazonaws.com/systemsandpapers/papers/HellandBuildingOnQuicksand.pdf)
-- [SOA Creates Order Out of Chaos at Amazon](https://queue.acm.org/detail.cfm?id=945137)
-- [Distributed Computing Economics](https://www.microsoft.com/en-us/research/publication/distributed-computing-economics/)
-- [Spanner (2022 Revisit)](https://research.google/pubs/pub49966/)
+- Netflix TechBlog - Resilience and Chaos Engineering
+- [Building on Quicksand](https://arxiv.org/pdf/0909.1788)
+- [Distributed Computing Economics](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2003-24.pdf)
 
 **Practice**
-1. YouTube / Netflix - Content delivery
-2. Uber / Lyft - Distributed coordination
-3. Twitter Timeline - Fan-out, caching, DB scaling
-4. Graph Analytics / Metrics - Large-scale pipelines
-5. Optional capstone: multi-tenant analytics platform (Uber-style Michelangelo)
+1. YouTube / Netflix - Content Delivery
+2. Uber / Lyft - Distributed Coordination
+3. Twitter Timeline - Fan-Out, Caching, DB Scaling
+4. Graph Analytics / Metrics - Large-Scale Pipelines
+5. Optional: Multi-Tenant Analytics Platform (Uber-style Michelangelo)
 
-**Whitepapers**
+**White Papers**
 - **Graph**
   - [GraphChi](https://www.usenix.org/system/files/conference/osdi12/osdi12-final-126.pdf)
   - [PowerGraph](https://www.usenix.org/system/files/conference/osdi12/osdi12-final-167.pdf)
@@ -191,18 +188,18 @@
 ## More Reading
 
 - [The Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)
-- [Unreliable Failure Detectors for Reliable Distributed Systems](https://s3.amazonaws.com/systemsandpapers/papers/ChandraToueg.pdf)
-- [Implementing Fault-Tolerant Services Using the State Machine Approach](https://lamport.azurewebsites.net/pubs/state-machine.pdf)
-- [Mencius](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/mencius.pdf)
+- [Unreliable Failure Detectors for Reliable Distributed Systems](https://dl.acm.org/doi/pdf/10.1145/226643.226647)
+- [Implementing Fault-Tolerant Services Using the State Machine Approach](https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf)
+- [Mencius](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/mao/mao.pdf)
 - [SWIM](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf)
-- [Pastry](https://www.cs.rice.edu/Conferences/IPTPS02/109.pdf)
+- [Pastry](https://www.cs.cornell.edu/courses/cs6452/2012sp/papers/pastry.pdf)
 
 ## Weekly Cadence
 
 | Day | Focus | Duration |
 |-----|--------|-----------|
 | Mon-Wed | Core Reading - DDIA, Database Internals, or Understanding Distributed Systems | 1.5-2 hrs/day |
-| Thu | Lecture or Whitepaper Deep Dive - MIT/CMU lecture or one key paper | 1-1.5 hrs |
+| Thu | Lecture or White Paper Deep Dive - MIT/CMU lecture or one key paper | 1-1.5 hrs |
 | Fri | Light Review / Reflection - summarize readings or record short voice recap | 1 hr |
 | Sat | System Design Practice - one scenario (e.g., “Design Dropbox”) + self-evaluation | 1.5-2 hrs |
 | Sun | Synthesis / Case Study Review - diagram or relate systems (e.g., Raft ↔ Kafka) | 1.5 hrs |
