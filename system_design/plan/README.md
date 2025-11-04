@@ -8,14 +8,20 @@
 
 **Primary Reading**
 - **Designing Data-Intensive Applications (DDIA)**
-  - Ch. 1-6: Data Models, Storage Engines, Encoding, Replication, Partitioning
-  - Focus on trade-offs (e.g., LSM vs B-trees, consistency vs availability)
+  - Ch. 1–6: Data Models, Storage Engines, Encoding, Replication, Partitioning
+  - Focus on trade-offs (e.g., LSM vs B-Trees, Consistency vs Availability)
 - **Understanding Distributed Systems**
-  - Ch. 1-5: Core Distributed Concepts, Nodes, Networks, Failure Models
-- **System Design Interview (Vol. 1 & 2)**
-  - Foundational patterns and high-level system overviews
+  - Ch. 1–5: Core Distributed Concepts, Nodes, Networks, Failure Models
+- **System Design Interview (Vol. 1)**
+  - Ch. 1–3: Scale from Zero to Millions, Estimation, Design Frameworks
+  - Ch. 4–8: Rate Limiter, Consistent Hashing, Key-Value Store, Unique ID Generator, URL Shortener
+- **System Design Interview (Vol. 2)**
+  - Ch. 4: Distributed Message Queue
+  - Ch. 9: S3-like Object Storage
 - **System Design Primer**
-  - Checklists and reference during practice
+  - Sections: System Design Topics: Start Here, Performance vs Scalability, Latency vs Throughput, CAP Theorem and Consistency, Availability Patterns, DNS, CDN, Load Balancing
+  - Use as reference for conceptual overviews and trade-off visualization
+
 
 **Supplement / Lectures**
 - MIT 6.824 Lectures 1-3: Introductions, RPC and Threads, GFS
@@ -50,14 +56,20 @@
 
 **Primary Reading**
 - **Database Internals**
-  - Part I: Storage Engines (Ch. 1-5)
-  - Part II: Distributed Systems (Ch. 6-9)
+  - Part I (Ch. 1–5): Storage Engines
+  - Part II (Ch. 6–9): Distributed Systems
 - **Understanding Distributed Systems**
-  - Ch. 6-10: Replication, Partitioning, Consensus, Consistency
-- **System Design Interview (Vol. 1 & 2)**
-  - Messaging, Caching, DB Scaling
+  - Ch. 6–10: Replication, Partitioning, Consensus, Consistency
+- **System Design Interview (Vol. 1)**
+  - Ch. 6–15: Key-Value Store, Notification, News Feed, Chat, Search, YouTube, Google Drive
+- **System Design Interview (Vol. 2)**
+  - Ch. 1–4, 9: Proximity Service, Nearby Friends, Google Maps, Distributed Message Queue, S3-like Object Storage
 - **Database System Concepts**
-  - Ch. 12-16: Storage, Indexing, Concurrency Control
+  - Ch. 12–16: Storage, Indexing, Concurrency Control
+- **System Design Primer**
+  - Sections: Databases, SQL vs NoSQL, RDBMS, Sharding, Master-Slave Replication, Denormalization, Caching (cache-aside, write-through, write-behind)
+  - Use for database scaling patterns and caching strategy reviews
+
 
 **Supplement / Lectures**
 - CMU 15-445 Lectures 3-10: Storage, Compression, Memory Management, Indexes & Filters
@@ -99,13 +111,19 @@
 
 **Primary Reading**
 - **Designing Data-Intensive Applications (DDIA)**
-  - Ch. 7-9: Batch and Stream Processing
-- **Site Reliability Engineering (SRE)**
-  - SLIs, SLOs, Monitoring, Incident Response
+  - Ch. 7–9: Batch and Stream Processing
+- **Site Reliability Engineering (SRE Book, Google)**
+  - Ch. 3–5: SLIs, SLOs, Monitoring, Incident Response
 - **Understanding Distributed Systems**
-  - Fault Tolerance, Backpressure, Orchestration
-- **System Design Interview (Vol. 1 & 2)**
-  - Stream and analytics case studies
+  - Ch. 11–13: Fault Tolerance, Backpressure, Orchestration
+- **System Design Interview (Vol. 1)**
+  - Ch. 10–12: Notification System, News Feed, Chat System
+- **System Design Interview (Vol. 2)**
+  - Ch. 5–10: Metrics Monitoring, Ad Click Aggregation, Hotel Reservation, Email Service, S3-like Object Storage, Real-Time Gaming Leaderboard
+- **System Design Primer**
+  - Sections: Asynchronism, Message Queues, Task Queues, Communication (TCP, UDP, RPC, REST), Application Layer, Microservices, Service Discovery, Reverse Proxy, Load Balancer Scaling
+  - Reinforce distributed computation and reliability mechanisms
+
 
 **Supplement / Lectures**
 - MIT 6.824 Lectures 7-10: MapReduce, Fault-Tolerant Services, Transactions, Dremel
@@ -143,15 +161,21 @@
 
 **Primary Reading**
 - **Designing Data-Intensive Applications (DDIA)**
-  - Ch. 10-12: Batch, Stream, Dataflow
+  - Ch. 10–12: Dataflow, Derived Data, Real-Time Systems
 - **Database Internals**
-  - Distributed Transactions, Coordination, Recovery
+  - Ch. 10–12: Distributed Transactions, Coordination, Recovery
 - **Understanding Distributed Systems**
-  - Complex Systems, Performance Tuning
-- **System Design Interview (Vol. 1 & 2)**
-  - Mock interviews and articulation practice
-- **Site Reliability Engineering (SRE)**
-  - Production SRE practices that tie into architecture
+  - Ch. 14–15: Complex Systems, Performance Tuning
+- **System Design Interview (Vol. 1)**
+  - Ch. 13–15: Search Autocomplete, YouTube, Google Drive
+- **System Design Interview (Vol. 2)**
+  - Ch. 10–13: Real-Time Gaming Leaderboard, Payment System, Digital Wallet, Stock Exchange
+- **Site Reliability Engineering (SRE Book, Google)**
+  - Ch. 6–10: Production Practices and Architecture Reliability
+- **System Design Primer**
+  - Sections: Security, Monitoring, Scalability, Failover Strategies, Real-World Architectures (Netflix, Twitter, YouTube), Engineering Blogs, Latency Numbers, Powers of Two Table
+  - Use for synthesis of large-scale production systems and final interview readiness
+
 
 **Supplement / Case Studies**
 - MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores
@@ -198,66 +222,145 @@
 
 | Day | Focus | Duration |
 |-----|--------|-----------|
-| Mon–Wed | Core Reading | 1.5–2 hrs/day |
-| Thu | Lecture / White Paper Deep Dive | 1–1.5 hrs |
-| Fri | Weekly Reflection | 1 hr |
-| Sat | System Design Practice | 1.5–2 hrs |
-| Sun | Concept Synthesis / Case Study Review | 1.5 hrs |
+| Mon–Wed | Core Reading & Concept Mapping | 1.5–2 hrs/day |
+| Thu | Lecture or White Paper Deep Dive | 1–1.5 hrs |
+| Fri | Reflection & Teach-Back Review | 1 hr |
+| Sat | System Design Practice & Failure Simulation | 1.5–2 hrs |
+| Sun | Integration Review & Case Study Synthesis | 1.5 hrs |
 
 ### Weekly Process
 
 **Reading Comprehension**
-- Break readings into small conceptual chunks; aim for understanding, not completion
-- Track recurring trade-offs (latency vs consistency, throughput vs correctness)
-- When concepts feel unclear, trace them back to fundamental models (Lamport’s happens-before, Raft’s log replication, CAP trade-offs)
+- Read actively rather than sequentially; aim for conceptual clarity, not completion
+- Summarize every core idea in your own words before moving forward
+- Track recurring trade-offs such as latency vs consistency or throughput vs correctness
+- When concepts feel unclear, return to first principles (e.g., Lamport clocks, Raft replication, CAP models)
+- Highlight not just what a system does but why the design choices exist
 
 **Paper Annotation**
-- Use a structured template for every paper:
-  - **Problem → Design → Trade-offs → Takeaways**  
-- Capture 1–2 core insights and relate them to a real-world system (e.g., Spanner, Kafka, Dynamo)
+- Use a consistent template for every paper:
+  - **Problem → Design → Trade-offs → Takeaways**
+- Capture 1–2 central insights and tie them to a real-world system (Spanner, Kafka, Dynamo)
+- Identify failure modes and recovery mechanisms for every paper reviewed
+
+**System Design Practice**
+- Each week, pick one system and walk through a complete structured design
+  - Clarify the goal and constraints
+  - Estimate load and capacity with back-of-envelope calculations
+  - Define the data model, critical paths, and scalability levers
+  - Identify one deep bottleneck and explore trade-offs
+  - Consider one failure mode and outline a recovery path
+  - Reflect on how the design changes under 10× growth
+- Focus on reasoning through decisions rather than naming technologies
 
 **Teach-Back Summary**
-- End each week with 3–5 concise bullets summarizing key insights
-- Write as if explaining the concept aloud; clarity reveals depth of understanding
+- End each week with a concise 3–5 bullet summary of key takeaways
+- Explain each idea aloud or in writing as if teaching another engineer
+- Capture one example of a design trade-off you now understand more intuitively
 
 **Cross-Linking**
-- Connect ideas across systems and theories:  
-  - Paxos ↔ Raft — Consensus Lineage
-  - Lamport clocks ↔ Vector clocks ↔ Dynamo Causality
-  - State Machine Replication ↔ Fault Tolerance and Recovery Mechanisms
+- Relate ideas across readings and systems
+  - Paxos ↔ Raft → Consensus lineage
+  - Lamport clocks ↔ Vector clocks ↔ Dynamo causality
+  - State machine replication ↔ Fault tolerance ↔ Recovery
+- Maintain a linked note index so ideas reinforce one another over time
 
 **Reflection**
 - Maintain a short log titled *“What changed in understanding this week?”*
-- Capture insights, confusions, and moments of conceptual clarity. These form the intuition base for design reasoning
+- Capture shifts in mental models, new intuitions, or persisting gaps
+- Focus on how design reasoning and trade-off intuition evolve
 
 ---
 
-## Notes on Timeline
+## Study Principles
+
+**1. Foundational Stage (November–December)**
+- Build mental models for replication, partitioning, caching, and CAP
+- Prioritize conceptual accuracy over breadth of coverage
+- Validate understanding by explaining ideas without referring to notes
+
+**2. Architectural Stage (December–January)**
+- Combine components to design end-to-end systems
+- Reason about scaling paths, bottlenecks, and trade-offs between throughput, latency, and consistency
+- Apply patterns such as leader-follower replication, quorum writes, and async queues
+
+**3. Operational Stage (January–February)**
+- Add production constraints to designs: failure handling, SLOs, and backpressure
+- Focus on trade-offs between durability, fault tolerance, and latency
+- Simulate failure and recovery paths to understand real-world system behavior
+
+**4. Articulation Stage (February onward)**
+- Practice structured communication under time limits
+- Present designs with clarity of reasoning and justification of choices
+- Strengthen explanation precision and calm, top-down articulation
+
+---
+
+## Evaluation and Progress Tracking
 
 **Consistency**
-- Maintain steady daily progress rather than bursts of effort
-- Distributed reasoning compounds through repetition
-- Missing sessions occasionally is not a setback; long-term consistency builds lasting understanding
+- Study regularly; small, sustained sessions yield deeper understanding than sporadic bursts
+- Repetition and revisiting complex ideas improves long-term retention
+- Missing a session occasionally is acceptable if overall consistency is maintained
 
 **Depth Over Breadth**
-- Deep comprehension of a few systems outweighs shallow familiarity with many
-- Core focus: Raft, Paxos, Dynamo, Spanner, Kafka
+- Aim for deep comprehension of core distributed systems before expanding
+- Focus on Raft, Paxos, Dynamo, Spanner, and Kafka as anchor systems
+- Evaluate mastery by whether you can analyze trade-offs under failure conditions
 
-**Nonlinear Progress**
-- Expect to revisit Consensus, Replication, and CAP multiple times
-- Each pass should strengthen intuition and improve reasoning precision
+**Iterative Progress**
+- Expect nonlinear growth; understanding deepens with multiple passes over key topics
+- Each cycle should refine your ability to reason precisely about correctness, latency, and availability
+- Accept conceptual rework as progress rather than regression
 
 **Retrospectives**
-- End each month with a short reflection:  
-  *“What can be designed now that couldn’t be reasoned about before?”*
-- Capture new trade-offs understood, design instincts gained, and unresolved questions
+- At the end of each month, write a reflection
+  *“What can I design now that I could not reason about before?”*
+- Summarize improved intuitions, design instincts, and remaining blind spots
+- Use this feedback to adjust focus areas for the next month
 
-**Integration**
-- Relate theoretical insights to practical systems design:
-  - Lamport → Paxos → Raft
-  - DDIA → Real-World Architectures (Spanner, DynamoDB)
-  - White Papers → Decision Frameworks/Trade-Off Reasonings
+---
+
+## Practice Framework
+
+**System Design Drills**
+- Practice one design per week using a consistent 6-step format
+  1. Clarify goals and assumptions
+  2. Estimate scale and constraints
+  3. Define major components and data flow
+  4. Deep dive into one critical subsystem
+  5. Analyze trade-offs and potential bottlenecks
+  6. Identify failure scenarios and recovery mechanisms
+
+**Failure Mode Exercises**
+- For each system, simulate one type of fault (node crash, network partition, duplicate message)
+- Describe how the system behaves and how recovery would proceed
+- Record the trade-offs in durability, latency, and availability
+
+**Mock Interviews**
+- Starting in January, schedule one mock interview every two weeks
+- In February, increase to two or more per week with peers or mentors
+- Record and review sessions to identify clarity and pacing issues
+- Focus on explaining reasoning rather than listing technologies
+
+---
+
+## Integration and Application
+
+**Connecting Theory to Practice**
+- Lamport → Paxos → Raft → State Machine Replication
+- DDIA → Real-world architectures such as Spanner, DynamoDB, Kafka
+- White papers → Design frameworks and decision heuristics
+
+**Trade-off Framework**
+- Replication → Latency vs Durability
+- Partitioning → Data locality vs Rebalance complexity
+- Consistency → Availability vs Correctness
+- Caching → Freshness vs Performance
+- Queueing → Throughput vs Ordering guarantees
+- Batch vs Stream → Latency vs Accuracy
+- Observability → Cost vs Coverage
 
 **Outcome**
-- The goal is architectural fluency: reasoning in trade-offs, articulating design constraints, and evaluating correctness under failure
-- Progress is measured by clarity of thought and design precision, not by volume of materials completed.
+- Target architectural fluency: reasoning clearly through trade-offs, articulating design constraints, and evaluating correctness under fault conditions
+- Measure progress by clarity of reasoning and depth of understanding rather than number of systems studied
