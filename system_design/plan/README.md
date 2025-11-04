@@ -51,15 +51,10 @@
 
 <details>
 <summary>Expand for Sample Reasoning</summary>
-
 1. Consistency is prioritized when correctness of state outweighs latency, such as in payment systems or metadata updates that require accuracy even at higher response times.
-
 2. Partition tolerance changes system architecture when scaling globally by forcing asynchronous replication, leader election, or eventual consistency to maintain operation under network splits.
-
 3. Distributed cache, rate limiter, and key-value store designs all share the same fundamental distributed storage abstractions such as hashing, replication, and consistency mechanisms, differing mainly in their performance focus and operational guarantees.
-
 4. Latency amplification occurs when dependent RPC chains or sequential service calls propagate small delays across the system; it can be mitigated through parallelization, batching, and caching.
-
 5. The CAP theorem defines the balance between consistency and availability. CP systems such as Spanner favor consistency under partition, while AP systems such as Dynamo favor availability with eventual consistency.
 </details>
 
@@ -127,13 +122,9 @@
 <summary>Expand for Sample Reasoning</summary>
 
 1. Logs unify both messaging and database systems by preserving event ordering and enabling deterministic replay for recovery and replication, making them the backbone for durability and consistency.
-
 2. Replication strategies differ by emphasis. Cassandra uses quorum-based eventual consistency, Dynamo allows tunable quorum models, and Spanner enforces external consistency through synchronized clocks and true-time guarantees.
-
 3. Synchronous replication is required for correctness-critical data such as financial transactions or configuration metadata, where data loss is unacceptable even if latency increases.
-
 4. Raft simplifies consensus reasoning compared to Paxos by using a single elected leader and an explicit log replication model that makes system state transitions easier to reason about.
-
 5. The log abstraction recurs because it represents ordered, append-only data that can support messaging, recovery, replication, and state reconstruction through a single model of event sequencing.
 </details>
 
@@ -194,13 +185,9 @@
 <summary>Expand for Sample Reasoning</summary>
 
 1. Batch systems like MapReduce favor completeness and fault tolerance, while streaming systems like MillWheel prioritize low latency through checkpointing and replay-based recovery mechanisms.
-
 2. Common bottlenecks in distributed pipelines include network shuffles, disk I/O, skewed data partitions, and serialization overhead that limits parallel throughput.
-
 3. Backpressure arises when downstream operators process data slower than producers. Techniques such as dynamic scaling, rate limiting, and adaptive buffering help maintain throughput without overload.
-
 4. Throughput, latency, and accuracy trade-offs vary by workload. Monitoring favors low latency and approximate correctness, while financial computation emphasizes durability and accuracy.
-
 5. Integration of batch, real-time, and serving layers requires consistent data freshness guarantees and alignment of replay boundaries, often achieved through unified stream processing or materialized view updates.
 </details>
 
@@ -265,13 +252,9 @@
 <summary>Expand for Sample Reasoning</summary>
 
 1. Large-scale systems balance latency, durability, and cost through multi-tiered storage, asynchronous replication, and caching hierarchies that optimize access frequency and reliability.
-
 2. Production-grade systems distinguish themselves through observability, failure isolation, and controlled degradation of services rather than complete shutdowns.
-
 3. Graph and analytics workloads affect partitioning and storage differently. Graphs require minimizing cross-partition edges, while analytics systems prioritize balanced distribution and predictable query parallelism.
-
 4. Chaos engineering validates resilience by injecting controlled failures such as node termination or network latency and measuring recovery speed against defined service objectives.
-
 5. Graceful degradation allows partial functionality to continue during failure, such as serving cached data when the database is unavailable or restricting writes while allowing reads.
 </details>
 
