@@ -112,7 +112,7 @@
 **Primary Reading**
 - **Designing Data-Intensive Applications (DDIA)**
   - Ch. 7–9: Batch and Stream Processing
-- **Site Reliability Engineering (SRE Book, Google)**
+- **Site Reliability Engineering (SRE)**
   - Ch. 3–5: SLIs, SLOs, Monitoring, Incident Response
 - **Understanding Distributed Systems**
   - Ch. 11–13: Fault Tolerance, Backpressure, Orchestration
@@ -170,7 +170,7 @@
   - Ch. 13–15: Search Autocomplete, YouTube, Google Drive
 - **System Design Interview (Vol. 2)**
   - Ch. 10–13: Real-Time Gaming Leaderboard, Payment System, Digital Wallet, Stock Exchange
-- **Site Reliability Engineering (SRE Book, Google)**
+- **Site Reliability Engineering (SRE)**
   - Ch. 6–10: Production Practices and Architecture Reliability
 - **System Design Primer**
   - Sections: Security, Monitoring, Scalability, Failover Strategies, Real-World Architectures (Netflix, Twitter, YouTube), Engineering Blogs, Latency Numbers, Powers of Two Table
