@@ -23,8 +23,8 @@
   - Use as conceptual reference for foundational trade-offs
 
 **Supplement / Lectures**
-- MIT 6.824 Lectures 1-3: RPC, Threads, GFS
-- CMU 15-445 Lectures 1-5: Relational Model, Storage, Compression
+- MIT 6.824 Lectures 1-3: Introductions, RPC and Threads, GFS
+- CMU 15-445 Lectures 1-5: Relational Model, Storage I & II, Compression
 - [Harvest, Yield, and Scalable Tolerant Systems](https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf)
 - [On Designing and Deploying Internet-Scale Services](https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf)
 - [The Tail at Scale](https://dl.acm.org/doi/pdf/10.1145/2408776.2408794)
@@ -87,8 +87,8 @@
   - Use for practical scaling and storage trade-off summaries
 
 **Supplement / Lectures**
-- CMU 15-445 Lectures 3-10: Storage, Compression, Indexing, Memory Management
-- MIT 6.824 Lectures 4-6: Fault Tolerance, Raft
+- CMU 15-445 Lectures 3-10: Storage, Compression, Memory Management, Indexes & Filters
+- MIT 6.824 Lectures 4-6: Primary-Backup, Fault Tolerance, Raft
 - [Consistency, Availability, and Convergence](https://www.cs.cornell.edu/lorenzo/papers/cac-tr.pdf)
 - [Life Beyond Distributed Transactions](https://queue.acm.org/detail.cfm?id=3025012)
 - [Eventually Consistent - Revisited](https://www.allthingsdistributed.com/2008/12/eventually_consistent.html)
@@ -158,8 +158,8 @@
   - Sections: Asynchronism, Message Queues, Microservices, Service Discovery, Reverse Proxy
 
 **Supplement / Lectures**
-- MIT 6.824 Lectures 7-10: MapReduce, Transactions, Dremel
-- CMU 15-445 Lectures 11-16: Execution, Concurrency
+- MIT 6.824 Lectures 7-10: MapReduce, Fault-Tolerant Services, Transactions, Dremel
+- CMU 15-445 Lectures 11-16: Sorting, Joins, Execution, Concurrency
 - [Megastore](https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper32.pdf)
 - [Principles of Robust Timing over the Internet](https://dl.acm.org/doi/pdf/10.1145/1735223.1735241)
 
@@ -169,9 +169,19 @@
 3. Messaging System: SLA, Fault Recovery
 
 **White Papers**
-- **Computation:** MapReduce, Dremel, Percolator, Tenzing, FlumeJava
-- **Streaming:** Kafka, MillWheel, Photon
-- **Experimentation:** Online Controlled Experiments
+- **Distributed Computation**
+  - [Dremel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
+  - [FlumeJava](https://pages.cs.wisc.edu/~akella/CS838/F12/838-CloudPapers/FlumeJava.pdf)
+  - [Hive](https://www.vldb.org/pvldb/vol2/vldb09-938.pdf)
+  - [MapReduce](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
+  - [Percolator](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Peng.pdf)
+  - [Tenzing](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37200.pdf)
+- **Streaming**
+  - [Kafka](https://cs.uwaterloo.ca/~ssalihog/courses/papers/netdb11-final12.pdf)
+  - [MillWheel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41378.pdf)
+  - [Photon](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41318.pdf)
+- **Experimentation**
+  - [Online Controlled Experiments](https://exp-platform.com/Documents/puzzlingOutcomesInControlledExperiments.pdf)
 
 ### Knowledge Integration Questions
 1. How do batch and stream processing models differ in their fault tolerance mechanisms?
@@ -216,7 +226,7 @@
 
 **Supplement / Case Studies**
 - MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores
-- CMU 15-445 Lectures 20-24: Logging, Recovery
+- CMU 15-445 Lectures 20-24: Logging, Recovery, Distributed Databases
 - Meta TAO, Uber Michelangelo, Netflix TechBlog
 - [Building on Quicksand](https://arxiv.org/pdf/0909.1788)
 - [Distributed Computing Economics](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2003-24.pdf)
@@ -264,6 +274,17 @@
 
 5. Graceful degradation allows partial functionality to continue during failure, such as serving cached data when the database is unavailable or restricting writes while allowing reads.
 </details>
+
+---
+
+## More Reading
+
+- [The Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)
+- [Unreliable Failure Detectors for Reliable Distributed Systems](https://dl.acm.org/doi/pdf/10.1145/226643.226647)
+- [Implementing Fault-Tolerant Services Using the State Machine Approach](https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf)
+- [Mencius](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/mao/mao.pdf)
+- [SWIM](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf)
+- [Pastry](https://www.cs.cornell.edu/courses/cs6452/2012sp/papers/pastry.pdf)
 
 ---
 
