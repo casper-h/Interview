@@ -51,6 +51,7 @@
 
 <details>
 <summary>Expand for Sample Reasoning</summary>
+
 1. Consistency is prioritized when correctness of state outweighs latency, such as in payment systems or metadata updates that require accuracy even at higher response times.
 2. Partition tolerance changes system architecture when scaling globally by forcing asynchronous replication, leader election, or eventual consistency to maintain operation under network splits.
 3. Distributed cache, rate limiter, and key-value store designs all share the same fundamental distributed storage abstractions such as hashing, replication, and consistency mechanisms, differing mainly in their performance focus and operational guarantees.
