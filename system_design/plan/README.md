@@ -1,8 +1,8 @@
-# 4-Month Senior System Design Plan (Nov → Feb)
+# 4-Month Senior System Design Plan (Dec → April)
 
 ---
 
-## Month 1 — November: Core Foundations + DDIA
+## Month 1 — December/January: Core Foundations + DDIA
 
 **Goal:** Build strong mental models of distributed system fundamentals. Focus on architecture patterns, storage, replication, and trade-offs.
 
@@ -61,7 +61,7 @@
 
 ---
 
-## Month 2 — December: Deep Internals + Database Systems
+## Month 2 — January/February: Deep Internals + Database Systems
 
 **Goal:** Move from architecture reasoning to internal design: storage, consensus, replication, and consistency models.
 
@@ -131,7 +131,7 @@
 
 ---
 
-## Month 3 — January: Distributed Computation + Reliability
+## Month 3 — March: Distributed Computation + Reliability
 
 **Goal:** Understand computation frameworks, fault tolerance, and how systems maintain reliability at scale.
 
@@ -194,7 +194,7 @@
 
 ---
 
-## Month 4 — February: Advanced Systems + Senior Hiring Readiness
+## Month 4 — April: Advanced Systems + Senior Hiring Readiness
 
 **Goal:** Integrate theoretical knowledge and develop reasoning clarity under interview conditions.
 
