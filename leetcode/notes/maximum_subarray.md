@@ -1,4 +1,0 @@
-- Constraints:
-    - Time Complexity: `O(n)`
-    - Space Complexity: Unspecified
-- Kadane's Algorithm

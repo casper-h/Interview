@@ -1,9 +1,0 @@
-- Constraints:
-    - Time Complexity: `O(n)`
-    - Space Complexity: `O(1)` (output array excluded)
-- Straight forward solution is to create arrays that calculate the prefix and suffix sum (not space optimized)
-    - Imagine: `[3, 3, 2, 5]`
-    - `pre = [1, 3, 9, 18]`
-    - `suff = [30, 10, 5, 1]`
-- How about using just the output array?
-    - Instead of constructing the prefix and suffix arrays, what if we keep track of the prefix and suffix as we traverse?

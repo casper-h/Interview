@@ -1,202 +1,289 @@
-# 🧠 LeetCode Practice Tracker
+# LeetCode Practice Tracker
 
-An extended, categorized list of LeetCode problems to master the fundamentals — inspired by Blind 75, NeetCode 150, and problem-solving patterns.
+An extended, categorized list of problems for building pattern recognition, organized around the
+patterns most commonly tested at Senior and Senior Plus level rather than around problem
+difficulty alone.
 
+## How to use this checklist
 
-### 📆 Arrays & Hashing
+A checked box means you have solved the problem before, not that you have mastered the pattern.
+Treat this list as a coverage map, and let two other files carry the actual weight of your
+practice.
 
-- [x] [Two Sum](https://leetcode.com/problems/two-sum/)
-- [x] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-- [x] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
-- [x] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
-- [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
-- [x] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
-- [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
-- [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
-
----
-
-### 👀 Two Pointers
-
-- [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
-- [x] [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-- [x] [3Sum](https://leetcode.com/problems/3sum/)
-- [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
-- [x] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
-- [x] [Push Dominoes](https://leetcode.com/problems/push-dominoes/)
-
----
-
-### 🔹 Sliding Window
-
-- [ ] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-- [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-- [ ] [Permutation in String](https://leetcode.com/problems/permutation-in-string/)
-- [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
-- [ ] [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+- Log every attempt, solved or not, in `schedule/tracker.md`, including how long it took and, if
+  you struggled, why: a missed pattern, an implementation bug, a missed edge case, or a
+  communication issue. That log is what tells you what to revisit; a checkmark by itself does
+  not.
+- Build `leetcode/templates.md` as you go. The goal of working through these problems is to
+  internalize a small number of reusable algorithm skeletons through repetition and
+  understanding, not to memorize solutions to individual problems. If you find yourself trying to
+  recall "how did I solve this exact problem," that is a sign to go back to the underlying
+  pattern instead.
+- Time-box each attempt (a common approach is 30 to 45 minutes) before looking at a hint. Getting
+  stuck and reasoning through why is part of building the pattern; open-ended, unbounded time
+  spent on a single problem usually is not.
+- Revisit problems on a spaced cadence rather than moving on permanently once checked. A problem
+  you solved once under no time pressure and have not revisited in a month is not yet reliable
+  under interview conditions.
 
 ---
 
-### 🛡️ Stack / Monotonic Stack
+### Arrays and Hashing
 
-- [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-- [x] [Min Stack](https://leetcode.com/problems/min-stack/)
-- [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-- [x] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
-- [x] [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
-- [x] [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
-- [x] [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
-- [x] [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/)
-
-
----
-
-### ⚖️ Binary Search
-
-- [x] [Binary Search](https://leetcode.com/problems/binary-search/)
-- [ ] [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
-- [ ] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-- [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-- [ ] [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
-- [ ] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+- [x] Two Sum
+- [x] Group Anagrams
+- [x] Top K Frequent Elements
+- [x] Contains Duplicate
+- [x] Product of Array Except Self
+- [x] Maximum Subarray
+- [x] Longest Consecutive Sequence
+- [ ] Encode and Decode Strings
 
 ---
 
-### 🦙 Linked Lists
+### Prefix Sum and Difference Array
 
-- [ ] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
-- [ ] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-- [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
-- [ ] [Remove Nth Node From End](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
-- [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+A distinct pattern from general array manipulation: precomputing running sums (or running
+differences for range updates) to answer range queries in constant time after linear
+preprocessing.
 
----
-
-### 🌳 Trees (DFS/BFS)
-
-- [ ] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
-- [ ] [Same Tree](https://leetcode.com/problems/same-tree/)
-- [ ] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
-- [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
-- [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
-- [ ] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
-- [ ] [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
-- [ ] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [ ] Range Sum Query, Immutable
+- [ ] Subarray Sum Equals K
+- [ ] Product of Array Except Self (revisit through the prefix and suffix lens specifically)
+- [ ] Range Addition
 
 ---
 
-### 🏰 Trie
+### Two Pointers
 
-- [ ] [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
-- [ ] [Replace Words](https://leetcode.com/problems/replace-words/)
-
----
-
-### 🚀 Heap / Priority Queue
-
-- [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
-- [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
-- [ ] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+- [x] Valid Palindrome
+- [x] Two Sum II
+- [x] 3Sum
+- [x] Container With Most Water
+- [x] Trapping Rain Water
+- [x] Push Dominoes
 
 ---
 
-### 🤖 Backtracking
+### Sliding Window
 
-- [ ] [Subsets](https://leetcode.com/problems/subsets/)
-- [ ] [Subsets II](https://leetcode.com/problems/subsets-ii/)
-- [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
-- [ ] [Permutations](https://leetcode.com/problems/permutations/)
-- [ ] [Word Search](https://leetcode.com/problems/word-search/)
-- [ ] [N-Queens](https://leetcode.com/problems/n-queens/)
-- [ ] [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+- [ ] Best Time to Buy and Sell Stock
+- [ ] Longest Substring Without Repeating Characters
+- [ ] Permutation in String
+- [ ] Minimum Window Substring
+- [ ] Sliding Window Maximum (also see Monotonic Deque below)
 
 ---
 
-### 🔍 Graphs (DFS/BFS)
+### Monotonic Stack and Monotonic Deque
 
-- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
-- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
-- [ ] [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
-- [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/)
-- [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
-- [ ] [Word Ladder](https://leetcode.com/problems/word-ladder/)
+Stack-based problems are grouped here with deque-based problems because they share the same core
+idea: maintaining a monotonic ordering of candidates and discarding ones that can no longer be
+the answer.
 
----
-
-### 📊 Dynamic Programming (DP)
-
-- [ ] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-- [ ] [House Robber](https://leetcode.com/problems/house-robber/)
-- [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
-- [ ] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
-- [ ] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
-- [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
-- [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
-- [ ] [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
-- [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
-- [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
+- [x] Valid Parentheses
+- [x] Min Stack
+- [x] Daily Temperatures
+- [x] Largest Rectangle in Histogram
+- [x] Asteroid Collision
+- [x] Next Greater Element I
+- [x] Next Greater Element II
+- [x] Final Prices With a Special Discount in a Shop
+- [ ] Sliding Window Maximum (monotonic deque)
+- [ ] Shortest Subarray with Sum at Least K (monotonic deque)
 
 ---
 
-### 🔢 1D/2D DP
+### Binary Search
 
-- [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
-- [ ] [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
-- [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
-- [ ] [Interleaving String](https://leetcode.com/problems/interleaving-string/)
-
----
-
-### ⚡ Greedy
-
-- [ ] [Jump Game](https://leetcode.com/problems/jump-game/)
-- [ ] [Jump Game II](https://leetcode.com/problems/jump-game-ii/)
-- [ ] [Gas Station](https://leetcode.com/problems/gas-station/)
-- [ ] [Candy](https://leetcode.com/problems/candy/)
-- [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-- [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+- [x] Binary Search
+- [ ] Search a 2D Matrix
+- [ ] Find Minimum in Rotated Sorted Array
+- [ ] Search in Rotated Sorted Array
+- [ ] Median of Two Sorted Arrays
+- [ ] Koko Eating Bananas (binary search on the answer)
+- [ ] Capacity to Ship Packages Within D Days (binary search on the answer)
 
 ---
 
-### ⏳ Intervals
+### Linked Lists
 
-- [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
-- [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-- [ ] [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
-- [ ] [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
-- [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
-
----
-
-### 🔫 Math / Bit Manipulation
-
-- [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
-- [ ] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
-- [ ] [Counting Bits](https://leetcode.com/problems/counting-bits/)
-- [ ] [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
-- [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
-- [ ] [Single Number](https://leetcode.com/problems/single-number/)
-- [ ] [Power of Two](https://leetcode.com/problems/power-of-two/)
-- [ ] [Rotate Image](https://leetcode.com/problems/rotate-image/)
+- [ ] Reverse Linked List
+- [ ] Merge Two Sorted Lists
+- [ ] Reorder List
+- [ ] Remove Nth Node From End
+- [ ] Linked List Cycle
 
 ---
 
-### 🔘 Union Find
+### Matrix and Grid Traversal
 
-- [ ] [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
-- [ ] [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
-- [ ] [Accounts Merge](https://leetcode.com/problems/accounts-merge/)
-- [ ] [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+Grid-based breadth-first and depth-first search is common enough, and different enough from
+general graph problems in its boundary handling, to warrant its own category rather than sitting
+inside Graphs.
+
+- [ ] Number of Islands
+- [ ] Flood Fill
+- [ ] Rotting Oranges
+- [ ] Surrounded Regions
+- [ ] Pacific Atlantic Water Flow
+- [ ] Walls and Gates
 
 ---
 
-### 🛠️ Design
+### Trees (Depth-First and Breadth-First Search)
 
-- [ ] [LRU Cache](https://leetcode.com/problems/lru-cache/)
-- [ ] [LFU Cache](https://leetcode.com/problems/lfu-cache/)
-- [ ] [Design Twitter](https://leetcode.com/problems/design-twitter/)
-- [ ] [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)
-- [ ] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
-- [ ] [Design File System](https://leetcode.com/problems/design-file-system/)
+- [ ] Maximum Depth of Binary Tree
+- [ ] Same Tree
+- [ ] Invert Binary Tree
+- [ ] Subtree of Another Tree
+- [ ] Binary Tree Level Order Traversal
+- [ ] Lowest Common Ancestor of a Binary Search Tree
+- [ ] Diameter of Binary Tree
+- [ ] Serialize and Deserialize Binary Tree
+
+---
+
+### Trie
+
+- [ ] Implement Trie
+- [ ] Word Search II
+- [ ] Replace Words
+
+---
+
+### Heap and Priority Queue
+
+- [ ] Kth Largest Element in an Array
+- [ ] Top K Frequent Elements
+- [ ] Find Median from Data Stream
+- [ ] Merge K Sorted Lists
+
+---
+
+### Backtracking
+
+- [ ] Subsets
+- [ ] Subsets II
+- [ ] Combination Sum
+- [ ] Permutations
+- [ ] Word Search
+- [ ] N-Queens
+- [ ] Sudoku Solver
+
+---
+
+### Graphs (Depth-First and Breadth-First Search)
+
+- [ ] Clone Graph
+- [ ] Number of Islands (also see Matrix and Grid Traversal)
+- [ ] Graph Valid Tree
+- [ ] Course Schedule (also see Topological Sort)
+- [ ] Pacific Atlantic Water Flow (also see Matrix and Grid Traversal)
+- [ ] Word Ladder
+
+---
+
+### Topological Sort
+
+A distinct pattern from general graph traversal, worth practicing explicitly rather than only
+encountering incidentally through Course Schedule.
+
+- [ ] Course Schedule
+- [ ] Course Schedule II
+- [ ] Alien Dictionary
+- [ ] Sequence Reconstruction
+
+---
+
+### Dynamic Programming
+
+- [ ] Climbing Stairs
+- [ ] House Robber
+- [ ] House Robber II
+- [ ] Longest Palindromic Substring
+- [ ] Palindromic Substrings
+- [ ] Longest Common Subsequence
+- [ ] Coin Change
+- [ ] Partition Equal Subset Sum
+- [ ] Decode Ways
+- [ ] Edit Distance
+
+---
+
+### One-Dimensional and Two-Dimensional Dynamic Programming
+
+- [ ] Unique Paths
+- [ ] Minimum Path Sum
+- [ ] Longest Increasing Subsequence
+- [ ] Interleaving String
+
+---
+
+### Greedy
+
+- [ ] Jump Game
+- [ ] Jump Game II
+- [ ] Gas Station
+- [ ] Candy
+- [ ] Merge Intervals
+- [ ] Non-overlapping Intervals
+
+---
+
+### Intervals
+
+- [ ] Insert Interval
+- [ ] Merge Intervals
+- [ ] Meeting Rooms
+- [ ] Meeting Rooms II
+- [ ] Non-overlapping Intervals
+
+---
+
+### Math and Bit Manipulation
+
+- [ ] Sum of Two Integers
+- [ ] Number of 1 Bits
+- [ ] Counting Bits
+- [ ] Reverse Bits
+- [ ] Missing Number
+- [ ] Single Number
+- [ ] Power of Two
+- [ ] Rotate Image
+
+---
+
+### Union Find
+
+- [ ] Number of Connected Components in an Undirected Graph
+- [ ] Graph Valid Tree
+- [ ] Accounts Merge
+- [ ] Redundant Connection
+
+---
+
+### Segment Tree and Binary Indexed Tree
+
+Less frequently tested than the categories above, but worth having at least one working
+implementation of each for harder rounds, particularly at infrastructure-heavy or
+trading-adjacent companies.
+
+- [ ] Range Sum Query, Mutable (binary indexed tree or segment tree)
+- [ ] Count of Smaller Numbers After Self
+- [ ] Range Sum Query 2D, Mutable
+
+---
+
+### Design
+
+- [ ] LRU Cache
+- [ ] LFU Cache
+- [ ] Design Twitter
+- [ ] Design Hit Counter
+- [ ] Serialize and Deserialize Binary Tree
+- [ ] Design File System
+
+These overlap with the practice list in `low_level_design/README.md`. Solving them here is about
+the underlying data structure; solving the low-level design versions is about class design and
+extensibility around the same core structure.
