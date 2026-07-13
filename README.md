@@ -45,7 +45,6 @@ is what turns this from a static reading list into an actual feedback loop.
 
 - [Levels.fyi](https://www.levels.fyi)
 - [Techjobs.xyz](https://techjobs.xyz/)
-- [Tejofi](https://tejofi.com/)
 - [Layoffs.fyi](https://layoffs.fyi/)
 
 ## Numbers and Negotiating
