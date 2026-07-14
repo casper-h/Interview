@@ -18,7 +18,7 @@ just read.
   bullet is trying to cover too much, and it should either be split or trimmed.
 
 Aim for six to eight of these across your recent roles. These double as raw material for your
-behavioural story bank in `behavioural/README.md`, since a well-scoped project bullet often is the
+behavioural story bank in the [behavioural guide](../behavioural/README.md), since a well-scoped project bullet often is the
 seed of a full STAR story.
 
 ## The ninety-second project walkthrough

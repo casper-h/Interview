@@ -3,7 +3,7 @@
 Solo study does not train two things that are explicitly graded in a real interview: verbalizing
 your thought process under time pressure, and reading and responding to an interviewer's live
 signal. Mock interviews are the only practice format that trains both, which is why they are
-weighted heavily in `schedule/README.md` from Phase 2 onward.
+weighted heavily in the [schedule](../schedule/README.md) from Phase 2 onward.
 
 ## Where to run them
 
@@ -16,7 +16,7 @@ weighted heavily in `schedule/README.md` from Phase 2 onward.
 
 ## Cadence
 
-Follow the cadence in `schedule/README.md`: roughly one per week starting partway through Phase
+Follow the cadence in the [schedule](../schedule/README.md): roughly one per week starting partway through Phase
 2, increasing to two per week in Phase 3, and full back-to-back loops in Phase 4. Rotate format
 each time (coding, high-level system design, low-level design, behavioural) rather than
 repeating the same one.
@@ -29,7 +29,7 @@ repeating the same one.
   record yourself and review the recording, since it will surface filler words, pacing issues,
   and moments where you went quiet while thinking.
 - For system design and low-level design mocks, use the frameworks in
-  `system_design/framework/README.md` and `low_level_design/README.md` explicitly, and note
+  the [system design framework](../system_design/framework/README.md) and the [low-level design guide](../low_level_design/README.md) explicitly, and note
   afterward whether you actually followed the structure or drifted from it under pressure.
 
 ## Grading rubric
@@ -48,9 +48,42 @@ each mock producing a differently shaped piece of feedback.
 - **Time management.** Did you pace yourself appropriately across the interview, or run out of
   time on one section at the expense of another?
 
-Rate each dimension, note the single biggest gap, and log it in `schedule/tracker.md` under the
+Rate each dimension, note the single biggest gap, and log it in the [tracker](../schedule/tracker.md) under the
 mock interviews section, along with a specific follow-up action rather than a general intention
 to "practice more."
+
+## What "strong hire" actually means on this rubric
+
+The [schedule](../schedule/README.md) gates the final phase on being "consistently rated strong
+hire," which is only useful if you know where that line sits. Rate each dimension against the bar
+below, not against your own sense of whether it "went fine." A useful heuristic: a hire clears the
+bar, a strong hire clears it without help and volunteers the next level of depth unprompted. Grade
+honestly, since self- and peer-grading both drift generous, and treat anything you needed a hint for
+as not yet clearing the bar.
+
+- **Correctness (coding).** Hire: a working, optimal-complexity solution. Strong hire: the same, plus
+  you caught at least one bug or edge case yourself and walked concrete test cases before calling it
+  done. Lean hire: correct only after a hint, or a suboptimal complexity you did not notice.
+- **Correctness (design).** Hire: the design meets every stated requirement with no missing major
+  component. Strong hire: the same, plus you named the primary bottleneck and how the system degrades
+  under it. Lean hire: a plausible sketch with a gap you did not surface.
+- **Structure.** Hire: a recognizable order the interviewer could follow. Strong hire: you drove the
+  order (requirements, estimation, API, data model, deep dive, trade-offs for design; clarify,
+  approach, code, test for coding) without being steered, and scoped out what you were not building.
+- **Communication.** Hire: your reasoning was clear when you spoke. Strong hire: you narrated
+  continuously, with no silent stretches longer than roughly ten seconds, and the interviewer never
+  had to ask what you were thinking.
+- **Trade-off depth.** Hire: you mentioned a trade-off when asked. Strong hire: you volunteered at
+  least two real alternatives with their costs and justified your choice against them, rather than
+  presenting one answer as the only one.
+- **Time management.** Hire: you finished the core of the problem. Strong hire: you hit every major
+  phase with time to spare for testing or the deep dive, and did not have to scramble in the last few
+  minutes.
+
+Score it: strong hire is at or above the strong-hire line on all five (coding folds the two
+correctness rows into one), hire is four of five with the last one close, and lean hire is three of
+five. The Phase 4 exit condition is met when you are landing at strong hire across formats,
+validated by at least one external mock rather than only your own grading.
 
 ## After the mock
 

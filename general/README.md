@@ -23,10 +23,9 @@
 
 ## What senior-level signal looks like, beyond the core loop
 
-The core loop above is necessary but not sufficient at the Senior and Senior Plus level.
-Interviewers at this level are also grading how you drive the interview, not only whether you
-arrive at a correct answer. A few things that distinguish stronger signal from adequate signal in
-a coding round:
+The core loop above is necessary but not sufficient at the senior level and above. Interviewers at
+this level are also grading how you drive the interview, not only whether you arrive at a correct
+answer. A few things that distinguish stronger signal from adequate signal in a coding round:
 
 - **Proactively discussing trade-offs**, rather than waiting to be asked. For example,
   volunteering that an approach trades space for time, or that a simpler solution is sufficient
@@ -41,6 +40,73 @@ a coding round:
   to support concurrent updates.
 - **Managing your own time.** Recognizing when an approach is not converging and being willing to
   step back and reconsider, rather than continuing to push on a path that is not working.
+
+## What to say out loud, phase by phase
+
+"Speak through your thought process" is the advice everyone gives and few operationalize. Solving
+the problem in silence and only narrating at the end reads as having got lucky, not as having
+reasoned. The point is not a script to recite, since that collapses the moment the problem deviates,
+but a sense of what belongs in the air at each phase so that narrating becomes automatic under
+pressure.
+
+- **While clarifying:** name the assumption you are making and the one you are checking. "I'll assume
+  the array fits in memory and can contain duplicates. Should it return the first match or all of
+  them?"
+- **While choosing an approach:** name the pattern and why the constraint points to it. "This is a
+  sliding-window problem because we want the longest contiguous run under a limit. The brute force is
+  O(n squared); the window makes it O(n)."
+- **While coding:** say what invariant each piece maintains, not a line-by-line readout. "This
+  pointer tracks the start of the current window, and I shrink it whenever the count goes over."
+- **Before declaring finished:** trace one real example and one edge case out loud, then state the
+  complexity without being asked. "Empty input returns zero, a single element returns one. Time is
+  O(n), space is O(1) since I reuse the counts."
+
+## When you get stuck
+
+Time-boxing an attempt only helps if you have something to do inside the box other than stare. When
+an approach stalls for more than a few minutes, work this loop out loud rather than going quiet,
+because a visible recovery is itself signal.
+
+- Re-read the prompt for a constraint you dropped or an assumption you never checked.
+- Work a small example by hand and find the exact step where your mental model and the correct output
+  diverge.
+- Say which patterns the constraints suggest. Sorted input points to binary search or two pointers;
+  "all combinations" points to backtracking; "shortest path" points to BFS.
+- Solve the easier version first. Relax a constraint (assume no duplicates, a smaller input, one
+  query instead of many), get that working, then add the constraint back.
+- If none of that lands, state the specific thing you are blocked on. Naming it precisely often
+  surfaces the gap, and it lets the interviewer give a hint that costs you far less signal than
+  silence does.
+
+## Edge cases worth checking every time
+
+Do not wait to be asked "what about edge cases?" Walking these before you declare a solution
+finished is part of the signal, and the specific list depends on the structure you are working with.
+
+- **Always:** empty input, a single element, two elements (where off-by-one errors surface), and all
+  elements identical.
+- **Arrays and strings:** already sorted or reverse-sorted, negatives and zero, and the maximum size
+  the constraints allow.
+- **Linked lists:** null head, one node, two nodes for a reversal, and a cycle.
+- **Trees:** null root, a single node, and a fully skewed tree where height equals the node count.
+- **Graphs:** a disconnected component, a self-loop, and a cycle where the algorithm assumes a DAG.
+
+## Stating complexity so it survives a follow-up
+
+Stating complexity is expected; stating it wrong is worse than staying quiet, because the follow-up
+will find it. A few traps worth naming correctly:
+
+- **Amortized is not worst-case.** A dynamic array append is O(1) amortized but O(n) on the resize.
+  If the problem needs a guaranteed bound, say amortized explicitly.
+- **Recursion costs stack space.** A depth-first traversal is O(h) space for the call stack, which is
+  O(n) on a skewed tree, not O(1). If O(1) space is required, an explicit stack or iteration is the
+  honest answer.
+- **Sorting is not free.** "O(n) after sorting" is really O(n log n), dominated by the sort. State
+  the total.
+- **Hashing is average-case O(1).** Under adversarial keys or a bad hash it degrades. Say "O(1)
+  average" rather than claiming a worst-case guarantee you do not have.
+- **Union-Find is near-constant, not constant.** With path compression and union by rank it is
+  O(alpha(n)), effectively constant but not literally O(1); saying so is a fast senior signal.
 
 ## A clarifying-question checklist for ambiguous prompts
 

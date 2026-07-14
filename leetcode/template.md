@@ -1,44 +1,52 @@
-# Pattern Templates
+# Pattern Recall Checklist
 
-This file is not a reference sheet to memorize before an interview. It is a place to write down,
-in your own words and your own syntax, the skeleton of each pattern once you have solved enough
-problems in that category to recognize the shape yourself. The point of working through
-`leetcode/README.md` is to arrive at these skeletons through repetition and understanding. If you
-copy a template in here before you have actually derived it from practice, it will not hold up
-under interview pressure, since you will not be able to adapt it when the problem deviates from
-the exact shape you memorized.
+This is a self-test, not a worksheet. It is deliberately not a collection of code skeletons to write
+out and memorize: a copied template collapses the moment a problem deviates from the exact shape you
+memorized, and maintaining a bank of skeletons is busywork that does not survive interview pressure.
+Instead, this file is a list of pattern *names*. The point of working through the [coding tracker](./README.md) is
+that, after enough reps, you can picture the shape of each pattern from its name alone.
 
-A reasonable process: after solving three or four problems in a pattern, attempt to write the
-skeleton from memory, without looking at your previous solutions. Compare it against what you
-actually wrote, note where it differs, and only then update this file.
+## How to use it
 
-## Suggested skeletons to build
+Before a mock or a real interview, read down the list and, for each name, ask: **can I picture the
+shape (the core loop, the state I maintain, the termination condition) without looking anything
+up?** You do not need to write it out. If a name draws a blank, that is a specific, actionable signal:
+go solve another problem or two in that category, rather than re-reading anything and calling it
+handled. A confident mental picture for every name below means you are in good shape. The blanks are
+your study list.
 
-Fill these in as you reach them, rather than all at once.
+If you *want* a written note for a pattern whose edge cases keep tripping you (say, the exact
+boundary conditions in binary search), keep it in your own words, kept short, and only for the
+handful that actually need it: not as a completionist exercise across the whole list.
 
-- Two pointers (converging, from both ends)
+## The patterns
+
+- Two pointers, converging from both ends
 - Sliding window, fixed size
-- Sliding window, variable size
+- Sliding window, variable size (grow, then shrink to restore the invariant)
 - Fast and slow pointers (cycle detection)
-- Binary search, standard
-- Binary search on the answer
-- Backtracking (subsets, permutations, combinations, and the pruning step that distinguishes
-  them)
-- Depth-first search and breadth-first search on a graph
-- Depth-first search and breadth-first search on a grid, including boundary handling
-- Topological sort (both the Kahn's algorithm and depth-first orderings)
+- Binary search, standard (and the off-by-one boundary you always have to think about)
+- Binary search on the answer (when the check is monotonic in the answer)
+- Backtracking: subsets, permutations, combinations, and the pruning step that distinguishes them
+- DFS and BFS on a graph
+- DFS and BFS on a grid, including boundary handling
+- Topological sort (both Kahn's algorithm and the DFS ordering)
 - Union-Find, with path compression and union by rank
-- Monotonic stack
-- Monotonic deque
+- Monotonic stack (next greater / next smaller element)
+- Monotonic deque (sliding-window extremum)
 - Dynamic programming, top-down with memoization
-- Dynamic programming, bottom-up with tabulation, and how to convert from the top-down version
+- Dynamic programming, bottom-up with tabulation, and how to convert one to the other
+- State-machine DP (the buy/sell/cooldown family)
+- Interval DP (choosing the last operation over a range)
 - Prefix sum, and difference array for range updates
 - Trie insert and search
-- Dijkstra's algorithm
+- Dijkstra's shortest path (and when Bellman-Ford is needed instead)
+- Minimum spanning tree (Prim's or Kruskal's)
+- Heap / priority queue for top-K and merge-K
+- Two heaps (a max-heap and a min-heap balanced for the running median)
+- Sweep line (sort the interval endpoints into events, then sweep maintaining an active set)
 
-## A note on how to actually use this once built
+## The point, restated
 
-Before a real interview, review the list of skeleton names above, not the code. If you can
-picture the shape of each one from the name alone, you are in good shape. If a name draws a
-blank, that is a specific, actionable signal to go back and solve another problem or two in that
-category, rather than to re-read the skeleton and consider it handled.
+Reviewing this list is a fast diagnostic you can run in five minutes before a session. The blanks
+tell you where to spend a rep or two. The ones you can picture confidently, you leave alone.

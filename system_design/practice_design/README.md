@@ -1,19 +1,32 @@
 # Practice Designs
 
 A consolidated list of system design prompts to work through, pulling together what already
-existed scattered across `system_design/plan/months/` and adding the designs identified as
+existed scattered across the [reading plan](../plan/README.md) and adding the designs identified as
 commonly asked but previously missing or reading-only.
 
-Work each one end to end using the structure in `system_design/framework/README.md`, out loud,
-against a clock. Log the attempt in `schedule/tracker.md`, including which part of the framework
+Work each one end to end using the structure in the [framework](../framework/README.md), out loud,
+against a clock. Log the attempt in the [tracker](../../schedule/tracker.md), including which part of the framework
 was weakest, since that is a better use of the log than simply marking a design as done.
 
 ## How to pick which ones to prioritize
 
-If you are not targeting a specific company yet, prioritize breadth across the categories below
-rather than depth on any one. If you are targeting a specific team, weight toward the category
-that matches it, using the guidance in the "Adapting depth by company or team type" section of
-`system_design/framework/README.md`.
+The full list below is more than anyone needs to do end to end. Use these tiers rather than working
+top to bottom:
+
+- **Tier 1: do these (roughly ten).** The highest-frequency prompts that also each exercise a
+  distinct core skill: URL shortener, distributed cache, news feed, chat system, notification
+  system, rate limiter, distributed message queue, key-value store, video platform, and a payment
+  or wallet system. Clearing these end to end is the "minimum viable pass" for a Senior loop; it
+  maps to the same gate in the [reading plan](../plan/README.md).
+- **Tier 2: breadth.** The rest of the list, worked as time allows to widen the range of contexts
+  you can apply the framework in.
+- **Tier 3: targeted.** Weight toward the category matching a specific team you're interviewing
+  with, using the "Adapting depth by company or team type" section of
+  the [framework](../framework/README.md) (for example, the transactional and consistency-sensitive
+  systems for a fintech loop, or the coordination and infrastructure ones for a platform team).
+
+If you are not targeting a specific company yet, do all of Tier 1 for depth, then spread across the
+categories below for breadth rather than going deep on any single one.
 
 ## Storage and retrieval systems
 
@@ -34,18 +47,25 @@ that matches it, using the guidance in the "Adapting depth by company or team ty
 - Search autocomplete and typeahead
 - Web crawler
 - Proximity or nearby-friends service
+- Ride-hailing service, for example Uber or Lyft: driver-rider matching, real-time location, ETA,
+  and surge pricing, which is the full system the proximity service is only one piece of
+- Google Maps or a navigation service: routing, tiling, and traffic aggregation over a road graph
 
 ## Media and content platforms
 
 - Video platform, for example YouTube or Netflix
+- Photo-sharing service, for example Instagram: the follower graph, feed, and the many-small-files
+  storage and CDN pattern, which differs from the large-file video case
 - Content delivery and geo-replication for a global content platform
 
 ## Coordination and infrastructure
 
 - Distributed message queue, for example a Kafka-like system
-- Rate limiter, as a service rather than as a class (see `low_level_design/README.md` for the
+- Rate limiter, as a service rather than as a class (see the [low-level design guide](../../low_level_design/README.md) for the
   class-level version of the same problem)
 - Distributed lock service
+- Distributed job scheduler, with dependency DAGs, retries, and priority, for example a cron or
+  workflow service at scale
 - Metrics and observability platform
 
 ## Transactional and consistency-sensitive systems
@@ -59,9 +79,18 @@ that matches it, using the guidance in the "Adapting depth by company or team ty
 ## Social and graph-shaped systems
 
 - Twitter-style timeline, with a comparison of fan-out on write versus fan-out on read
+- Real-time leaderboard, for example for a game: sorted sets, windowed rankings, and how a global
+  ranking is partitioned
 - Recommendation system, combining a batch-trained model with real-time signal
 - File storage and sync, for example Dropbox or Google Drive, with a clear separation between
   metadata and blob storage
+
+## Machine-learning systems
+
+- An ML platform for a real feature, for example a ranking or fraud model: the feature store, offline
+  training versus online serving, model deployment and rollback, and the A/B and monitoring
+  infrastructure around it. Increasingly its own dedicated round at the senior level and above, and
+  a distinct skill from designing the recommendation system's data flow.
 
 ## Notes on using this list well
 
@@ -73,5 +102,5 @@ that matches it, using the guidance in the "Adapting depth by company or team ty
   trade-off in a new context is a good test of whether you actually understand it or only
   memorized the first version.
 - Revisit two or three of the earliest designs you attempted later in your preparation, once
-  you have covered more of `system_design/plan/`, and compare your answer to your first attempt.
+  you have covered more of the [reading plan](../plan/README.md), and compare your answer to your first attempt.
   The gap between the two is a useful, concrete measure of progress.

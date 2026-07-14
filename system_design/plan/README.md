@@ -1,8 +1,30 @@
-# 4-Month Senior System Design Plan (Dec → April)
+# System Design Reading Plan
+
+This is a staged reading plan, not a calendar. The four parts below are a sensible ordering of the
+material, not a four-month deadline: roughly three to four months of focused, interleaved effort is
+a reasonable target for most people, but let a part run longer if it needs to and don't treat any
+date as a gate. Progress through the parts using the exit conditions in the [schedule](../../schedule/README.md), not a
+calendar.
+
+Each part pairs **required** interview-relevant reading with a **deep reasoning companion**
+(the matching part of the [deep reasoning companion](./companion.md)) of integration questions and worked answers:
+that companion is the highest-value part of this track, so treat the Q&A as active practice rather
+than skimming it.
+The **supplement** material (extra textbooks, lecture series, and the long white-paper tail) is
+**optional depth**: valuable if you lack production distributed-systems experience or are targeting
+an infrastructure, database, or platform team, but not something to grind through by default.
+
+**Minimum viable pass.** If you are short on time, the following is enough to be ready for a Senior
+loop at most product companies: DDIA's interview-relevant chapters, the eight core white papers in
+the [white paper core set](../white_paper/README.md#core-set-required), the
+[building blocks](../building_blocks/README.md) component library, and roughly a dozen practice
+designs done out loud against the clock. Everything beyond that (the extra textbooks, the
+lecture series, the optional white papers) is depth for Staff-level range or infrastructure-leaning
+teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 
 ---
 
-## Month 1 — December/January: Core Foundations + DDIA
+## Part 1: Core Foundations + DDIA
 
 **Goal:** Build strong mental models of distributed system fundamentals. Focus on architecture patterns, storage, replication, and trade-offs.
 
@@ -22,7 +44,7 @@
   - Sections: Performance vs Scalability, Latency vs Throughput, CAP Theorem, Availability Patterns, DNS, CDN, Load Balancing
   - Use as conceptual reference for foundational trade-offs
 
-**Supplement / Lectures**
+**Supplement / Lectures** (optional depth, pull as needed, not required)
 - MIT 6.824 Lectures 1-3: Introductions, RPC and Threads, GFS
 - CMU 15-445 Lectures 1-5: Relational Model, Storage I & II, Compression
 - [Harvest, Yield, and Scalable Tolerant Systems](https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf)
@@ -40,7 +62,7 @@
 - [CAP Twelve Years Later: How the "Rules" Have Changed ](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/)
 - [Why Distributed Computing?](https://www.artima.com/weblogs/viewpost.jsp?thread=4247)
 - [Notes on Distributed Systems for Young Bloods](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
-- [Time, Clocks, and the Ordering of Events in a Distributed System](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
+- [Time, Clocks, and the Ordering of Events in a Distributed System](https://lamport.azurewebsites.net/pubs/time-clocks.pdf)
 
 ### Knowledge Integration Questions
 1. When would I prefer consistency over availability in a design?
@@ -61,14 +83,11 @@
 
 ---
 
-## Month 2 — January/February: Deep Internals + Database Systems
+## Part 2: Deep Internals + Database Systems
 
 **Goal:** Move from architecture reasoning to internal design: storage, consensus, replication, and consistency models.
 
 **Primary Reading**
-- **Database Internals**
-  - Part I (Ch. 1-5): Storage Engines
-  - Part II (Ch. 6-9): Distributed Systems
 - **Understanding Distributed Systems**
   - Ch. 6-10: Replication, Partitioning, Consensus, Consistency
 - **System Design Interview (Vol. 1)**
@@ -76,13 +95,17 @@
 - **System Design Interview (Vol. 2)**
   - Ch. 1-3: Proximity Service, Nearby Friends, Google Maps
   - Ch. 9: S3-like Object Storage
-- **Database System Concepts**
-  - Ch. 12-16: Storage, Indexing, Concurrency Control
 - **System Design Primer**
   - Sections: SQL vs NoSQL, RDBMS, Sharding, Replication, Caching (cache-aside, write-through, write-behind)
-  - Use for practical scaling and storage trade-off summaries
+  - Use as a reference for practical scaling and storage trade-off summaries, not a linear read
 
-**Supplement / Lectures**
+**Supplement / Lectures** (optional depth, for infrastructure- or database-leaning loops)
+- **Database Internals**: Part I (Ch. 1-5, Storage Engines); Part II (Ch. 6-9, Distributed Systems).
+  Deep storage-engine internals; DDIA covers enough for a generalist loop, so read this only for
+  database-heavy targets.
+- **Database System Concepts** (Ch. 12-16: Storage, Indexing, Concurrency Control): a university
+  textbook that largely overlaps DDIA and Database Internals; skip unless you want the academic
+  treatment.
 - CMU 15-445 Lectures 3-10: Storage, Compression, Memory Management, Indexes & Filters
 - MIT 6.824 Lectures 4-6: Primary-Backup, Fault Tolerance, Raft
 - [Consistency, Availability, and Convergence](https://www.cs.cornell.edu/lorenzo/papers/cac-tr.pdf)
@@ -131,7 +154,7 @@
 
 ---
 
-## Month 3 — March: Distributed Computation + Reliability
+## Part 3: Distributed Computation + Reliability
 
 **Goal:** Understand computation frameworks, fault tolerance, and how systems maintain reliability at scale.
 
@@ -149,7 +172,7 @@
 - **System Design Primer**
   - Sections: Asynchronism, Message Queues, Microservices, Service Discovery, Reverse Proxy
 
-**Supplement / Lectures**
+**Supplement / Lectures** (optional depth, pull as needed, not required)
 - MIT 6.824 Lectures 7-10: MapReduce, Fault-Tolerant Services, Transactions, Dremel
 - CMU 15-445 Lectures 11-16: Sorting, Joins, Execution, Concurrency
 - [Megastore](https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper32.pdf)
@@ -194,15 +217,13 @@
 
 ---
 
-## Month 4 — April: Advanced Systems + Senior Hiring Readiness
+## Part 4: Advanced Systems + Hiring Readiness
 
 **Goal:** Integrate theoretical knowledge and develop reasoning clarity under interview conditions.
 
 **Primary Reading**
 - **Designing Data-Intensive Applications (DDIA)**
   - Ch. 10-12: Dataflow, Real-Time Systems
-- **Database Internals**
-  - Ch. 10-12: Distributed Transactions, Coordination, Recovery
 - **Understanding Distributed Systems**
   - Ch. 14-15: Complex Systems, Performance Tuning
 - **System Design Interview (Vol. 1)**
@@ -212,7 +233,9 @@
 - **Site Reliability Engineering (SRE)**
   - Ch. 6-10: Production Practices, Scalability, and Architecture Reliability
 
-**Supplement / Case Studies**
+**Supplement / Case Studies** (optional depth, pull as needed, not required)
+- **Database Internals** Ch. 10-12: Distributed Transactions, Coordination, Recovery, for
+  database- or infrastructure-leaning targets.
 - MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores
 - CMU 15-445 Lectures 20-24: Logging, Recovery, Distributed Databases
 - Meta TAO, Uber Michelangelo, Netflix TechBlog
@@ -274,14 +297,16 @@
 
 ## Integration Projects (Optional)
 
-Each month, select one synthesis project to consolidate reading and reasoning.
+These are optional synthesis projects: deeper learning exercises, not interview prep, so prioritize
+practice designs first and reach for one of these only if you want to consolidate a part's reading
+before moving on. Pair each with the part whose material it exercises.
 
-| Month | Project | Focus |
+| Alongside | Project | Focus |
 |-------|----------|-------|
-| **November** | Distributed Cache | Consistency, replication, read/write trade-offs |
-| **December** | Distributed Message Queue | Log segmentation, offset management, backpressure |
-| **January** | Real-Time Analytics Pipeline | Stream vs batch unification, latency management |
-| **February** | Global Content Platform | Geo-replication, failure isolation, scalability |
+| **Part 1** | Distributed Cache | Consistency, replication, read/write trade-offs |
+| **Part 2** | Distributed Message Queue | Log segmentation, offset management, backpressure |
+| **Part 3** | Real-Time Analytics Pipeline | Stream vs batch unification, latency management |
+| **Part 4** | Global Content Platform | Geo-replication, failure isolation, scalability |
 
 Each project should include one page outlining assumptions, design, trade-offs, and one major bottleneck analysis.
 
@@ -303,13 +328,15 @@ Record how each failure propagates and how the system design can mitigate or rec
 
 ## Final Phase: Interview Refinement
 
-The final phase should train clarity, composure, and structured articulation.
+The final phase should train clarity, composure, and structured articulation. This corresponds to
+Phases 3 and 4 of the [schedule](../../schedule/README.md) and the cadence in [mocks](../../mocks/README.md); the progression below
+is the system-design-specific view of that same sprint, not a separate schedule.
 
-### Structure
-- **Week 1:** 60-min design mocks &rarr; focus on structure and completenes
-- **Week 2:** Add peer “pushback” &rarr; justify trade-offs and assumptions
-- **Week 3:** Timed rounds &rarr; 30-min designs emphasizing concise reasoning
-- **Week 4:** Simulated panel with back-to-back design + follow-up questions
+### Progression
+- **First:** 60-min design mocks, focused on structure and completeness.
+- **Then:** add peer pushback and justify trade-offs and assumptions.
+- **Then:** timed 30-min rounds emphasizing concise reasoning.
+- **Finally:** a simulated panel with back-to-back design plus follow-up questions.
 
 ### Refinement Goals
 - Speak through reasoning transitions clearly (“Because we need consistency, we’ll...”)

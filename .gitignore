@@ -43,3 +43,10 @@ __pycache__/
 
 # MC Files
 *.mc
+
+# Private prep material: real behavioural stories, per-system deep-dive briefs, and any
+# notes containing sensitive employer or compensation detail. Kept out of version history
+# on purpose (see behavioural/README.md and experience_deep_dive/README.md).
+stories.md
+**/stories.md
+private/
