@@ -150,6 +150,10 @@ Which questions this answers: ("Tell me about a conflict...", "Tell me about a f
 Keep the filled-in versions in a private `stories.md` alongside this file, ideally excluded from
 version history if it contains anything sensitive; the table above serves as the index.
 
+For rows 11 to 20, [strong_vs_lean.md](./strong_vs_lean.md) spells out what a strong-hire answer
+demonstrates versus what the lean-hire version sounds like, plus the follow-up probe that separates
+them. Use it to pressure-test each drafted story before you rehearse it.
+
 ## Standard narrative pieces to pre-build
 
 - **"Tell me about yourself,"** answered in 60 to 90 seconds, structured around where you are

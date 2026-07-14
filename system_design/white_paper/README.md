@@ -125,8 +125,8 @@ low-level design, and behavioural prep from the start.
 
 - [ ] [Erasure Coding](https://www.usenix.org/system/files/conference/atc12/atc12-final181_0.pdf)
 - [ ] [Facebook's Photo Storage](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf)
-- [ ] [GFS: Evolution on Fast-forward](https://queue.acm.org/detail.cfm?id=1594206)
-- [ ] [RCFile](https://scispace.com/pdf/rcfile-a-fast-and-space-efficient-data-placement-structure-2kq37wcjl0.pdf)
+- [ ] [GFS: Evolution on Fast-forward](https://web.archive.org/web/2018/https://queue.acm.org/detail.cfm?id=1594206)
+- [ ] [RCFile](https://web.archive.org/web/2018/http://www.cse.ohio-state.edu/hpcs/WWW/HTML/publications/papers/TR-11-4.pdf)
 - [ ] [XORing Elephants](https://arxiv.org/pdf/1301.3791)
 
 **Streaming**

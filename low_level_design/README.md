@@ -104,7 +104,8 @@ Work through the following using the framework above, ideally writing real skele
 interview language rather than only talking through it. The [examples](./examples/README.md) folder
 has a few worked skeletons to study for shape (how the classes and interfaces fit together), not to
 memorize; the value is in seeing an extensible structure, then closing the file and rebuilding it
-yourself against a new requirement.
+yourself against a new requirement. The [walkthroughs](./walkthroughs.md) take five of these problems
+through the pattern to reach for and the hardest extend-live follow-up each one gets.
 
 - Parking lot
 - Elevator system
