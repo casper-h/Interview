@@ -1,6 +1,6 @@
 # System Design Building Blocks
 
-The [framework](../framework/README.md) tells you the *steps* of a design interview.
+The [framework](./framework.md) tells you the *steps* of a design interview.
 This file is the *components* you reach for while walking those steps: the reusable toolkit that
 turns "I'd add a cache here" into a crisp statement of which caching strategy, why, and what it costs
 you. During the deep-dive step, the difference between a hire and a strong hire is often exactly
@@ -44,8 +44,9 @@ the main alternative and the trade-off between them, and how does it fail?**
   or durability.
 - **Layers.** Client / browser -> CDN -> edge cache -> application-level (in-process or shared, e.g.
   Redis/Memcached) -> database buffer cache. Say which layer you mean.
-- **Invalidation.** TTL, event-driven / pub-sub invalidation, and versioned keys. "There are only
-  two hard things...": be explicit about how stale data is allowed to get and why that is acceptable.
+- **Invalidation.** TTL, event-driven / pub-sub invalidation, and versioned keys. Invalidation is
+  the hard part of caching, so be explicit about how stale the data is allowed to get and why that
+  staleness is acceptable for this data.
 - **Failure modes to name unprompted.** Cache stampede / thundering herd on a cold or expired hot
   key (mitigate with request coalescing, staggered TTLs, or a lock-and-refresh); and the caching of
   negative results to absorb lookups for keys that don't exist.
@@ -100,6 +101,30 @@ the main alternative and the trade-off between them, and how does it fail?**
   still act on stale authority. Redis Redlock is the contested single-store option; a lease on
   ZooKeeper or etcd is the safer answer when correctness matters. The strong-hire point is that a
   lock without fencing is not safe under process pauses.
+- **The FLP result, stated plainly.** In an asynchronous system where a single process may fail,
+  no deterministic protocol can guarantee that consensus always terminates. Real systems live with
+  this by relaxing the "always" rather than the safety: Raft and Paxos never return a wrong result,
+  but they can stall (repeated elections) while messages are delayed, and they make progress once
+  the network is well-behaved for long enough. Cite FLP to explain why consensus protocols depend on
+  timeouts and cannot promise both safety and liveness under fully asynchronous conditions; do not
+  cite it as a reason consensus is impossible in practice.
+
+### Time, clocks, and their limits
+
+- **Physical clocks drift and are not monotonic.** Wall-clock time across machines disagrees by
+  milliseconds even under NTP, and it can jump backward on correction, so a timestamp comparison is
+  not a safe way to order events on different hosts. This is the reason "just use the timestamp" is
+  the wrong answer to most ordering questions.
+- **Logical clocks order events without physical time.** A Lamport clock gives a total order
+  consistent with causality but cannot tell whether two events are concurrent; a vector clock can
+  distinguish concurrent from causally-ordered events at the cost of storing one counter per node.
+  Reach for these when the requirement is "establish an ordering," not "know the real time."
+- **Bounded clock uncertainty as a design tool.** Spanner's TrueTime exposes the clock's error bound
+  as an interval rather than a point, and a transaction waits out that interval before committing so
+  that commit timestamps respect real-time order across regions. The cost is a deliberate wait tied
+  to the uncertainty bound, which is why globally strong consistency at that scale needs specialized
+  time infrastructure. Name this trade-off when a design asks for external consistency across
+  regions (see geo-distribution, block 13).
 
 ## 7. Rate limiting
 
@@ -147,7 +172,39 @@ the main alternative and the trade-off between them, and how does it fail?**
 - **Eventual:** replicas converge; fine for feeds, counts, and caches.
 - **The frameworks to cite.** CAP (during a partition, choose consistency or availability) and its
   refinement **PACELC** (Else, even with no partition, choose Latency or Consistency). Map real
-  systems: Spanner ≈ PC/EC, Dynamo ≈ PA/EL.
+  systems: Spanner is roughly PC/EC, Dynamo is roughly PA/EL.
+- **Replication consistency versus transaction isolation.** The models above describe what a single
+  replicated object guarantees across replicas. Isolation levels (below) describe what concurrent
+  multi-object transactions guarantee against each other. They are separate axes: a store can be
+  linearizable per key and still expose weak isolation across a transaction that touches many keys.
+  Keeping the two apart is a common point where a strong answer separates from a hand-waved one.
+
+### Transaction isolation levels
+
+Order from weakest to strongest by the anomaly each one prevents. Naming the specific anomaly, not
+just the level, is the signal an interviewer is looking for.
+
+- **Read uncommitted:** no protection; a transaction can read another's uncommitted writes (a **dirty
+  read**). Rarely a deliberate choice.
+- **Read committed:** reads see only committed data, which removes dirty reads. It still allows a
+  **non-repeatable read**: reading the same row twice in one transaction can return two values because
+  another transaction committed in between.
+- **Repeatable read and snapshot isolation:** repeated reads of the same row are stable, so
+  non-repeatable reads are gone. Snapshot isolation is the common implementation, where the
+  transaction reads from a consistent snapshot taken at its start. The two are often named together,
+  but they differ on phantoms: textbook repeatable read still allows a **phantom** (a range query
+  returning a different set of rows when repeated), while snapshot isolation does not for its own
+  reads. Snapshot isolation still permits **write skew**, where two transactions read an overlapping
+  set, make disjoint writes that each preserve an invariant alone, and together violate it (the
+  canonical example is two on-call doctors each checking that at least one other is on duty and both
+  going off call).
+- **Serializable:** the outcome is equivalent to some serial order of the transactions, which
+  eliminates write skew and phantoms. It is the strongest and the most expensive, implemented through
+  two-phase locking, serializable snapshot isolation (SSI), or actual serial execution.
+- **Phantom reads** sit alongside these: a query over a range returns a different set of rows when
+  repeated because another transaction inserted or deleted a matching row. Snapshot isolation handles
+  the read-side phantom for its own snapshot; preventing a write that depends on the absence of such
+  rows requires serializable isolation.
 
 ## 11. Data modeling and storage selection
 

@@ -3,7 +3,7 @@
 Solo study does not train two things that are explicitly graded in a real interview: verbalizing
 your thought process under time pressure, and reading and responding to an interviewer's live
 signal. Mock interviews are the only practice format that trains both, which is why they are
-weighted heavily in the [schedule](../schedule/README.md) from Phase 2 onward.
+weighted heavily in the [schedule](./README.md) from Phase 2 onward.
 
 ## Where to run them
 
@@ -16,7 +16,7 @@ weighted heavily in the [schedule](../schedule/README.md) from Phase 2 onward.
 
 ## Cadence
 
-Follow the cadence in the [schedule](../schedule/README.md): roughly one per week starting partway through Phase
+Follow the cadence in the [schedule](./README.md): roughly one per week starting partway through Phase
 2, increasing to two per week in Phase 3, and full back-to-back loops in Phase 4. Rotate format
 each time (coding, high-level system design, low-level design, behavioural) rather than
 repeating the same one.
@@ -29,7 +29,7 @@ repeating the same one.
   record yourself and review the recording, since it will surface filler words, pacing issues,
   and moments where you went quiet while thinking.
 - For system design and low-level design mocks, use the frameworks in
-  the [system design framework](../system_design/framework/README.md) and the [low-level design guide](../low_level_design/README.md) explicitly, and note
+  the [system design framework](../system_design/framework.md) and the [low-level design guide](../system_design/low_level_design/README.md) explicitly, and note
   afterward whether you actually followed the structure or drifted from it under pressure.
 
 ## Grading rubric
@@ -48,13 +48,13 @@ each mock producing a differently shaped piece of feedback.
 - **Time management.** Did you pace yourself appropriately across the interview, or run out of
   time on one section at the expense of another?
 
-Rate each dimension, note the single biggest gap, and log it in the [tracker](../schedule/tracker.md) under the
+Rate each dimension, note the single biggest gap, and log it in the [tracker](./tracker.md) under the
 mock interviews section, along with a specific follow-up action rather than a general intention
 to "practice more."
 
 ## What "strong hire" actually means on this rubric
 
-The [schedule](../schedule/README.md) gates the final phase on being "consistently rated strong
+The [schedule](./README.md) gates the final phase on being "consistently rated strong
 hire," which is only useful if you know where that line sits. Rate each dimension against the bar
 below, not against your own sense of whether it "went fine." A useful heuristic: a hire clears the
 bar, a strong hire clears it without help and volunteers the next level of depth unprompted. Grade

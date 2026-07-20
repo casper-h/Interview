@@ -1,26 +1,34 @@
 # Worked design walkthroughs
 
-Four designs worked end to end against the [framework](../framework/README.md), chosen because each
-anchors a different core skill: read-heavy caching and key generation (URL shortener), in-memory
-structures and cluster sharding (distributed cache), the fanout trade-off (news feed), and
-correctness under failure (payment). Read one, then close the file and rebuild it out loud against a
+Four designs worked end to end against the [framework](../framework.md), chosen because each
+anchors a different core skill: read-heavy caching, key generation, and a metadata-versus-blob
+storage split (Pastebin), in-memory structures and cluster sharding (distributed cache), the fanout
+trade-off (news feed), and correctness under failure (payment). Read one, then close the file and rebuild it out loud against a
 clock. These are reasoning references, not canned answers to memorize; the value is in seeing where
 the trade-off lives and being able to reconstruct it when the interviewer perturbs the prompt.
 
 Each walkthrough cites the matching [system-design-primer](https://github.com/donnemartin/system-design-primer#index-of-system-design-topics)
-solution as further reading, and reaches into the [building blocks](../building_blocks/README.md) by
+solution as further reading, and reaches into the [building blocks](../building_blocks.md) by
 name where a component is used.
 
-## URL shortener
+## Pastebin
 
-This design exercises read-heavy caching, key generation at scale, and tiered storage decisions.
-Begin with requirements. The system must support 10M users generating 10M shortlinks per month and
-following 100M links per month, which gives a 10-to-1 read-to-write ratio. State the non-functional
+This design exercises read-heavy caching, key generation at scale, and a metadata-versus-blob storage
+split. It is the Pastebin variant of the shortlink family: unlike a bare URL shortener, whose record
+is a short key mapping to a target URL of about a hundred bytes, a paste stores real user content, so
+the sizing and the storage split are the point. A pure URL shortener would carry a much smaller
+per-record size and would not need a separate object store, which is exactly the distinction worth
+naming out loud if the interviewer frames the prompt as one rather than the other.
+
+Begin with requirements. The system must support 10M users creating 10M pastes per month and reading
+100M pastes per month, which gives a 10-to-1 read-to-write ratio. State the non-functional
 constraints: reads must be low latency (cache-first), writes can be slower, and shortlinks must not
 collide. The back-of-envelope numbers show 4 writes per second average and 40 reads per second
-average. Each record costs roughly 1.27 KB (content plus metadata), so 12.7 GB of new content
-arrives monthly and 360M shortlinks accumulate over 3 years. That sizing drives the key-generation
-choice.
+average. Assume an average paste of roughly 1.27 KB (content plus metadata), so 12.7 GB of new
+content arrives monthly and 360M pastes accumulate over 3 years. Treat that per-paste size as an
+example value, not a fixed figure; it is the input the storage split depends on, so state your
+assumption explicitly. That sizing drives both the key-generation choice and the decision to store
+content outside the mapping table.
 
 Design the API as two REST endpoints. POST `/api/v1/paste` accepts paste content and optional
 expiration, returns a 7-character shortlink. GET `/api/v1/paste?shortlink=<key>` returns the paste

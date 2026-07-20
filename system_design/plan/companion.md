@@ -50,7 +50,7 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 
 </details>
 
-**Reflection → Add your own notes here.**
+**Reflection to Add your own notes here.**
 
 ---
 
@@ -73,12 +73,17 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 
 3. **Replication lag:** occurs when async followers trail the leader, leading to stale reads or read-after-write anomalies. Monitoring replica lag and using read-your-writes consistency per session mitigate it.
 
-4. **Eventual consistency unacceptable:** in financial, security, or metadata systems where invariants (e.g., “only one active session”) must hold immediately. Acceptable in social feeds or counters.
+4. **Eventual consistency unacceptable:** in financial, security, or metadata systems where invariants (e.g., "only one active session") must hold immediately. Acceptable in social feeds or counters.
 
-5. **Consistency spectrum:**  
-   - *Strong:* all reads reflect latest write (Spanner, linearizable).  
-   - *Causal:* respects cause-before-effect ordering, lighter coordination (Cassandra + client-side tracking).  
-   - *Eventual:* only guarantees convergence, cheapest coordination.
+5. **Consistency spectrum:**
+   - *Strong:* all reads reflect the latest write (Spanner, linearizable).
+   - *Causal:* respects cause-before-effect ordering with lighter coordination than strong
+     consistency. It is delivered by session guarantees or explicit dependency tracking, as in
+     COPS-style causal stores. Note that Cassandra does not provide causal consistency: it offers
+     tunable eventual consistency through quorum settings, and reaching read-your-writes requires
+     quorum reads and writes rather than causal tracking.
+   - *Eventual:* guarantees only that replicas converge, the cheapest coordination (Cassandra and
+     Dynamo at their default quorum settings).
 
 </details>
 
@@ -107,7 +112,7 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 
 4. Range partitioning preserves ordering, great for range scans but prone to skew. Hash partitioning balances load but breaks order. Composite (hash + range) blends both.
 
-5. Cross-region replication uses async pipelines with eventual consistency or geo-distributed consensus (Spanner’s TrueTime). Latency is mitigated through locality-aware reads and multi-tier caches (CDNs, edge stores).
+5. Cross-region replication uses async pipelines with eventual consistency or geo-distributed consensus (Spanner's TrueTime). Latency is mitigated through locality-aware reads and multi-tier caches (CDNs, edge stores).
 
 </details>
 
@@ -120,7 +125,7 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 1. Interpret the **CAP theorem** in modern systems: is it binary or continuous?  
 2. Provide real examples of **CP** and **AP** systems and their implications.  
 3. How do systems actually recover after **network partitions**?  
-4. What does **PACELC** add to CAP’s reasoning?  
+4. What does **PACELC** add to CAP's reasoning?  
 5. Why is partition tolerance non-negotiable in real networks?
 
 <details>
@@ -145,19 +150,19 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 #### Core Questions
 
 1. Summarize the key **architectural insight of GFS** and how it shaped Bigtable.  
-2. Why does **“The Tail at Scale”** matter for user-facing systems?  
+2. Why does **"The Tail at Scale"** matter for user-facing systems?  
 3. Explain **data on the outside vs inside** and its impact on microservice design.  
-4. What did **Brewer’s Harvest & Yield** paper propose beyond CAP?  
+4. What did **Brewer's Harvest & Yield** paper propose beyond CAP?  
 5. How does **network unreliability** manifest at scale, and how do large systems hide it?
 
 <details>
 <summary>Answers</summary>
 
-1. **GFS:** simplified distributed file system with large immutable files, master metadata, and chunkserver replication. Inspired Bigtable’s tablet abstraction (GFS to Bigtable to Spanner lineage).
+1. **GFS:** simplified distributed file system with large immutable files, master metadata, and chunkserver replication. Inspired Bigtable's tablet abstraction (GFS to Bigtable to Spanner lineage).
 
 2. **Tail at Scale:** small latency outliers across thousands of RPCs compound to large tail latencies. Mitigation: hedged requests, load balancing, replication, and latency-aware scheduling.
 
-3. **Data on the Outside vs Inside:** argues for explicit contracts between services (APIs, schemas) and separation of persistent data boundaries. Encourages “bounded contexts” and prevents accidental coupling.
+3. **Data on the Outside vs Inside:** argues for explicit contracts between services (APIs, schemas) and separation of persistent data boundaries. Encourages "bounded contexts" and prevents accidental coupling.
 
 4. **Harvest & Yield:** formalized the idea that partial results (yield) are better than full outage (harvest loss). Motivated graceful degradation and partial availability patterns.
 
@@ -352,14 +357,14 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
    - Spanner: strict correctness required (banking, critical metadata), willing to pay latency and cost for global consistency.
 
 5. **Trade-offs:**  
-   - External consistency (Spanner) → higher latency, clock infrastructure cost, and operational complexity.  
-   - Eventual consistency → lower latency, simpler infrastructure, but client must handle anomalies.
+   - External consistency (Spanner) to higher latency, clock infrastructure cost, and operational complexity.  
+   - Eventual consistency to lower latency, simpler infrastructure, but client must handle anomalies.
 
 </details>
 
 ---
 
-### Section 4: Logs & Messaging (Kafka, Dropbox, Slack, LinkedIn “Log” paper)
+### Section 4: Logs & Messaging (Kafka, Dropbox, Slack, LinkedIn "Log" paper)
 
 #### Core Questions
 
@@ -575,7 +580,7 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
    - Batch: high throughput, deterministic, slow to react.  
    - Incremental/stream: low-latency updates, can tolerate partial failures but requires careful state management.
 
-4. **Balancing LCT (Latency, Consistency, Throughput):**  
+4. **Balancing latency, consistency, and throughput:**
    - Trade-offs depend on SLA targets and workload type; partial replication or async updates improve throughput but affect freshness.
 
 5. **Design principles:**  
@@ -633,8 +638,14 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 <details>
 <summary>Answers</summary>
 
-1. Use Lambda architecture: batch layer for complete view, speed layer for incremental updates, serving layer to merge results.  
-2. Synchronize using timestamps, materialized views, or event ordering; replay streams to reconcile discrepancies.  
+1. The Lambda architecture pairs a batch layer for a complete, corrected view with a speed layer for
+   incremental updates, then a serving layer merges the two. Its cost is maintaining the same logic
+   twice, once for batch and once for streaming, which is a common source of drift. The Kappa
+   architecture is the modern alternative: run a single stream-processing path and reprocess history
+   by replaying the log when the logic changes. Reach for Kappa when a single codebase and a
+   replayable log make the batch layer redundant, and for Lambda when the batch layer does genuinely
+   different work (heavier corrections or joins) than the streaming path.
+2. Synchronize using timestamps, materialized views, or event ordering; replay streams to reconcile discrepancies.
 3. Bottlenecks: network shuffle, skewed partitions, disk I/O, serialization. Mitigate with partitioning, parallelism, compression, and caching.
 
 </details>
@@ -823,7 +834,7 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 
 1. Compare **replication** vs **erasure coding** for durability, storage efficiency, and recovery latency.  
 2. How do columnar storage formats (e.g., RCFile) optimize analytic workloads?  
-3. How does Facebook’s **XORing Elephants** implement erasure coding in production?  
+3. How does Facebook's **XORing Elephants** implement erasure coding in production?  
 4. What operational challenges arise when applying erasure coding at scale?  
 5. How do you handle **hot partitions** and skew in large object storage?
 

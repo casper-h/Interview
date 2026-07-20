@@ -1,17 +1,19 @@
 # Worked design walkthroughs
 
-The [examples](./examples/README.md) skeletons show the pattern anchors: where a strategy plugs in,
-how composition wins over inheritance, where a new requirement lands as a class rather than a rewrite.
-Study the shape of one, then close the file and rebuild it against a requirement the skeleton does not
-handle. These five walkthroughs apply that discipline to the hardest follow-up each problem typically
-gets, the extend-live moment that separates a lean design from a strong one. Each names its core
-objects, the pattern to reach for, and how a well-factored design absorbs the follow-up.
+These five walkthroughs demonstrate the pattern anchors: where a strategy plugs in, how composition
+wins over inheritance, where a new requirement lands as a class rather than a rewrite. Each applies
+that discipline to the hardest follow-up the problem typically gets, the extend-live moment that
+separates a lean design from a strong one, and names its core objects, the pattern to reach for, and
+how a well-factored design absorbs the follow-up. For additional worked code examples, see the
+[system-design-primer's object-oriented design solutions](https://github.com/donnemartin/system-design-primer#object-oriented-design-interview-questions-with-solutions),
+which cover parking lot, LRU cache, call center, deck of cards, hash map, and online chat.
 
 ### Parking lot
 
-Core objects: `Vehicle`, `ParkingSpot`, `Level`, `ParkingLot`, and `PricingStrategy`. The trap is
-building a vehicle hierarchy (`Motorcycle`, `Car`, `Van`) and then trying to extend it when the
-interviewer asks for EV charging spots. Reach for
+Core objects: `Vehicle`, `ParkingSpot`, `Level`, `ParkingLot`, and `PricingStrategy`. For a worked
+code example see the [parking lot solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/object_oriented_design/parking_lot/parking_lot.ipynb)
+in the system-design-primer. The trap is building a vehicle hierarchy (`Motorcycle`, `Car`, `Van`)
+and then trying to extend it when the interviewer asks for EV charging spots. Reach for
 [Strategy](https://refactoring.guru/design-patterns/strategy) and composition instead: give
 `ParkingSpot` a `spotType` field (`COMPACT`, `LARGE`, `EV_CHARGING`) and inject a `PricingStrategy`
 interface (`calculate(vehicle, duration) -> cost`) so a new pricing rule is a new class, not an edit

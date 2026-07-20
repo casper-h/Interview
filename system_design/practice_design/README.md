@@ -4,7 +4,7 @@ A consolidated list of system design prompts to work through, pulling together w
 existed scattered across the [reading plan](../plan/README.md) and adding the designs identified as
 commonly asked but previously missing or reading-only.
 
-Work each one end to end using the structure in the [framework](../framework/README.md), out loud,
+Work each one end to end using the structure in the [framework](../framework.md), out loud,
 against a clock. Log the attempt in the [tracker](../../schedule/tracker.md), including which part of the framework
 was weakest, since that is a better use of the log than simply marking a design as done.
 
@@ -22,7 +22,7 @@ top to bottom:
   you can apply the framework in.
 - **Tier 3: targeted.** Weight toward the category matching a specific team you're interviewing
   with, using the "Adapting depth by company or team type" section of
-  the [framework](../framework/README.md) (for example, the transactional and consistency-sensitive
+  the [framework](../framework.md) (for example, the transactional and consistency-sensitive
   systems for a fintech loop, or the coordination and infrastructure ones for a platform team).
 
 If you are not targeting a specific company yet, do all of Tier 1 for depth, then spread across the
@@ -61,7 +61,7 @@ categories below for breadth rather than going deep on any single one.
 ## Coordination and infrastructure
 
 - Distributed message queue, for example a Kafka-like system
-- Rate limiter, as a service rather than as a class (see the [low-level design guide](../../low_level_design/README.md) for the
+- Rate limiter, as a service rather than as a class (see the [low-level design guide](../low_level_design/README.md) for the
   class-level version of the same problem)
 - Distributed lock service
 - Distributed job scheduler, with dependency DAGs, retries, and priority, for example a cron or
@@ -107,22 +107,22 @@ categories below for breadth rather than going deep on any single one.
 
 ## Worked walkthroughs
 
-Four of the Tier-1 prompts are worked end to end in [walkthroughs.md](./walkthroughs.md): the URL
-shortener, the distributed cache, the news feed, and the payment system. Each follows the framework
-step by step and ends on the trade-off a strong hire states unprompted. Read one, then rebuild it from
-a blank page against a clock rather than rereading it.
+Four of the Tier-1 prompts are worked end to end in [walkthroughs.md](./walkthroughs.md): Pastebin
+(the content-storing member of the shortlink family), the distributed cache, the news feed, and the
+payment system. Each follows the framework step by step and ends on the trade-off a strong hire states
+unprompted. Read one, then rebuild it from a blank page against a clock rather than rereading it.
 
 ## Reference solutions and resources
 
 Every prompt below maps either to a worked solution in the
 [system-design-primer](https://github.com/donnemartin/system-design-primer#index-of-system-design-topics)
 or, where no primer solution exists, to the closest analog plus the one white paper from the
-[reading list](../white_paper/README.md) that grounds the hardest part. Jump to the example first,
+[reading list](../white_paper.md) that grounds the hardest part. Jump to the example first,
 then work the prompt yourself; the primer solutions are for calibration, not for copying.
 
 ### Storage and retrieval systems
 
-- **URL shortener.** [Pastebin solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/pastebin), and the worked [walkthrough](./walkthroughs.md).
+- **URL shortener or Pastebin.** [Pastebin solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/pastebin), and the worked [walkthrough](./walkthroughs.md). The two differ in per-record size and whether content needs a separate object store; the walkthrough works the Pastebin variant and notes the distinction.
 - **Distributed key-value store.** No primer solution; ground it in the Dynamo paper (consistent hashing, vector clocks, quorum reads and writes for an available store).
 - **Distributed cache.** [Query cache solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/query_cache), and the worked [walkthrough](./walkthroughs.md).
 - **Distributed unique ID generator.** No primer solution; the standard analog is Snowflake (timestamp plus worker ID plus sequence), with Spanner as the reference for globally ordered IDs at scale.
@@ -151,7 +151,7 @@ then work the prompt yourself; the primer solutions are for calibration, not for
 ### Coordination and infrastructure
 
 - **Distributed message queue.** No primer solution; ground it in the Kafka paper (partitioned commit log, offset-based replay).
-- **Rate limiter as a service.** Closest analog is the counter tier in the [query cache solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/query_cache); the algorithms (token bucket, leaky bucket) are in the [low-level design guide](../../low_level_design/README.md).
+- **Rate limiter as a service.** Closest analog is the counter tier in the [query cache solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/query_cache); the algorithms (token bucket, leaky bucket) are in the [low-level design guide](../low_level_design/README.md).
 - **Distributed lock service.** No primer solution; ground it in the Raft paper (consensus) and the ZooKeeper or Chubby papers (lock and coordination primitives, fencing tokens).
 - **Distributed job scheduler.** No primer solution; the analog is a priority queue plus a dependency DAG and a state machine, with ZooKeeper for coordination and Kafka for the task queue.
 - **Metrics and observability platform.** No primer solution; ground ingestion in the Kafka paper, time-series storage in the Bigtable paper, and batch rollups in the MapReduce paper.

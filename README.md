@@ -1,90 +1,100 @@
 # Interview Prep
 
-A structured, interleaved plan for senior-level software engineering interviews, covering coding,
-system design, low-level design, concurrency, and behavioural preparation.
+A structured, interleaved plan for senior-level software engineering interviews. It covers three
+things you are evaluated on directly, coding, system design, and behavioural performance, and a
+small set of supporting material for how you prepare and present.
 
 ## The bar this prepares for
 
-The target is a strong Senior hire, and the way to reliably clear that bar is to prepare against
-the Staff bar. Senior loops probe scope, judgment, and trade-off reasoning that shade into what a
-Staff interviewer is looking for; a candidate who can hold that altitude reads as a clear hire
-rather than a borderline one. So throughout this repository, when a topic goes deeper than a
-minimum-viable Senior answer, that is deliberate: the extra depth is what turns a lean hire into
-a strong hire. Nothing here requires that you *are* Staff; it asks that you can reason like one
-when the interview opens the door.
+The target is a strong Senior hire, and the reliable way to clear that bar is to prepare against the
+Staff bar. Senior loops probe scope, judgment, and trade-off reasoning that shade into what a Staff
+interviewer looks for, and a candidate who holds that altitude reads as a clear hire rather than a
+borderline one. Throughout this repository, when a topic goes deeper than a minimum-viable Senior
+answer, that is deliberate: the extra depth is what turns a lean hire into a strong hire. Nothing
+here requires that you are Staff. It asks that you can reason like one when the interview opens the
+door.
 
-## How to use this repository
+## How this repository is organized
 
-Start with the [schedule](./schedule/README.md). It lays out the phases of preparation and, most importantly, how
-the sections below fit together week to week. The sections themselves are organized by topic, not
-by time, because the schedule is what tells you how to move through them in parallel rather than
-finishing one before starting the next.
+The material lives under three anchors, one for each thing an interview loop evaluates:
 
-Log every problem, design, and mock interview you work through in the [tracker](./schedule/tracker.md). That log
-is what turns this from a static reading list into an actual feedback loop.
+- **[Coding](./leetcode/README.md)** is the algorithmic round: pattern coverage, the
+  [pattern-recall template](./leetcode/template.md), and the
+  [interview-loop playbook](./leetcode/playbook.md) for what senior signal looks like
+  in a coding round.
+- **[System Design](./system_design/README.md)** is the design round, taken broadly. It holds the
+  interview [framework](./system_design/framework.md) (a flat file, no longer a subdirectory), the reusable
+  [building blocks](./system_design/building_blocks.md) library (also flat), the
+  [reading plan](./system_design/plan/README.md), the
+  [practice designs](./system_design/practice_design/README.md), the
+  [white papers](./system_design/white_paper.md) (flat), the
+  [low-level (object-oriented) design](./system_design/low_level_design/README.md) round, and the
+  [foundations](./system_design/foundations/README.md) beneath distributed systems (networking,
+  operating systems, database internals, and concurrency).
+- **[Behavioural](./behavioural/README.md)** is how you present yourself and your work. It holds the
+  STAR framework and story bank, the technical [deep dive on systems you built](./behavioural/experience_deep_dive.md)
+  (a flat file, no longer a subdirectory), [resume and narrative](./behavioural/resume_and_narrative.md) work (also flat), and
+  [company preparation](./behavioural/company_prep.md) (also flat) including offer evaluation and
+  negotiation.
+
+One supporting area sits outside the three anchors because it coordinates all of them rather than
+belonging to any one:
+
+- **[Schedule](./schedule/README.md)** is the phase-based plan that tells you how to move through the
+  anchors in parallel, the [tracker](./schedule/tracker.md) for logging every problem and design you
+  work through, and the [mock-interview](./schedule/mocks.md) (flat file, no longer a subdirectory) cadence and rubric.
+
+Everything else is a sub-section under one of the four directories above. This README is the only
+documentation file at the repository root. The root also contains [roadmap.png](./roadmap.png), the visual reading
+roadmap for the System Design track (with a text transcription at [system_design/plan/roadmap.md](./system_design/plan/roadmap.md)),
+and two reference papers ([amazon-dynamo-sosp2007.pdf](./amazon-dynamo-sosp2007.pdf) and
+[spanner-osdi2012.pdf](./spanner-osdi2012.pdf)), which are assets rather than documentation.
+
+## How to use it
+
+Start with the [schedule](./schedule/README.md). It lays out the phases of preparation and, more
+importantly, how the anchors fit together week to week. The anchors are organized by topic rather
+than by time, so the schedule is what tells you to interleave them instead of finishing one before
+starting the next.
+
+Log every problem, design, and mock you work through in the [tracker](./schedule/tracker.md). That
+log is what turns a static reading list into an actual feedback loop.
 
 A note on artifacts: this repository is deliberately a set of frameworks and checklists, not a bank
-of memorized answers. It does not keep worked solutions to individual coding problems or canned
-write-ups of specific designs, because reproducing a memorized answer collapses the moment an
-interviewer perturbs the prompt. The durable outputs of your practice are the pattern-recall
-checklist in [the template](./leetcode/template.md), the feedback log in [the tracker](./schedule/tracker.md), and your private
-behavioural story bank, not solution files.
+of memorized answers. It keeps no worked solutions to individual coding problems and no canned
+write-ups of specific designs, because a memorized answer collapses the moment an interviewer
+perturbs the prompt. The durable outputs of your practice are the pattern-recall checklist in
+[the template](./leetcode/template.md), the feedback log in [the tracker](./schedule/tracker.md),
+and your private behavioural story bank, not solution files.
 
-## Sections
+## Reading priority
 
-### Core interview tracks: what you are evaluated on
+The reading is tiered so that limited time goes to the highest-return material first. The tiers below
+follow the roadmap shipped with the System Design track (available as both an
+[image](./roadmap.png) and a [text transcription](./system_design/plan/roadmap.md)),
+and the [reading plan](./system_design/plan/README.md) applies them in detail.
 
-- [General](./general/README.md): the core interview loop, and what distinguishes senior-level
-  signal from adequate signal in a coding round.
-- [Coding](./leetcode/README.md): the coding practice checklist, organized by pattern and tiered
-  into core and stretch coverage, along with [the template](./leetcode/template.md), a pattern-recall checklist for
-  self-testing (not a set of skeletons to write out).
-- [System Design](./system_design/README.md): the interview framework, the reusable
-  [building blocks](./system_design/building_blocks/README.md) library, the reading plan, the
-  practice design list, and the white paper reading, split into a required core set and an optional
-  deep dive set.
-- [Low-Level Design](./low_level_design/README.md): object-oriented and component design practice,
-  including a dedicated [Concurrency](./low_level_design/concurrency/README.md) section.
-- [Behavioural](./behavioural/README.md): the STAR framework, the competency mapping, the
-  story bank to build, and how to handle follow-up probing and the hiring-manager round.
-- [Experience Deep Dive](./experience_deep_dive/README.md): preparing two or three systems you
-  actually built for a deep technical grilling, distinct from the behavioural story bank and from
-  the generic practice designs.
+- **Read first (highest return).** *Designing Data-Intensive Applications* is the top-tier concepts book (S tier on the roadmap).
+  The eight core [white papers](./system_design/white_paper.md),
+  the [building blocks](./system_design/building_blocks.md) library, and a dozen practice
+  designs worked out loud cover most of what a Senior loop tests.
+- **Read for the upper-Senior and Staff range you are targeting.** *Database Internals* (A tier) for
+  storage-engine depth, *Specifying Systems* (S tier secondary) and the TLA+ material for formal reasoning, and
+  jepsen.io (A tier) for how consistency claims break in practice. The MIT 6.824 and CMU 15-445 lecture
+  series are primary sources here, not optional extras. *Understanding Distributed Systems* and the System Design Primer
+  (both B tier) are supporting material.
+- **De-emphasize as a primary study path.** The interview-prep compilations (*Grokking the System
+  Design Interview*, *System Design Interview* Volume 1, *Fundamentals of Software Architecture*) are
+  useful as an applied warm-up for problem shape, not as a primary resource. Do not let
+  them crowd out the material above.
 
-### Supporting tracks: how you prepare and present
+## Additional resources
 
-- [Resume and Narrative](./resume_and_narrative/README.md): rewriting your project bullets, and
-  preparing your project walkthrough, your "tell me about yourself," and your questions for the
-  interviewer.
-- [Company Prep](./company_prep/README.md): pre-interview research workflow, interview logistics,
-  and offer evaluation and negotiation.
-- [Mocks](./mocks/README.md): where to run mock interviews, how often, and the rubric to grade
-  them against.
-- [Fundamentals](./fundamentals/README.md) (optional): networking, operating systems, and database
-  internals, for infrastructure- and platform-leaning loops that probe below the distributed-systems
-  layer.
+- [Levels.fyi](https://www.levels.fyi): compensation data by company and level.
+- [Techjobs.xyz](https://techjobs.xyz/): open roles.
+- [Layoffs.fyi](https://layoffs.fyi/): context on company stability.
 
-### Execution
-
-- [Schedule](./schedule/README.md): the phase-based plan tying all of the above together, and
-  [the tracker](./schedule/tracker.md) for logging practice across every section.
-
-## Additional Resources
-
-### Rough Company List
-
-- [New Grad Positions](https://github.com/SimplifyJobs/New-Grad-Positions): useful as a template
-  for tracking open roles even though it is framed around new graduate hiring.
-
-### All Things Job
-
-- [Levels.fyi](https://www.levels.fyi)
-- [Techjobs.xyz](https://techjobs.xyz/)
-- [Layoffs.fyi](https://layoffs.fyi/)
-
-## Numbers and Negotiating
-
-The offer stage is part of the outcome, not an afterthought: a strong hire is undersold if the
-offer is mishandled. The structured guidance and the external source material both live in
-[Company Prep](./company_prep/README.md), so the offer-handling material sits with the logistics it
-belongs beside rather than at the top level.
+Offer evaluation and negotiation live with the rest of the logistics in
+[Company Prep](./behavioural/company_prep.md), so the offer-handling material sits beside the
+research and interview logistics it belongs with. The offer stage is part of the outcome, not an
+afterthought: a strong hire is undersold if the offer is mishandled.

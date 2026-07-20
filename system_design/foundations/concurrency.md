@@ -63,13 +63,13 @@ Prepare this section for whichever language you expect to interview in.
 This is where the standalone concepts above connect back to the System Design track, and is worth
 being ready to raise unprompted during a deep dive.
 
-- **Idempotency keys**, to handle retried requests safely, which is really a concurrency-adjacent
+- **Idempotency keys** to handle retried requests safely, which is really a concurrency-adjacent
   correctness problem at the API layer.
-- **Optimistic versus pessimistic concurrency control**, when multiple writers might update the
-  same record, and the trade-off between retry-on-conflict and locking up front.
-- **Distributed locks**, for example built on Redis or ZooKeeper, when coordination is needed
-  across processes or machines rather than threads within one process.
-- **Compare-and-swap**, as the building block behind both lock-free data structures and optimistic
+- **Optimistic versus pessimistic concurrency control** when multiple writers might update the same
+  record, and the trade-off between retry-on-conflict and locking up front.
+- **Distributed locks**, for example built on Redis or ZooKeeper, when coordination is needed across
+  processes or machines rather than threads within one process.
+- **Compare-and-swap** as the building block behind both lock-free data structures and optimistic
   concurrency control.
 
 ## Practice problems

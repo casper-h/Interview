@@ -5,7 +5,7 @@ Here, you are graded on class and interface design, on extensibility, and on app
 object-oriented principles live, often including extending your own design on the fly when the
 interviewer adds a new requirement partway through.
 
-See also the [concurrency track](./concurrency/README.md) for the concurrency-specific track.
+See also the [concurrency track](../foundations/concurrency.md) for the concurrency-specific track.
 
 ## Core principles to have crisp, example-backed definitions for
 
@@ -101,11 +101,12 @@ somewhere to go.
 ## Practice problem list
 
 Work through the following using the framework above, ideally writing real skeleton code in your
-interview language rather than only talking through it. The [examples](./examples/README.md) folder
-has a few worked skeletons to study for shape (how the classes and interfaces fit together), not to
-memorize; the value is in seeing an extensible structure, then closing the file and rebuilding it
-yourself against a new requirement. The [walkthroughs](./walkthroughs.md) take five of these problems
-through the pattern to reach for and the hardest extend-live follow-up each one gets.
+interview language rather than only talking through it. For worked examples, the
+[system-design-primer](https://github.com/donnemartin/system-design-primer#object-oriented-design-interview-questions-with-solutions)
+provides object-oriented design solutions to study for shape (how classes and interfaces fit
+together), though it covers a subset of the problems below, so treat it as a pattern reference
+rather than full coverage. The [walkthroughs](./walkthroughs.md) take five of these problems through
+the pattern to reach for and the hardest extend-live follow-up each one gets.
 
 - Parking lot
 - Elevator system
@@ -115,7 +116,7 @@ through the pattern to reach for and the hardest extend-live follow-up each one 
   the LeetCode LRU and LFU cache problems)
 - A rate limiter implemented as a reusable library or class, using the token bucket or leaky
   bucket algorithm; this is distinct from the system-level rate limiter design covered in the
-  [system design practice list](../system_design/practice_design/README.md)
+  [system design practice list](../practice_design/README.md)
 - Splitwise-style expense-sharing system
 - Library management system
 - Movie ticket booking system, scoped to a single service rather than the distributed version
@@ -141,7 +142,7 @@ directly than the domain problems do.
 - An in-process task scheduler or job queue, with priorities and retries
 - A configuration system with layered overrides (defaults, environment, runtime) and typed access
 
-For each problem, log the attempt in the [tracker](../schedule/tracker.md), noting what you would extend if given
+For each problem, log the attempt in the [tracker](../../schedule/tracker.md), noting what you would extend if given
 an additional requirement, and where the design would break.
 
 ## Common mistakes at the senior level

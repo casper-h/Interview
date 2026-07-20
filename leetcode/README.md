@@ -46,7 +46,7 @@ interviewer prompts you.
   range, sortedness), whether the input may be mutated, whether duplicates or nulls are possible,
   and any performance requirement beyond big-O (in place, single pass, streaming). Even in solo
   practice, write these down first: it builds the reflex so it is automatic under pressure. See
-  the [general coding guide](../general/README.md) for the fuller clarifying-question checklist.
+  the [general coding guide](./playbook.md) for the fuller clarifying-question checklist.
 - **Drill the optimization follow-up.** After you have a working solution, do not stop. Ask, out
   loud: can I reduce time complexity further? Can I reduce space? What is the trade-off, and when
   would each variant be preferred? How does this change if the input no longer fits in memory, or
@@ -188,7 +188,7 @@ inside Graphs.
 
 Lower frequency than the categories above and safe to skip for a generalist product loop, but worth
 one working implementation each if you are targeting search, compiler, or text-heavy teams, or want
-full coverage. The core idea across all three is avoiding the naive O(n·m) rescan by precomputing
+full coverage. The core idea across all three is avoiding the naive O(n*m) rescan by precomputing
 structure in the pattern (KMP's failure function) or hashing a rolling window (Rabin-Karp).
 
 - [ ] Implement strStr (KMP)
@@ -368,7 +368,7 @@ These problems are about implementing a data structure to hit specific complexit
 example, an LRU cache with O(1) get and put): the algorithmic skill of choosing and combining
 structures. That is distinct from the low-level design track, where the same prompts are about class
 design, interfaces, and extensibility. Do them here for the structure; see
-the [low-level design guide](../low_level_design/README.md) for the design-round version, and do not double-count the two.
+the [low-level design guide](../system_design/low_level_design/README.md) for the design-round version, and do not double-count the two.
 
 - [ ] LRU Cache
 - [ ] LFU Cache (stretch)

@@ -35,7 +35,7 @@ If you're targeting a specific company, it helps to map your stories to their la
   wrong, saw it, and changed course) alongside the scope stories.
 - **Meta** evaluates along "Direction," "Execution," and "Talent," with heavy emphasis on impact
   and ambiguity. "Talent" is about growing and raising the bar for other engineers, so have a
-  people-development story ready (rows 4 and 20 below), not only delivery stories.
+  people-development story ready (rows 4 and 14 below), not only delivery stories.
 - For most other companies, prepare for the general list above; it covers the common ground.
 
 ## The STAR framework, and how to not sound robotic doing it
@@ -83,7 +83,7 @@ miss.
   make day-to-day technical calls. The story bank below is aimed squarely here.
 - **Hiring-manager round.** More strategic, and often the final gate. Expect scope, impact, "why
   this team," and how you operate with a manager and handle direction and disagreement. This is
-  where the row 11 to 20 scope stories and ["why this company, why now"](../resume_and_narrative/README.md)
+  where the row 11 to 20 scope stories and ["why this company, why now"](./resume_and_narrative.md)
   get stress-tested, along with forward-looking questions ("how would you approach X on this team?")
   that no rehearsed past-tense story covers. Prepare manager-facing questions of your own:
   team roadmap and challenges, how success is measured, and what growth from this level looks like.
@@ -165,16 +165,15 @@ them. Use it to pressure-test each drafted story before you rehearse it.
 - **"Why this company, why now,"** answered genuinely, specifically, and with real research
   behind it. Avoid generic answers.
 - **Questions to ask the interviewer.** Senior candidates are evaluated on the quality of these
-  too. Have three or four ready per interview type, covering the team's technical challenges, how
-  they measure success, what makes someone successful in the role at the senior level, and any
-  recent technical decisions the team debated.
+  too. The canonical list, organized by interview type, lives in
+  [Company Prep](./company_prep.md); build from there rather than keeping a second copy here.
 
 ## Practice cadence
 
 - In the first one to two weeks of your overall schedule, draft the story index and two or three
   full stories.
 - On an ongoing basis, add or refine one story per week until you have eight to ten solid ones.
-- Once you have a full bank, run at least three or four mock behavioural rounds (see [mocks](../mocks/README.md)).
+- Once you have a full bank, run at least three or four mock behavioural rounds (see [mocks](../schedule/mocks.md)).
   This is the only way to find out which stories don't land, or run too long, in practice.
 
 ## Anti-patterns to avoid

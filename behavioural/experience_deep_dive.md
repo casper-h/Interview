@@ -10,7 +10,7 @@ It does.
 
 This is distinct from two adjacent tracks and should not be collapsed into either:
 
-- The **[behavioural story bank](../behavioural/README.md)** is about *how you operated*: ownership,
+- The **[behavioural story bank](./README.md)** is about *how you operated*: ownership,
   conflict, influence. This round is about *what you engineered* and whether it holds up under
   scrutiny.
 - The **[practice designs](../system_design/practice_design/README.md)** are generic, greenfield
@@ -59,7 +59,7 @@ whiteboard and defend the following without notes:
   will perturb the prompt.
 - Have a mock partner play the interviewer and drill one of your systems for 30 minutes. The goal is
   to find the questions you can't yet answer crisply: those are your study list.
-- Reconcile it with your resume and your [project walkthrough](../resume_and_narrative/README.md). The
+- Reconcile it with your resume and your [project walkthrough](./resume_and_narrative.md). The
   90-second walkthrough is the *opening* of this round, and the deep dive is what happens when the
   interviewer pulls a thread from it.
 

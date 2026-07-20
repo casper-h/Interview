@@ -19,26 +19,26 @@ it; just keep touching Coding and Behavioural weekly throughout.
 
 Minimum duration: one to two weeks.
 
-- Read the [system design framework](../system_design/framework/README.md) (and memorize the estimation cheat sheet) and
-  the [low-level design guide](../low_level_design/README.md) end to end first, so the baseline mocks below measure your reasoning
+- Read the [system design framework](../system_design/framework.md) (and memorize the estimation cheat sheet) and
+  the [low-level design guide](../system_design/low_level_design/README.md) end to end first, so the baseline mocks below measure your reasoning
   rather than your unfamiliarity with the format.
 - Take one baseline mock in each format: coding, high-level system design, low-level design, and
   behavioural. Don't skip this; it tells you where your real gaps are instead of leaving you to
   guess. Treat it as diagnostic, not evaluative; it is *supposed* to expose gaps, so don't read a
-  rough first mock as a verdict. Read the [strong-hire thresholds](../mocks/README.md) before you
+  rough first mock as a verdict. Read the [strong-hire thresholds](./mocks.md) before you
   grade these, so you are calibrating against the real bar from the start rather than in Phase 4.
   For the low-level design mock, prefer a problem with shared mutable state (a thread-safe cache or
   rate limiter) so you find out early whether concurrency is a gap, since that track otherwise does
   not start until the second half of Phase 2.
 - Draft your resume narrative and your first two or three behavioural stories, using
-  the [behavioural guide](../behavioural/README.md) and the [resume and narrative guide](../resume_and_narrative/README.md).
-- List the two or three systems you would use for the [experience deep dive](../experience_deep_dive/README.md)
+  the [behavioural guide](../behavioural/README.md) and the [resume and narrative guide](../behavioural/resume_and_narrative.md).
+- List the two or three systems you would use for the [experience deep dive](../behavioural/experience_deep_dive.md)
   and write a one-paragraph technical summary of each. Do this now, not in Phase 3: if you struggle
   to find two systems you drove the design of, that gap needs the full runway to develop into a
   credible narrative, and it is far better to discover it in week one than in week ten.
 - Do a light coding warm-up of ten to fifteen easy problems to shake off rust, and skim
   the [pattern-recall template](../leetcode/template.md) so you know the self-test you'll be using throughout.
-- Skim the [building blocks](../system_design/building_blocks/README.md) once so you know what's in the toolkit before the
+- Skim the [building blocks](../system_design/building_blocks.md) once so you know what's in the toolkit before the
   practice designs in Phase 2 start pulling from it.
 
 Exit condition: you have a baseline score, or at least notes, in all four areas, and you know
@@ -62,20 +62,20 @@ Run all tracks in parallel every week.
   now that it isn't compressed into a fixed timeline. Keep the optional deep-dive material optional:
   pull from it when a practice design or mock exposes a gap, not by default, so it doesn't crowd out
   the weekly designs. Do at least one full practice design per week, end to end, using the framework
-  in the [framework](../system_design/framework/README.md), reaching into
-  the [building blocks](../system_design/building_blocks/README.md) for components, and drawing from
+  in the [framework](../system_design/framework.md), reaching into
+  the [building blocks](../system_design/building_blocks.md) for components, and drawing from
   the [practice designs](../system_design/practice_design/README.md) (start with its Tier 1).
 - **Low-Level Design.** Do one problem per week once the framework document is read.
-- **Concurrency.** Start the standalone problems in the [concurrency track](../low_level_design/concurrency/README.md) in the
+- **Concurrency.** Start the standalone problems in the [concurrency track](../system_design/foundations/concurrency.md) in the
   second half of this phase, timed to land alongside the System Design replication, consensus, and
   distributed-locks topics so the thread-level and cross-process versions of the same idea reinforce
   each other.
 - **Behavioural.** Draft and rehearse one new story per week, out loud, and revisit and tighten
   earlier ones. Include at least one of the scope/influence/leadership stories (rows 11 to 20 in the
   [behavioural guide](../behavioural/README.md)) in this phase; those take the most iteration to get right.
-- **Mocks.** Start one mock interview per week partway through this phase (see [mocks](../mocks/README.md)), rotating
-  the format each time rather than repeating your comfort format. A workable rotation is coding →
-  high-level design → low-level design → behavioural, repeating, so you hit each at least twice
+- **Mocks.** Start one mock interview per week partway through this phase (see [mocks](./mocks.md)), rotating
+  the format each time rather than repeating your comfort format. A workable rotation is coding  to 
+  high-level design to low-level design to behavioural, repeating, so you hit each at least twice
   before Phase 3. In the last week or two of this phase, run one full back-to-back loop (two or three
   rounds with only short breaks) so pacing and context-switching fatigue surface now rather than for
   the first time in Phase 4.
@@ -99,9 +99,9 @@ Minimum duration: three to six weeks.
 - This is a natural place to go deeper into the optional deep-dive system design material, such
   as the fuller white paper list or extra books, for any topic that came up shaky in mocks. With
   no hard timeline, it's fine to let this phase run long if a particular area needs it.
-- Prepare the [experience deep dive](../experience_deep_dive/README.md) round now: pick two or three systems you built and
+- Prepare the [experience deep dive](../behavioural/experience_deep_dive.md) round now: pick two or three systems you built and
   drill them, since this round needs your Phase 2 system-design vocabulary to be fluent first.
-- Revisit your resume narrative and [project walkthrough](../resume_and_narrative/README.md) and
+- Revisit your resume narrative and [project walkthrough](../behavioural/resume_and_narrative.md) and
   tighten them against the behavioural stories that matured in Phase 2; the walkthrough is the
   opening of the experience deep dive, so they should reinforce each other.
 
@@ -115,9 +115,9 @@ Minimum duration: two weeks.
 - Continue the full-loop simulated interviews you started at the end of Phase 2: coding, system
   design, and behavioural, back to back, timed as close to the real format as possible, aiming for
   two or three across this phase. Record sessions where feasible.
-- Grade every mock against the [rubric](../mocks/README.md). Log gaps in the tracker, and fix them
+- Grade every mock against the [rubric](./mocks.md). Log gaps in the tracker, and fix them
   with targeted practice rather than broad re-study.
-- Once you're targeting specific companies, work through the [company prep guide](../company_prep/README.md): the research per
+- Once you're targeting specific companies, work through the [company prep guide](../behavioural/company_prep.md): the research per
   company, the logistics check, and reading the offer/negotiation framework *before* offers land so
   the leverage-creating moves (clustering your loops) happen in time.
 

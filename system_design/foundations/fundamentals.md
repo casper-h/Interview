@@ -1,17 +1,23 @@
 # Fundamentals: Networking, OS, and Database Internals
 
-**This track is optional, and deliberately so.** For most product and feature-team loops, the coding,
-system-design, and behavioural tracks are what's tested, and time spent here is better spent there.
-But infrastructure, platform, systems, and some trading-adjacent teams probe *below* the
-distributed-systems layer. A candidate who can design Spanner at a high level but can't explain
-a TCP handshake or the difference between a process and a thread reads as having memorized system
-design rather than earned it. If you're targeting those teams, or a mock surfaces that your
-distributed-systems answers rest on shaky fundamentals, work this track. Otherwise, skim it once and
-move on.
+This track covers the layer beneath distributed systems design: networking, operating systems, and
+database internals. For most product and feature-team loops, the coding, system-design, and
+behavioural tracks are what is tested, and time spent here is better spent there. But
+infrastructure, platform, systems, and trading-adjacent teams probe below the distributed-systems
+layer, and a candidate who can design Spanner at a high level but cannot explain a TCP handshake or
+the difference between a process and a thread reads as having memorized system design rather than
+earned it.
 
-Use the "Adapting depth by company or team type" guidance in the [system design framework](../system_design/framework/README.md) to
-decide how much of this you need: product companies, very little; infrastructure and platform teams,
-most of it.
+The database-internals portion (storage engines, indexing, isolation levels, MVCC, write-ahead log)
+is expected knowledge at the upper-Senior and lower-Staff band, where the roadmap explicitly lists
+component internals like B-trees, LSM-trees, and inverted index as required. That portion is largely
+review once you have done the DDIA and Database Internals reading in the
+[reading plan](../plan/README.md). The networking and operating-systems portion scales with team type:
+heavy for infrastructure, platform, systems, and trading teams, light for product teams.
+
+Use the "Adapting depth by company or team type" guidance in the [system design framework](../framework.md)
+to decide how much of this you need: product companies, database internals plus light networking;
+infrastructure and platform teams, most of it.
 
 ## Networking
 
@@ -35,13 +41,21 @@ Be able to explain, and reason about the performance implications of:
   and when you'd reach for multiple processes vs multiple threads (connects directly to the
   concurrency track).
 - **Concurrency primitives at the OS level:** mutexes, semaphores, condition variables, and how they
-  map to the language idioms in the [concurrency track](../low_level_design/concurrency/README.md).
+  map to the language idioms in the [concurrency track](./concurrency.md).
 - **Virtual memory:** paging, the page cache, and why memory-mapped I/O and the page cache matter for
   storage-engine performance.
 - **I/O models:** blocking vs non-blocking, synchronous vs asynchronous, and the event-loop model
   (epoll/kqueue) behind high-concurrency servers.
-- **Scheduling** at a conceptual level: preemption, and why CPU-bound and I/O-bound workloads behave
-  differently.
+- **Scheduling:** preemptive versus cooperative scheduling, the role of time slices and priorities,
+  and why CPU-bound and I/O-bound workloads behave differently under the same scheduler (an I/O-bound
+  task yields often and stays responsive; a CPU-bound task must be preempted). Be able to connect
+  this to thread-pool sizing, where the right pool size depends on whether the work blocks on I/O.
+- **Clocks and time:** why the wall clock is unreliable for ordering or measuring durations. System
+  time can jump backward when NTP corrects drift, so a monotonic clock is the right source for
+  elapsed-time measurements, and cross-machine timestamp comparison is unsafe without bounded-error
+  time. This is the operating-system-level foundation for the clock-skew and TrueTime material in the
+  system-design [building blocks](../building_blocks.md); a design that orders events by raw
+  wall-clock timestamps is a common and avoidable error.
 
 ## Database internals
 
@@ -61,8 +75,8 @@ Be able to explain, and reason about the performance implications of:
 
 ## How to study this
 
-This is reference material, not a problem set. The DDIA and Database Internals reading in
-The [reading plan](../system_design/plan/README.md) already covers the database-internals portion in depth. If you've
+This is reference material, not a problem set. The DDIA and Database Internals reading in the
+[reading plan](../plan/README.md) already covers the database-internals portion in depth. If you have
 done that reading, most of this section is review. For networking and OS, the goal is being able to
 answer a pointed question crisply and reason about the performance consequence, not to recite RFCs.
 Treat a blank on any bullet above the same way you treat a blank in the coding pattern-recall

@@ -1,6 +1,6 @@
 # System Design Interview Framework
 
-The material in the [reading plan](../plan/README.md) builds deep knowledge. This document is different: it is
+The material in the [reading plan](./plan/README.md) builds deep knowledge. This document is different: it is
 the repeatable structure that turns that knowledge into a coherent 45-to-60-minute interview
 performance instead of a rambling knowledge dump. Read this before doing any practice design, and
 review it weekly until the structure below becomes automatic.
@@ -42,8 +42,8 @@ review it weekly until the structure below becomes automatic.
    not every field.
 6. **Deep dive (roughly 10-to-15 minutes), usually interviewer-directed.** Pick one or two
    components to go deep on. This is where replication, partitioning, consistency trade-offs, and
-   the content covered in the [reading plan](../plan/README.md) actually get used, and where you reach into the
-   [building blocks](../building_blocks/README.md) toolkit by name, naming the component, the
+   the content covered in the [reading plan](./plan/README.md) actually get used, and where you reach into the
+   [building blocks](./building_blocks.md) toolkit by name, naming the component, the
    alternative you rejected, and how it fails. Follow the interviewer's signal; if they lean into
    one area, that is where depth is expected.
 7. **Bottlenecks, failure modes, and trade-offs (roughly 5-to-10 minutes).** Discuss single points
@@ -52,7 +52,7 @@ review it weekly until the structure below becomes automatic.
    answer; this is usually the highest-signal part of the interview.
 8. **Wrap-up (roughly 2-to-3 minutes).** Cover monitoring and observability concretely: the key
    metrics per component, and SLIs/SLOs rather than a vague "we'd add monitoring" (see the
-   observability block in the [building blocks](../building_blocks/README.md)). Touch on cost at scale if it
+   observability block in the [building blocks](./building_blocks.md)). Touch on cost at scale if it
    is a meaningful lever (storage, compute, cross-region bandwidth), since Staff-level rounds often
    probe it. Then state what you would do with more time and what you would reconsider at ten times
    the scale.
@@ -88,10 +88,12 @@ exact figures.
 - Round trip across a country or region: roughly 50-to-150 milliseconds.
 - Packet round trip, for example between the US and Europe: roughly 150 milliseconds.
 
-A useful rule of thumb: memory is roughly one hundred times faster than SSD, and SSD is roughly
-one hundred times faster than a network round trip within a region. A cross-region round trip
-dwarfs everything else, which is the core justification for regional replicas and CDNs whenever
-that topic comes up.
+A useful rule of thumb: main memory is between one hundred and one thousand times faster than an SSD
+random read, an SSD random read is on the order of ten times faster than a same-data-center round
+trip (the two are within about an order of magnitude, so do not lean on the exact ratio), and a
+same-data-center round trip is roughly one hundred times faster than a cross-region one. A cross-region round trip dwarfs
+everything else, which is the core justification for regional replicas and CDNs whenever that topic
+comes up.
 
 **Traffic and storage math.**
 
@@ -155,7 +157,7 @@ Weave these in briefly; they don't need to become a separate track.
 - **Product companies, or consumer-facing feature teams,** tend to emphasize scale, latency,
   caching, API design, and user-facing trade-offs.
 - **Infrastructure or platform teams** tend to probe more deeply into the storage engine,
-  consensus, and replication internals covered in the [reading plan](../plan/README.md), and the optional
+  consensus, and replication internals covered in the [reading plan](./plan/README.md), and the optional
   deep-dive white papers are more likely to be directly relevant here.
 - **Fintech or payments companies** tend to focus explicitly on consistency, idempotency,
   auditability, and correctness under failure, over raw throughput.

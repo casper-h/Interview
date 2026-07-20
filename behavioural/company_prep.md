@@ -7,7 +7,7 @@ you've already earned the offer. None of this is hard; all of it is routinely un
 
 ## Pre-interview company research
 
-"Why this company, why now" is called out in the [resume and narrative guide](../resume_and_narrative/README.md) as an avoidable way to
+"Why this company, why now" is called out in the [resume and narrative guide](./resume_and_narrative.md) as an avoidable way to
 lose points, but a good answer is a *research output*, not a talent. Before an onsite, spend a
 focused block on:
 

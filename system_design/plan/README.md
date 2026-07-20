@@ -10,17 +10,26 @@ Each part pairs **required** interview-relevant reading with a **deep reasoning 
 (the matching part of the [deep reasoning companion](./companion.md)) of integration questions and worked answers:
 that companion is the highest-value part of this track, so treat the Q&A as active practice rather
 than skimming it.
-The **supplement** material (extra textbooks, lecture series, and the long white-paper tail) is
-**optional depth**: valuable if you lack production distributed-systems experience or are targeting
-an infrastructure, database, or platform team, but not something to grind through by default.
+The **supplement** material below (the long white-paper tail and the optional textbooks) is
+**optional depth**: valuable if you lack production distributed-systems experience, but not something
+to grind through by default.
+
+## How the reading is tiered
+
+The priority here follows the roadmap at [./roadmap.md](./roadmap.md), which transcribes the durable content of the roadmap image for the upper-Senior and lower-Staff band. The tiers matter because time is the binding constraint, and the wrong reading order spends it on low-return material.
+
+- **S-tier concepts spine (read for depth).** *Designing Data-Intensive Applications* (DDIA) is the center of gravity. *Database Internals* by Alex Petrov is core, not optional, at this band: it is where the storage-engine and distributed-transaction internals live. The MIT 6.824 and CMU 15-445 lecture series are primary sources here, watched alongside the reading rather than deferred.
+- **A-tier and S-tier depth for the Staff edge.** *Specifying Systems* (S-tier secondary) and the TLA+ material for reasoning about correctness formally, and jepsen.io (A-tier) for how consistency claims fail under real partitions. These separate a strong answer from a competent one when a deep dive turns to correctness.
+- **A-tier applied warm-up, not the spine.** *System Design Interview* Volumes 1 and 2 (Alex Xu) are useful for problem shape and vocabulary early on, and Volume 2 has a few worthwhile worked designs. Treat them as a warm-up for the practice designs, not as core reading. The chapter pointers to them below are optional and can be skipped once you are fluent in the framework; do not let them displace the primary spine.
+- **B-tier supporting material.** *Understanding Distributed Systems* gives the concept scaffolding, and Donne Martin's System Design Primer is a useful applied reference. Both are supporting material, not the primary spine.
 
 **Minimum viable pass.** If you are short on time, the following is enough to be ready for a Senior
 loop at most product companies: DDIA's interview-relevant chapters, the eight core white papers in
-the [white paper core set](../white_paper/README.md#core-set-required), the
-[building blocks](../building_blocks/README.md) component library, and roughly a dozen practice
-designs done out loud against the clock. Everything beyond that (the extra textbooks, the
-lecture series, the optional white papers) is depth for Staff-level range or infrastructure-leaning
-teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
+the [white paper core set](../white_paper.md#core-set-required), the
+[building blocks](../building_blocks.md) component library, and roughly a dozen practice
+designs done out loud against the clock. Beyond that, *Database Internals* and the lecture series are
+the first things to add for the upper-Senior and Staff range; the optional white papers are the last.
+Read them when a mock surfaces a specific gap, not as a prerequisite.
 
 ---
 
@@ -44,13 +53,10 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
   - Sections: Performance vs Scalability, Latency vs Throughput, CAP Theorem, Availability Patterns, DNS, CDN, Load Balancing
   - Use as conceptual reference for foundational trade-offs
 
-**Supplement / Lectures** (optional depth, pull as needed, not required)
-- MIT 6.824 Lectures 1-3: Introductions, RPC and Threads, GFS
-- CMU 15-445 Lectures 1-5: Relational Model, Storage I & II, Compression
-- [Harvest, Yield, and Scalable Tolerant Systems](https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf)
-- [On Designing and Deploying Internet-Scale Services](https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf)
-- [The Tail at Scale](https://dl.acm.org/doi/pdf/10.1145/2408776.2408794)
-- [Data on the Outside versus Data on the Inside](https://www.cidrdb.org/cidr2005/papers/P12.pdf)
+**Lectures (primary spine)** and **supplementary papers (optional depth)**
+- MIT 6.824 Lectures 1-3: Introductions, RPC and Threads, GFS. Primary source, watch alongside the reading.
+- CMU 15-445 Lectures 1-5: Relational Model, Storage I & II, Compression. Primary source, watch alongside the reading.
+- Optional systems theory papers: Harvest and Yield, On Designing and Deploying Internet-Scale Services, The Tail at Scale, Data on the Outside versus Data on the Inside. See the [white paper catalog](../white_paper.md) optional tier under Systems Theory.
 
 **Practice**
 1. URL Shortener: Hashing, Storage Model, Replication
@@ -58,11 +64,8 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 3. Distributed Cache: Consistency, Eviction, TTL
 
 **White Papers**
-- [GFS](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf)
-- [CAP Twelve Years Later: How the "Rules" Have Changed ](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/)
-- [Why Distributed Computing?](https://www.artima.com/weblogs/viewpost.jsp?thread=4247)
-- [Notes on Distributed Systems for Young Bloods](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
-- [Time, Clocks, and the Ordering of Events in a Distributed System](https://lamport.azurewebsites.net/pubs/time-clocks.pdf)
+- GFS from the [core set](../white_paper.md#core-set-required)
+- Optional systems theory papers: CAP Twelve Years Later, Why Distributed Computing, Notes on Distributed Systems for Young Bloods, Time Clocks and the Ordering of Events in a Distributed System. See the [white paper catalog](../white_paper.md) optional tier under Systems Theory.
 
 ### Knowledge Integration Questions
 1. When would I prefer consistency over availability in a design?
@@ -99,20 +102,15 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
   - Sections: SQL vs NoSQL, RDBMS, Sharding, Replication, Caching (cache-aside, write-through, write-behind)
   - Use as a reference for practical scaling and storage trade-off summaries, not a linear read
 
-**Supplement / Lectures** (optional depth, for infrastructure- or database-leaning loops)
+**Primary spine (this part), plus optional textbooks**
 - **Database Internals**: Part I (Ch. 1-5, Storage Engines); Part II (Ch. 6-9, Distributed Systems).
-  Deep storage-engine internals; DDIA covers enough for a generalist loop, so read this only for
-  database-heavy targets.
+  Core at the upper-Senior and Staff band, not optional: this is the storage-engine and
+  distributed-systems internals reading DDIA only summarizes.
+- CMU 15-445 Lectures 3-10: Storage, Compression, Memory Management, Indexes & Filters. Primary source.
+- MIT 6.824 Lectures 4-6: Primary-Backup, Fault Tolerance, Raft. Primary source.
 - **Database System Concepts** (Ch. 12-16: Storage, Indexing, Concurrency Control): a university
-  textbook that largely overlaps DDIA and Database Internals; skip unless you want the academic
-  treatment.
-- CMU 15-445 Lectures 3-10: Storage, Compression, Memory Management, Indexes & Filters
-- MIT 6.824 Lectures 4-6: Primary-Backup, Fault Tolerance, Raft
-- [Consistency, Availability, and Convergence](https://www.cs.cornell.edu/lorenzo/papers/cac-tr.pdf)
-- [Life Beyond Distributed Transactions](https://queue.acm.org/detail.cfm?id=3025012)
-- [Eventually Consistent - Revisited](https://www.allthingsdistributed.com/2008/12/eventually_consistent.html)
-- [Avoiding Two-Phase Commit](https://web.archive.org/web/20180821165044/http://www.addsimplicity.com/adding_simplicity_an_engi/2006/12/avoiding_two_ph.html)
-- [The Log: What Every Software Engineer Should Know About Real-time Data’s Unifying Abstraction](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
+  textbook that largely overlaps DDIA and Database Internals; optional, for the academic treatment.
+- Optional systems theory papers: Consistency Availability and Convergence, Life Beyond Distributed Transactions, Eventually Consistent - Revisited, Avoiding Two-Phase Commit, The Log. See the [white paper catalog](../white_paper.md) optional tier under Systems Theory.
 
 **Practice**
 1. Kafka-like Queue: Log Segmentation, Offsets, Consumer Groups
@@ -120,27 +118,15 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 3. Slack / WhatsApp: Message Ordering, Delivery Guarantees
 
 **White Papers**
-- **Consensus**
-  - [Raft](https://raft.github.io/raft.pdf)
-  - [The Part-Time Parliament](https://lamport.azurewebsites.net/pubs/lamport-paxos.pdf)
-  - [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
-  - [Impossibility of Distributed Consensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)
-- **Database**
-  - [Bigtable](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
-  - [Cassandra](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf)
-  - [Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
-  - [F1](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf)
-  - [Mesa](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42851.pdf)
-  - [PNUTS](https://people.mpi-sws.org/~druschel/courses/ds/papers/cooper-pnuts.pdf)
-  - [Spanner](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf)
-  - [TAO](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf)
+- **Consensus papers** (Raft, Paxos Made Simple, Part-Time Parliament, FLP impossibility) from the [core and optional sets](../white_paper.md). Read Raft and Paxos Made Simple alongside this part; the others are optional depth.
+- **Database papers** (Bigtable, Cassandra, Dynamo, Spanner from the [core set](../white_paper.md#core-set-required); F1, Mesa, PNUTS, TAO from the [optional tier](../white_paper.md#optional-deep-dive)). Read the core four alongside this part; the optional papers are for targeted use.
 
 ### Knowledge Integration Questions
 1. Why do distributed logs unify both messaging and database design?
 2. How do replication strategies differ between Cassandra, Dynamo, and Spanner?
 3. When is synchronous replication necessary despite performance costs?
 4. How does Raft simplify reasoning about consensus compared to Paxos?
-5. Why is the “log as a system backbone” a recurring idea?
+5. Why is the "log as a system backbone" a recurring idea?
 
 <details>
 <summary>Expand for Sample Reasoning</summary>
@@ -172,11 +158,10 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 - **System Design Primer**
   - Sections: Asynchronism, Message Queues, Microservices, Service Discovery, Reverse Proxy
 
-**Supplement / Lectures** (optional depth, pull as needed, not required)
-- MIT 6.824 Lectures 7-10: MapReduce, Fault-Tolerant Services, Transactions, Dremel
-- CMU 15-445 Lectures 11-16: Sorting, Joins, Execution, Concurrency
-- [Megastore](https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper32.pdf)
-- [Principles of Robust Timing over the Internet](https://dl.acm.org/doi/pdf/10.1145/1735223.1735241)
+**Lectures (primary spine)** and **supplementary papers (optional depth)**
+- MIT 6.824 Lectures 7-10: MapReduce, Fault-Tolerant Services, Transactions, Dremel. Primary source.
+- CMU 15-445 Lectures 11-16: Sorting, Joins, Execution, Concurrency. Primary source.
+- Optional papers: Megastore, Principles of Robust Timing over the Internet. See the [white paper catalog](../white_paper.md) optional tier under Database and Systems Theory.
 
 **Practice**
 1. Real-Time Analytics: Stream Processing
@@ -184,19 +169,9 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 3. Messaging System: SLA, Fault Recovery
 
 **White Papers**
-- **Distributed Computation**
-  - [Dremel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
-  - [FlumeJava](https://pages.cs.wisc.edu/~akella/CS838/F12/838-CloudPapers/FlumeJava.pdf)
-  - [Hive](https://www.vldb.org/pvldb/vol2/vldb09-938.pdf)
-  - [MapReduce](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
-  - [Percolator](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Peng.pdf)
-  - [Tenzing](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37200.pdf)
-- **Streaming**
-  - [Kafka](https://cs.uwaterloo.ca/~ssalihog/courses/papers/netdb11-final12.pdf)
-  - [MillWheel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41378.pdf)
-  - [Photon](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41318.pdf)
-- **Experimentation**
-  - [Online Controlled Experiments](https://exp-platform.com/Documents/puzzlingOutcomesInControlledExperiments.pdf)
+- **Distributed Computation papers** (MapReduce from the [core set](../white_paper.md#core-set-required); Dremel, FlumeJava, Hive, Percolator, Tenzing from the [optional tier](../white_paper.md#optional-deep-dive)). Read MapReduce alongside this part; the others are optional depth.
+- **Streaming papers** (Kafka from the [core set](../white_paper.md#core-set-required); MillWheel, Photon from the [optional tier](../white_paper.md#optional-deep-dive)). Read Kafka alongside this part; the others are optional depth.
+- **Experimentation paper** (Online Controlled Experiments from the [optional tier](../white_paper.md#optional-deep-dive)).
 
 ### Knowledge Integration Questions
 1. How do batch and stream processing models differ in their fault tolerance mechanisms?
@@ -233,14 +208,13 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 - **Site Reliability Engineering (SRE)**
   - Ch. 6-10: Production Practices, Scalability, and Architecture Reliability
 
-**Supplement / Case Studies** (optional depth, pull as needed, not required)
-- **Database Internals** Ch. 10-12: Distributed Transactions, Coordination, Recovery, for
-  database- or infrastructure-leaning targets.
-- MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores
-- CMU 15-445 Lectures 20-24: Logging, Recovery, Distributed Databases
+**Primary spine (this part), plus optional case studies**
+- **Database Internals** Ch. 10-12: Distributed Transactions, Coordination, Recovery. Core at this
+  band for reasoning about commit protocols and recovery.
+- MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores. Primary source.
+- CMU 15-445 Lectures 20-24: Logging, Recovery, Distributed Databases. Primary source.
 - Meta TAO, Uber Michelangelo, Netflix TechBlog
-- [Building on Quicksand](https://arxiv.org/pdf/0909.1788)
-- [Distributed Computing Economics](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2003-24.pdf)
+- Optional papers: Building on Quicksand, Distributed Computing Economics. See the [white paper catalog](../white_paper.md) optional tier under Systems Theory.
 
 **Practice**
 1. YouTube / Netflix: Content Delivery
@@ -249,28 +223,20 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 4. Graph Analytics: Large-Scale Data Pipelines
 
 **White Papers**
-- **Graph**
-  - [GraphChi](https://www.usenix.org/system/files/conference/osdi12/osdi12-final-126.pdf)
-  - [PowerGraph](https://www.usenix.org/system/files/conference/osdi12/osdi12-final-167.pdf)
-  - [Pregel](https://kowshik.github.io/JPregel/pregel_paper.pdf)
-- **Peer-to-Peer**
-  - [Chord](https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf)
-- **Search**
-  - [Earlybird](https://cs.uwaterloo.ca/~jimmylin/publications/Busch_etal_ICDE2012.pdf)
-  - [Unicorn](https://www.vldb.org/pvldb/vol6/p1150-curtiss.pdf)
-  - [Google Cluster Architecture](https://static.googleusercontent.com/media/research.google.com/en//archive/googlecluster-ieee.pdf)
-- **Storage**
-  - [Erasure Coding](https://www.usenix.org/system/files/conference/atc12/atc12-final181_0.pdf)
-  - [Facebook Photo Storage](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf)
-  - [RCFile](https://scispace.com/pdf/rcfile-a-fast-and-space-efficient-data-placement-structure-2kq37wcjl0.pdf)
-  - [XORing Elephants](https://arxiv.org/pdf/1301.3791)
+
+All papers below are from the [optional deep-dive tier](../white_paper.md#optional-deep-dive). Read them when a specific team or mock feedback calls for one of these topics.
+
+- **Graph papers:** GraphChi, PowerGraph, Pregel
+- **Peer-to-Peer papers:** Chord
+- **Search papers:** Earlybird, Unicorn, Google Cluster Architecture
+- **Storage papers:** Erasure Coding, Facebook Photo Storage, RCFile, XORing Elephants
 
 ### Knowledge Integration Questions
 1. How do real-world systems trade off latency, durability, and cost at scale?
-2. What operational principles separate “good designs” from production-ready systems?
+2. What operational principles separate "good designs" from production-ready systems?
 3. How do graph or analytics workloads shift storage and partitioning strategies?
 4. How can chaos engineering validate distributed resilience?
-5. What does “graceful degradation” look like in global architectures?
+5. What does "graceful degradation" look like in global architectures?
 
 <details>
 <summary>Expand for Sample Reasoning</summary>
@@ -286,12 +252,7 @@ teams. Read it when a mock surfaces a specific gap, not as a prerequisite.
 
 ## More Reading
 
-- [The Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)
-- [Unreliable Failure Detectors for Reliable Distributed Systems](https://dl.acm.org/doi/pdf/10.1145/226643.226647)
-- [Implementing Fault-Tolerant Services Using the State Machine Approach](https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf)
-- [Mencius](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/mao/mao.pdf)
-- [SWIM](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf)
-- [Pastry](https://www.cs.cornell.edu/courses/cs6452/2012sp/papers/pastry.pdf)
+Additional consensus and peer-to-peer papers (The Byzantine Generals Problem, Unreliable Failure Detectors for Reliable Distributed Systems, Implementing Fault-Tolerant Services Using the State Machine Approach, Mencius, SWIM, Pastry) are available in the [white paper catalog](../white_paper.md) optional tier under Consensus and Peer-to-Peer. These are for targeted use when a specific team or interest calls for them.
 
 ---
 
@@ -314,7 +275,7 @@ Each project should include one page outlining assumptions, design, trade-offs, 
 
 ## Production Realism Exercises
 
-Integrate “real-world failure” thought experiments weekly:
+Integrate "real-world failure" thought experiments weekly:
 - Node crash during leader election
 - Network partition between regions
 - Message duplication in async queues
@@ -329,7 +290,7 @@ Record how each failure propagates and how the system design can mitigate or rec
 ## Final Phase: Interview Refinement
 
 The final phase should train clarity, composure, and structured articulation. This corresponds to
-Phases 3 and 4 of the [schedule](../../schedule/README.md) and the cadence in [mocks](../../mocks/README.md); the progression below
+Phases 3 and 4 of the [schedule](../../schedule/README.md) and the cadence in [mocks](../../schedule/mocks.md); the progression below
 is the system-design-specific view of that same sprint, not a separate schedule.
 
 ### Progression
@@ -339,7 +300,7 @@ is the system-design-specific view of that same sprint, not a separate schedule.
 - **Finally:** a simulated panel with back-to-back design plus follow-up questions.
 
 ### Refinement Goals
-- Speak through reasoning transitions clearly (“Because we need consistency, we’ll...”)
+- Speak through reasoning transitions clearly ("Because we need consistency, we'll...")
 - Lead the discussion top-down - define requirements before architecture
 - Quantify design decisions (latency, QPS, replication factors)
 - Close with operational and monitoring considerations

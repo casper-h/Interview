@@ -1,4 +1,9 @@
-# Key Ideas
+# The Coding Round Playbook
+
+How to run a coding interview from the first clarifying question to the final complexity statement.
+This is the process half of the [Coding](./README.md) anchor: the [pattern coverage map](./README.md)
+lists what to practice, the [template](./template.md) is the pattern-recall diagnostic, and this file
+is how you conduct yourself in the room once a problem is in front of you.
 
 ## The core loop
 
@@ -37,7 +42,10 @@ answer. A few things that distinguish stronger signal from adequate signal in a 
   being asked "how would you test this."
 - **Generalizing the solution.** Noticing and mentioning how the approach would need to change
   under a different constraint, for example if the input no longer fit in memory, or if it needed
-  to support concurrent updates.
+  to support concurrent updates. This is the seam where a coding round touches system design: "if
+  the input did not fit in memory, this becomes an external sort or a streaming pass, and at scale a
+  sharded one." Reaching for that vocabulary (see the [building blocks](../system_design/building_blocks.md))
+  when the constraint invites it is a strong senior signal.
 - **Managing your own time.** Recognizing when an approach is not converging and being willing to
   step back and reconsider, rather than continuing to push on a path that is not working.
 
