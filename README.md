@@ -45,10 +45,7 @@ belonging to any one:
   work through, and the [mock-interview](./schedule/mocks.md) (flat file, no longer a subdirectory) cadence and rubric.
 
 Everything else is a sub-section under one of the four directories above. This README is the only
-documentation file at the repository root. The root also contains [roadmap.png](./roadmap.png), the visual reading
-roadmap for the System Design track (with a text transcription at [system_design/plan/roadmap.md](./system_design/plan/roadmap.md)),
-and two reference papers ([amazon-dynamo-sosp2007.pdf](./amazon-dynamo-sosp2007.pdf) and
-[spanner-osdi2012.pdf](./spanner-osdi2012.pdf)), which are assets rather than documentation.
+documentation file at the repository root.
 
 ## How to use it
 
