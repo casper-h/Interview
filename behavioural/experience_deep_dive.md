@@ -6,7 +6,7 @@ picks a system from your background and drills (architecture, data model, failur
 decisions you made and the ones you'd revisit) for 30 to 45 minutes. This is where genuine technical
 judgment is probed most directly, because you can't hand-wave through the details of your own work,
 and it is the round candidates most often under-prepare because it feels like it needs no preparation.
-It does.
+This round requires preparation.
 
 This is distinct from two adjacent tracks and should not be collapsed into either:
 
@@ -17,7 +17,7 @@ This is distinct from two adjacent tracks and should not be collapsed into eithe
   systems. This round is your real, messy, constraint-laden system, where "why didn't you just use
   X" has an actual answer rooted in what you knew and had at the time.
 
-## Pick two or three systems and prepare them cold
+## Pick Two or Three Systems and Prepare Them Cold
 
 Choose systems that are recent, that you owned a meaningful part of, and that have real technical
 depth (distributed behavior, scale, a hard trade-off, an interesting failure). For each, be able to
@@ -51,7 +51,7 @@ whiteboard and defend the following without notes:
   decision that aged badly, the thing you'd redesign now. This is a strong-hire signal, the same way
   it is in the behavioural round.
 
-## How to prepare it
+## How to Prepare It
 
 - Write a one-page brief per system for *your own* use (architecture sketch, data model, the two or
   three decisions, the numbers). This is working material to internalize, not a script to recite:
@@ -63,7 +63,7 @@ whiteboard and defend the following without notes:
   90-second walkthrough is the *opening* of this round, and the deep dive is what happens when the
   interviewer pulls a thread from it.
 
-## Common failure modes
+## Common Failure Modes
 
 - **Vagueness about your own system.** "The service scaled well" without numbers, or "we used a
   queue" without being able to say which delivery semantics and why, reads as shallow ownership.
@@ -74,7 +74,7 @@ whiteboard and defend the following without notes:
 - **No trade-offs, only wins.** A system with no tech debt, no regrets, and no alternatives
   considered is not a credible system. Name the trade-offs you made deliberately.
 
-## Ask your own questions at the end
+## Ask Your Own Questions at the End
 
 This is still an interview, not only a grilling, so leave a few minutes to ask questions of your
 own, and let them build on the conversation you just had. Because the interviewer has been deep in

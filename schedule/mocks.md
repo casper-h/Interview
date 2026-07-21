@@ -5,7 +5,7 @@ your thought process under time pressure, and reading and responding to an inter
 signal. Mock interviews are the only practice format that trains both, which is why they are
 weighted heavily in the [schedule](./README.md) from Phase 2 onward.
 
-## Where to run them
+## Where to Run Them
 
 - Peer swaps with other senior engineers, ideally people also preparing for interviews, so the
   exchange is mutually valuable.
@@ -21,7 +21,7 @@ Follow the cadence in the [schedule](./README.md): roughly one per week starting
 each time (coding, high-level system design, low-level design, behavioural) rather than
 repeating the same one.
 
-## Running the mock
+## Running the Mock
 
 - Time it exactly as the real interview would be timed. Do not pause the clock to think, since
   the ability to think under time pressure is exactly what is being trained.
@@ -32,7 +32,7 @@ repeating the same one.
   the [system design framework](../system_design/framework.md) and the [low-level design guide](../system_design/low_level_design/README.md) explicitly, and note
   afterward whether you actually followed the structure or drifted from it under pressure.
 
-## Grading rubric
+## Grading Rubric
 
 Use this rubric consistently across sessions so your notes are comparable over time, rather than
 each mock producing a differently shaped piece of feedback.
@@ -52,7 +52,7 @@ Rate each dimension, note the single biggest gap, and log it in the [tracker](./
 mock interviews section, along with a specific follow-up action rather than a general intention
 to "practice more."
 
-## What "strong hire" actually means on this rubric
+## The Strong-Hire Bar on This Rubric
 
 The [schedule](./README.md) gates the final phase on being "consistently rated strong
 hire," which is only useful if you know where that line sits. Rate each dimension against the bar
@@ -85,7 +85,7 @@ correctness rows into one), hire is four of five with the last one close, and le
 five. The Phase 4 exit condition is met when you are landing at strong hire across formats,
 validated by at least one external mock rather than only your own grading.
 
-## After the mock
+## After the Mock
 
 - Fix the specific gap identified before your next mock in the same format, rather than only
   doing more volume in the same shape.

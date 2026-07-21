@@ -5,7 +5,7 @@ points that have nothing to do with your engineering ability: showing up unprepa
 company," fumbling the logistics, asking weak questions, or leaving compensation on the table after
 you've already earned the offer. None of this is hard; all of it is routinely under-done.
 
-## Pre-interview company research
+## Pre-Interview Company Research
 
 "Why this company, why now" is called out in the [resume and narrative guide](./resume_and_narrative.md) as an avoidable way to
 lose points, but a good answer is a *research output*, not a talent. Before an onsite, spend a
@@ -23,7 +23,7 @@ focused block on:
 Turn the research into two artifacts: a two- or three-sentence "why this company" you can say
 naturally, and three or four genuine questions per interviewer type (see below).
 
-## Questions to ask interviewers
+## Questions to Ask Interviewers
 
 Senior candidates are graded on the quality of these, not just their answers. Tailor by round, and
 let them evolve as the loop progresses rather than repeating the same ones:
@@ -56,7 +56,7 @@ Small things that cost real points when they go wrong:
 - **Follow-up.** A brief, specific thank-you to your recruiter or interviewers is fine and sometimes
   expected; clarify the timeline and next steps before you leave the loop.
 
-## Offer evaluation and negotiation
+## Offer Evaluation and Negotiation
 
 A strong hire is undersold if the offer is mishandled. This is part of the outcome, not an
 afterthought. The framework:
@@ -89,7 +89,7 @@ choice, not something to leave to chance:
   the balance is a tight cluster of your top targets, with a short gap after the warm-up loop to fix
   whatever it exposed.
 
-### External source material
+### External Source Material
 
 The framework above is distilled from these, which are worth reading in full before you are in the
 conversation:

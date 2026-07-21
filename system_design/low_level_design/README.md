@@ -7,7 +7,7 @@ interviewer adds a new requirement partway through.
 
 See also the [concurrency track](../foundations/concurrency.md) for the concurrency-specific track.
 
-## Core principles to have crisp, example-backed definitions for
+## Core Principles
 
 **SOLID.**
 
@@ -33,7 +33,7 @@ Two related principles come up constantly in the follow-ups and are worth statin
   make those fakes cheap to write, and avoiding global mutable state (one reason Singleton is
   suspect) keeps tests from becoming order-dependent.
 
-## Design patterns worth recognizing and applying live
+## Design Patterns Worth Recognizing and Applying Live
 
 There's no need to memorize the full Gang of Four catalog. Know the following well, since they
 cover most interview scenarios.
@@ -63,7 +63,7 @@ cover most interview scenarios.
 - **Command.** Encapsulates a request as an object, useful for undo and redo behavior or for task
   queues.
 
-## The framework: use this structure out loud
+## The Framework
 
 1. **Clarify requirements.** What are the core use cases, and what is explicitly out of scope?
 2. **Identify the core objects and nouns.** Pull these directly from the requirements.
@@ -78,7 +78,7 @@ cover most interview scenarios.
    round. A design that can absorb the new requirement with a small, localized change, such as a
    new class or strategy, rather than a rewrite, is what is being tested.
 
-## Sketching the class diagram
+## Sketching the Class Diagram
 
 Most low-level design rounds happen on a whiteboard or a shared diagramming tool, and the drawing is
 half the communication. You do not need formal UML, but the relationships have to be unambiguous, so
@@ -98,7 +98,7 @@ Draw incrementally rather than all at once: start with the two or three core ent
 relationships as you talk, and leave whitespace so the new class the interviewer asks for has
 somewhere to go.
 
-## Practice problem list
+## Practice Problem List
 
 Work through the following using the framework above, ideally writing real skeleton code in your
 interview language rather than only talking through it. For worked examples, the
@@ -145,12 +145,11 @@ directly than the domain problems do.
 For each problem, log the attempt in the [tracker](../../schedule/tracker.md), noting what you would extend if given
 an additional requirement, and where the design would break.
 
-## Common mistakes at the senior level
+## Common Mistakes at the Senior Level
 
 - Jumping straight to code before clarifying requirements or naming the core entities.
 - Over-engineering upfront by adding patterns or abstractions the stated requirements don't yet
-  need. A senior signal is knowing when not to add abstraction, not just knowing the patterns
-  themselves.
+  need. Knowing when not to add abstraction is as important as knowing the patterns themselves.
 - Under-engineering, producing a design that cannot absorb the interviewer's follow-up requirement
   without a rewrite.
 - Ignoring concurrency entirely when the problem implies shared or mutable state, for example in

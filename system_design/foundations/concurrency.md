@@ -4,7 +4,7 @@ A smaller track than Low-Level Design or System Design, but worth deliberate cov
 both as a standalone topic and embedded inside system design deep dives, and it is commonly
 underprepared relative to how often it comes up.
 
-## Core concepts to be able to explain clearly
+## Core Concepts
 
 - **Race conditions.** What they are, a concrete example of one, and why they are hard to catch
   through testing alone.
@@ -25,7 +25,7 @@ underprepared relative to how often it comes up.
 - **Producer-consumer.** The pattern itself, and how a bounded queue between producer and
   consumer relates to backpressure, which also shows up in the system design track.
 
-## The memory model, and why correct-looking code is still wrong
+## The Memory Model, and Why Correct-Looking Code Is Still Wrong
 
 The concepts above assume threads see each other's writes; on real hardware and compilers they do
 not, unless you make them. This is the layer a standalone concurrency round probes once the basics
@@ -38,16 +38,16 @@ are solid, and it is where a lot of plausible code is quietly broken.
 - **Visibility versus atomicity.** `volatile` (Java) or `std::atomic` gives visibility and ordering,
   but a `count++` on a volatile is still three operations and still races. Visibility and atomicity
   are separate guarantees, and most bugs come from assuming one gives the other.
-- **The thread-safe singleton.** The canonical trap: double-checked locking is broken without a
+- **The thread-safe singleton.** A common error: double-checked locking is broken without a
   volatile instance field, because another thread can observe a partially constructed object through
   a reordered write. Being able to explain why is a fast signal that you understand the memory model,
   not just the syntax.
 - **False sharing.** Two threads updating independent variables that happen to sit on the same cache
   line contend on the hardware cache anyway, so throughput collapses for no logical reason. The fix
-  is padding to push them onto separate lines. Worth knowing for performance-sensitive and
-  low-latency shops.
+  is padding to push them onto separate lines. Relevant for performance-sensitive and low-latency
+  teams.
 
-## Language-specific idioms
+## Language-Specific Idioms
 
 Prepare this section for whichever language you expect to interview in.
 
@@ -58,7 +58,7 @@ Prepare this section for whichever language you expect to interview in.
 - **Go**: goroutines and channels, and the idiom of communicating by sharing memory versus sharing
   memory by communicating.
 
-## How concurrency shows up inside system design answers
+## How Concurrency Shows Up Inside System Design Answers
 
 This is where the standalone concepts above connect back to the System Design track, and is worth
 being ready to raise unprompted during a deep dive.
@@ -72,7 +72,7 @@ being ready to raise unprompted during a deep dive.
 - **Compare-and-swap** as the building block behind both lock-free data structures and optimistic
   concurrency control.
 
-## Practice problems
+## Practice Problems
 
 Concurrency shows up two ways, and you should practice for both. It appears embedded in system
 design (the integration points above) and low-level design (a parking lot or rate limiter with
@@ -94,7 +94,7 @@ round needs reps at actually implementing the primitives: so keep a short, concr
 For each, be ready to discuss where the lock boundaries are, whether a lock-free approach is
 warranted, and how the design would behave under high contention.
 
-## Practice approach
+## Practice Approach
 
 Beyond the list above, fold this in naturally: when working through the System Design track's
 replication and consensus material, pause and ask how the same correctness problem would be solved

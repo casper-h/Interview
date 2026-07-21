@@ -1,4 +1,4 @@
-# Worked design walkthroughs
+# Worked Design Walkthroughs
 
 These five walkthroughs demonstrate the pattern anchors: where a strategy plugs in, how composition
 wins over inheritance, where a new requirement lands as a class rather than a rewrite. Each applies
@@ -8,7 +8,7 @@ how a well-factored design absorbs the follow-up. For additional worked code exa
 [system-design-primer's object-oriented design solutions](https://github.com/donnemartin/system-design-primer#object-oriented-design-interview-questions-with-solutions),
 which cover parking lot, LRU cache, call center, deck of cards, hash map, and online chat.
 
-### Parking lot
+### Parking Lot
 
 Core objects: `Vehicle`, `ParkingSpot`, `Level`, `ParkingLot`, and `PricingStrategy`. For a worked
 code example see the [parking lot solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/object_oriented_design/parking_lot/parking_lot.ipynb)
@@ -32,7 +32,7 @@ CardBlockedState." Both land cleanly: multi-account adds a state and a transitio
 one more state. The state pattern localizes behavior per phase, so extending the lifecycle is a new
 class plus wiring, not a rewrite of every operation.
 
-### In-memory file system
+### In-Memory File System
 
 Core objects: `FileSystemNode` as an interface, `File` and `Directory` as implementations, with
 `Directory` holding a map of children. This is the textbook
@@ -44,7 +44,7 @@ node without touching the relationship between files and directories. If your de
 operations to concrete file types, the follow-up breaks it. Depend on the interface, not the concrete
 classes.
 
-### Logging framework
+### Logging Framework
 
 Core objects: `Logger`, `LogLevel`, `LogSink` (interface: `write(message)`), and `Formatter`
 (interface: `format(level, message) -> string`). Use
@@ -56,7 +56,7 @@ log level at runtime" or "add a sink without restarting." Both require sinks and
 state injected through a setter or builder, not fixed at construction. A library that cannot
 reconfigure itself live reads as over-rigid; make that mutability explicit upfront.
 
-### Elevator system
+### Elevator System
 
 Core objects: `Elevator`, `Request`, `ElevatorController`, `DispatchStrategy`, and `ElevatorState`
 (idle, moving up, moving down). Model each elevator's motion with

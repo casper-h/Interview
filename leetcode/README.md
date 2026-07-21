@@ -4,7 +4,7 @@ An extended, categorized list of problems for building pattern recognition, orga
 patterns most commonly tested at the senior level and above rather than around problem difficulty
 alone.
 
-## How to use this checklist
+## How to Use This Checklist
 
 A checked box means you have solved the problem before, not that you have mastered the pattern.
 Treat this list as a coverage map, and let two other files carry the actual weight of your
@@ -26,7 +26,7 @@ practice.
   you solved once under no time pressure and have not revisited in a month is not yet reliable
   under interview conditions.
 
-## Core and stretch coverage
+## Core and Stretch Coverage
 
 Each category below is split implicitly into **core** and **stretch**. Solving two problems in a
 category is usually enough to establish the pattern and recognize it under pressure: that is the
@@ -35,9 +35,9 @@ problems (the hard-tier and less common ones, flagged where they appear) are wha
 Phase 3 for the categories your mock feedback flags as weak. This is the concrete difference between
 a hire and a strong hire in a coding round: a hire recognizes the pattern; a strong hire has also
 drilled the hard variant the interviewer escalates to. Do not treat finishing every box as the
-goal: depth in your weak categories beats breadth you will never revisit.
+goal: depth in weak categories yields more than breadth that is never revisited.
 
-## Two habits that separate a strong hire from a hire
+## Two Behaviors Graded Beyond Correctness
 
 These are graded even on problems you solve correctly. Practice them deliberately, not just when an
 interviewer prompts you.
@@ -45,7 +45,7 @@ interviewer prompts you.
 - **Clarify before coding.** Before writing anything, state the input constraints (size, value
   range, sortedness), whether the input may be mutated, whether duplicates or nulls are possible,
   and any performance requirement beyond big-O (in place, single pass, streaming). Even in solo
-  practice, write these down first: it builds the reflex so it is automatic under pressure. See
+  practice, write these down first: it establishes the habit for interview conditions. See
   the [general coding guide](./playbook.md) for the fuller clarifying-question checklist.
 - **Drill the optimization follow-up.** After you have a working solution, do not stop. Ask, out
   loud: can I reduce time complexity further? Can I reduce space? What is the trade-off, and when
@@ -184,7 +184,7 @@ inside Graphs.
 
 ---
 
-### String Matching (stretch)
+### String Matching (Stretch)
 
 Lower frequency than the categories above and safe to skip for a generalist product loop, but worth
 one working implementation each if you are targeting search, compiler, or text-heavy teams, or want

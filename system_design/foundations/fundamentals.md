@@ -9,8 +9,9 @@ the difference between a process and a thread reads as having memorized system d
 earned it.
 
 The database-internals portion (storage engines, indexing, isolation levels, MVCC, write-ahead log)
-is expected knowledge at the upper-Senior and lower-Staff band, where the roadmap explicitly lists
-component internals like B-trees, LSM-trees, and inverted index as required. That portion is largely
+is expected knowledge at the upper-Senior and lower-Staff band, where component internals like
+B-trees, LSM-trees, and inverted index are expected (see the
+[concepts-by-level reference](../plan/concepts_by_level.md)). That portion is largely
 review once you have done the DDIA and Database Internals reading in the
 [reading plan](../plan/README.md). The networking and operating-systems portion scales with team type:
 heavy for infrastructure, platform, systems, and trading teams, light for product teams.
@@ -35,7 +36,7 @@ Be able to explain, and reason about the performance implications of:
 - **Load balancing at the network level:** L4 vs L7 (cross-reference the building-blocks library),
   and anycast.
 
-## Operating systems
+## Operating Systems
 
 - **Processes vs threads:** address-space isolation vs shared memory, the cost of context switches,
   and when you'd reach for multiple processes vs multiple threads (connects directly to the
@@ -57,7 +58,7 @@ Be able to explain, and reason about the performance implications of:
   system-design [building blocks](../building_blocks.md); a design that orders events by raw
   wall-clock timestamps is a common and avoidable error.
 
-## Database internals
+## Database Internals
 
 - **Storage engines:** B-tree vs LSM-tree in depth (write/read/space amplification, compaction):
   the same trade-off the system-design track uses, but here you should be able to explain the
@@ -73,7 +74,7 @@ Be able to explain, and reason about the performance implications of:
 - **Query execution basics:** how a join is executed (nested loop, hash, merge), and what a query
   planner is choosing between.
 
-## How to study this
+## How to Study This
 
 This is reference material, not a problem set. The DDIA and Database Internals reading in the
 [reading plan](../plan/README.md) already covers the database-internals portion in depth. If you have

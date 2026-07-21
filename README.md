@@ -4,7 +4,7 @@ A structured, interleaved plan for senior-level software engineering interviews.
 things you are evaluated on directly, coding, system design, and behavioural performance, and a
 small set of supporting material for how you prepare and present.
 
-## The bar this prepares for
+## The Bar This Prepares For
 
 The target is a strong Senior hire, and the reliable way to clear that bar is to prepare against the
 Staff bar. Senior loops probe scope, judgment, and trade-off reasoning that shade into what a Staff
@@ -14,7 +14,7 @@ answer, that is deliberate: the extra depth is what turns a lean hire into a str
 here requires that you are Staff. It asks that you can reason like one when the interview opens the
 door.
 
-## How this repository is organized
+## How This Repository Is Organized
 
 The material lives under three anchors, one for each thing an interview loop evaluates:
 
@@ -45,9 +45,9 @@ belonging to any one:
   work through, and the [mock-interview](./schedule/mocks.md) (flat file, no longer a subdirectory) cadence and rubric.
 
 Everything else is a sub-section under one of the four directories above. This README is the only
-documentation file at the repository root.
+top-level document; every other guide lives inside one of those four directories.
 
-## How to use it
+## How to Use It
 
 Start with the [schedule](./schedule/README.md). It lays out the phases of preparation and, more
 importantly, how the anchors fit together week to week. The anchors are organized by topic rather
@@ -64,28 +64,28 @@ perturbs the prompt. The durable outputs of your practice are the pattern-recall
 [the template](./leetcode/template.md), the feedback log in [the tracker](./schedule/tracker.md),
 and your private behavioural story bank, not solution files.
 
-## Reading priority
+## Reading Priority
 
-The reading is tiered so that limited time goes to the highest-return material first. The tiers below
-follow the roadmap shipped with the System Design track (available as both an
-[image](./roadmap.png) and a [text transcription](./system_design/plan/roadmap.md)),
-and the [reading plan](./system_design/plan/README.md) applies them in detail.
+Limited time goes to the highest-return material first. The order below reflects the
+concept-to-hiring-band mapping in the
+[concepts-by-level reference](./system_design/plan/concepts_by_level.md), and the
+[reading plan](./system_design/plan/README.md) applies it in detail.
 
-- **Read first (highest return).** *Designing Data-Intensive Applications* is the top-tier concepts book (S tier on the roadmap).
-  The eight core [white papers](./system_design/white_paper.md),
-  the [building blocks](./system_design/building_blocks.md) library, and a dozen practice
-  designs worked out loud cover most of what a Senior loop tests.
-- **Read for the upper-Senior and Staff range you are targeting.** *Database Internals* (A tier) for
-  storage-engine depth, *Specifying Systems* (S tier secondary) and the TLA+ material for formal reasoning, and
-  jepsen.io (A tier) for how consistency claims break in practice. The MIT 6.824 and CMU 15-445 lecture
-  series are primary sources here, not optional extras. *Understanding Distributed Systems* and the System Design Primer
-  (both B tier) are supporting material.
+- **Read first (highest return).** *Designing Data-Intensive Applications* is the primary concepts
+  book. The eight core [white papers](./system_design/white_paper.md), the
+  [building blocks](./system_design/building_blocks.md) library, and a dozen practice designs worked
+  out loud cover most of what a Senior loop tests.
+- **Read for the upper-Senior and Staff range you are targeting.** *Database Internals* for
+  storage-engine depth, *Specifying Systems* and the TLA+ material for formal reasoning, and jepsen.io
+  for how consistency claims break in practice. The MIT 6.824 and CMU 15-445 lecture series are
+  primary sources here, not optional extras. *Understanding Distributed Systems* and the System Design
+  Primer are supporting material.
 - **De-emphasize as a primary study path.** The interview-prep compilations (*Grokking the System
   Design Interview*, *System Design Interview* Volume 1, *Fundamentals of Software Architecture*) are
-  useful as an applied warm-up for problem shape, not as a primary resource. Do not let
-  them crowd out the material above.
+  useful as an applied warm-up for problem shape, not as a primary resource. Do not let them crowd out
+  the material above.
 
-## Additional resources
+## Additional Resources
 
 - [Levels.fyi](https://www.levels.fyi): compensation data by company and level.
 - [Techjobs.xyz](https://techjobs.xyz/): open roles.

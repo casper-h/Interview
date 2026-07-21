@@ -1,10 +1,10 @@
 # White Papers
 
-Two tiers in one list: a required **core set** of roughly eight papers, then an **optional deep
+Two groups in one list: a required **core set** of roughly eight papers, then an **optional deep
 dive** for targeted use. Do the core set; pull from the deep dive only when a specific team or a
 mock-interview gap calls for it.
 
-## How to read these for interview value, not just completion
+## Reading for Interview Value
 
 For each paper, you should be able to answer, without rereading it, three questions: what problem
 was this system solving that existing systems at the time did not, what is the one core design
@@ -19,11 +19,9 @@ this whole repo to mistake reading for progress. If the choice on a given week i
 the optional tier versus another mock or another design worked end to end, take the mock or the
 design; the optional papers have the lowest interview return per hour of anything here.
 
-Note: PDF copies of the Dynamo and Spanner papers are included at the repository root for offline reference.
-
 ---
 
-## Core set (required)
+## Core Set (Required)
 
 Chosen because they cover the concepts that recur most often across senior-level system design
 interviews, rather than the full list the field has produced. Between these eight you get the core
@@ -44,7 +42,8 @@ wait. You do not need to read the FLP paper to use the result.
 - [ ] [Raft](https://raft.github.io/raft.pdf). The one to be able to explain end to end: leader
   election, log replication, and safety. For the underlying idea, keep
   [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf) as a short companion
-  read so you can say how Raft relates to Paxos. This is the "Raft/Paxos" the roadmap expects.
+  read so you can say how Raft relates to Paxos. This is the "Raft/Paxos" pairing senior-level
+  interviews expect.
 
 **Database**
 
@@ -67,7 +66,7 @@ wait. You do not need to read the FLP paper to use the result.
 
 ---
 
-## Optional deep dive
+## Optional Deep Dive
 
 Everything below was kept out of the required core set because, for a generalist senior-level loop,
 the direct interview return is lower relative to the time to read it well. None of it is low

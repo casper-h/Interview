@@ -14,7 +14,7 @@ the main alternative and the trade-off between them, and how does it fail?**
 
 ---
 
-## 1. Load balancing
+## 1. Load Balancing
 
 - **L4 vs L7.** L4 balances on TCP/UDP (fast, protocol-agnostic, no visibility into the request);
   L7 balances on HTTP/gRPC (can route by path, header, or cookie, terminate TLS, and retry, at some
@@ -53,7 +53,7 @@ the main alternative and the trade-off between them, and how does it fail?**
 - **When *not* to cache.** Write-heavy data with low read reuse, or data whose staleness is
   unacceptable. Knowing when a cache adds complexity without payoff is itself a senior signal.
 
-## 3. Content delivery (CDN)
+## 3. Content Delivery (CDN)
 
 - Edge caching of static and cacheable dynamic content close to users; origin shielding to protect
   the origin from cache-miss stampedes; cache-control headers and purge/invalidation.
@@ -61,7 +61,7 @@ the main alternative and the trade-off between them, and how does it fail?**
 - The core justification is the latency arithmetic in the framework: a cross-region round trip
   dwarfs everything else, so serving from the edge is the single biggest user-facing latency win.
 
-## 4. Partitioning and sharding
+## 4. Partitioning and Sharding
 
 - **Strategies.** Range partitioning (good for range scans, prone to skew), hash partitioning
   (even load, breaks ordering), and composite / hash-then-range (blends both).
@@ -87,7 +87,7 @@ the main alternative and the trade-off between them, and how does it fail?**
   partition, and failover correctness (fencing tokens to stop a demoted leader from accepting
   writes).
 
-## 6. Consensus and coordination
+## 6. Consensus and Coordination
 
 - **What it's for.** Leader election, distributed locks, membership, and configuration/metadata that
   must be linearizable. Reach for it sparingly: it is a correctness tool, not a throughput tool.
@@ -109,7 +109,7 @@ the main alternative and the trade-off between them, and how does it fail?**
   timeouts and cannot promise both safety and liveness under fully asynchronous conditions; do not
   cite it as a reason consensus is impossible in practice.
 
-### Time, clocks, and their limits
+### Time, Clocks, and Their Limits
 
 - **Physical clocks drift and are not monotonic.** Wall-clock time across machines disagrees by
   milliseconds even under NTP, and it can jump backward on correction, so a timestamp comparison is
@@ -126,7 +126,7 @@ the main alternative and the trade-off between them, and how does it fail?**
   time infrastructure. Name this trade-off when a design asks for external consistency across
   regions (see geo-distribution, block 13).
 
-## 7. Rate limiting
+## 7. Rate Limiting
 
 - **Algorithms.** Token bucket (allows bursts up to bucket size: the usual default), leaky bucket
   (smooths to a fixed rate), fixed window (simple, but allows 2x bursts at the boundary), sliding
@@ -136,7 +136,7 @@ the main alternative and the trade-off between them, and how does it fail?**
 - **Two distinct goals.** Abuse prevention (per-user/per-IP, a security concern) vs load shedding
   (protecting the system under overload): they call for different limits and placement.
 
-## 8. Message queues and event streaming
+## 8. Message Queues and Event Streaming
 
 - **Delivery semantics.** At-most-once (may drop), at-least-once (may duplicate: the common
   default, pair with idempotent consumers), exactly-once (expensive; usually at-least-once +
@@ -151,7 +151,7 @@ the main alternative and the trade-off between them, and how does it fail?**
 - **Use cases.** Decoupling services, smoothing spiky load, async/background work, and event-driven
   fan-out.
 
-## 9. Idempotency and reliability
+## 9. Idempotency and Reliability
 
 - **Idempotency keys.** A client-generated key plus a server-side dedup table so a retried write
   (after a timeout or network blip) doesn't double-charge. The canonical example is a payment.
@@ -163,7 +163,7 @@ the main alternative and the trade-off between them, and how does it fail?**
   failure) vs the **saga pattern** (a sequence of local transactions with compensating actions).
   Sagas are the modern default for cross-service consistency and a strong thing to raise unprompted.
 
-## 10. Consistency models
+## 10. Consistency Models
 
 - **Strong** (linearizable / serializable): every read sees the latest write; needed for balances,
   inventory, unique-constraint invariants.
@@ -179,7 +179,7 @@ the main alternative and the trade-off between them, and how does it fail?**
   linearizable per key and still expose weak isolation across a transaction that touches many keys.
   Keeping the two apart is a common point where a strong answer separates from a hand-waved one.
 
-### Transaction isolation levels
+### Transaction Isolation Levels
 
 Order from weakest to strongest by the anomaly each one prevents. Naming the specific anomaly, not
 just the level, is the signal an interviewer is looking for.
@@ -206,7 +206,7 @@ just the level, is the signal an interviewer is looking for.
   the read-side phantom for its own snapshot; preventing a write that depends on the absence of such
   rows requires serializable isolation.
 
-## 11. Data modeling and storage selection
+## 11. Data Modeling and Storage Selection
 
 - **Access-pattern-first.** Choose storage from the query, not the other way around. OLTP point
   reads/writes vs OLAP scans and aggregations pull toward very different stores.
@@ -223,7 +223,7 @@ just the level, is the signal an interviewer is looking for.
   amplification, compaction) vs B-tree (predictable read latency): reach for LSM for write-heavy
   ingest, B-tree for balanced OLTP.
 
-## 12. API and communication patterns
+## 12. API and Communication Patterns
 
 - **Protocols.** REST (simple, cacheable, great for public APIs), gRPC (efficient binary, strong
   typing, ideal for internal service-to-service), GraphQL (flexible client-shaped queries, at the
@@ -236,7 +236,7 @@ just the level, is the signal an interviewer is looking for.
 - **Versioning and idempotency.** URL vs header versioning with backward compatibility as a
   constraint; idempotency keys on mutating endpoints (cross-reference block 9).
 
-## 13. Geo-distribution and multi-region
+## 13. Geo-Distribution and Multi-Region
 
 - **Why.** Latency (serve from the nearest region) and disaster recovery (survive a regional
   outage).
@@ -248,7 +248,7 @@ just the level, is the signal an interviewer is looking for.
 - **Routing and failover.** Latency-based / geo DNS, anycast, and health-based failover; and the
   data-residency constraints that sometimes pin data to a region regardless of latency.
 
-## 14. Cell-based architecture
+## 14. Cell-Based Architecture
 
 - Partition the whole system into independent **cells** (each a full stack serving a slice of
   users/tenants) to bound blast radius: a failure or poison request is contained to one cell rather
@@ -267,7 +267,7 @@ just the level, is the signal an interviewer is looking for.
   budget the allowed shortfall that governs how aggressively you ship vs stabilize. Alert on
   symptoms (SLO burn) rather than causes to avoid alert fatigue.
 
-## 16. Security and trust
+## 16. Security and Trust
 
 - **AuthN / AuthZ.** How users and services authenticate (tokens, OAuth/OIDC, mTLS between services)
   and how authorization is scoped (RBAC/ABAC, resource-level checks).
@@ -277,7 +277,7 @@ just the level, is the signal an interviewer is looking for.
 - **PII and data lifecycle.** Retention, deletion/right-to-be-forgotten, and audit logging,
   increasingly expected unprompted, especially for fintech and anything storing user data.
 
-## 17. Probabilistic and specialized structures
+## 17. Probabilistic and Specialized Structures
 
 - **Bloom filter.** Space-efficient set-membership with no false negatives: front a store to avoid
   disk lookups for absent keys (LSM engines use it internally). Reach for it whenever the question
@@ -288,7 +288,7 @@ just the level, is the signal an interviewer is looking for.
 - **Inverted index.** The core structure behind search: term -> posting list of documents, plus
   ranking and sharding across the corpus. Enough to reason about a search or typeahead design.
 
-## 18. API gateway and service mesh
+## 18. API Gateway and Service Mesh
 
 - **API gateway.** A single ingress in front of many backend services: it handles routing, request
   aggregation, authentication/authorization, TLS termination, and rate limiting (block 7) in one
@@ -308,7 +308,7 @@ just the level, is the signal an interviewer is looking for.
   or misconfigured gateway is a system-wide single point of failure, and a mesh's sidecars add
   latency and operational complexity that a small service count rarely justifies.
 
-## 19. Batch processing
+## 19. Batch Processing
 
 - **What it's for.** Reprocessing a large, bounded dataset for throughput rather than latency:
   nightly aggregations, building a search index or recommendation model, backfills, and ETL. The
@@ -321,7 +321,7 @@ just the level, is the signal an interviewer is looking for.
   a delay of minutes is acceptable. Pair it with stream processing (block 20) in a lambda or kappa
   architecture when you need both a fast approximate path and a slow exact one.
 
-## 20. Stream processing
+## 20. Stream Processing
 
 - **What it's for.** Continuous computation over an unbounded event stream with low latency:
   real-time analytics, fraud detection, live leaderboards, and materialized views kept fresh from a
@@ -338,7 +338,7 @@ just the level, is the signal an interviewer is looking for.
 - **Failure modes.** Late and out-of-order data, state that grows without bound (needs TTL or
   compaction), and reprocessing after a code change (replay from an offset, block 8).
 
-## 21. Geospatial indexing
+## 21. Geospatial Indexing
 
 - **What it's for.** "Find the nearest N" and "what is within this region" queries: ride-hailing,
   store locators, nearby-friends, geofencing. A plain B-tree on latitude and longitude cannot answer
@@ -355,7 +355,7 @@ just the level, is the signal an interviewer is looking for.
   updates, accept a short staleness window, and keep the hot index in memory (Redis geospatial
   commands are the quick answer).
 
-## 22. Change data capture and the outbox pattern
+## 22. Change Data Capture and the Outbox Pattern
 
 - **What it's for.** Reliably turning committed database writes into an event stream, so a search
   index, cache, or downstream service stays in sync without dual-writes. The core problem is that
@@ -370,7 +370,7 @@ just the level, is the signal an interviewer is looking for.
   "publish an event when an order is created": dual-writing directly to a queue is the trap this
   block exists to avoid.
 
-## 23. Event sourcing and CQRS
+## 23. Event Sourcing and CQRS
 
 - **Event sourcing.** Store the append-only log of state-changing events as the source of truth and
   derive current state by replaying them, rather than storing only the latest snapshot. You get a
@@ -384,7 +384,7 @@ just the level, is the signal an interviewer is looking for.
 - **When *not* to reach for it.** For simple CRUD, event sourcing and CQRS add real complexity for
   little payoff. Naming that boundary is itself a senior signal, the same way "when not to cache" is.
 
-## 24. Dead-letter queues
+## 24. Dead-Letter Queues
 
 - **What it's for.** A separate queue that captures messages a consumer cannot process after a set
   number of retries (a poison message, a schema it can't parse, a permanent downstream failure), so
@@ -398,7 +398,7 @@ just the level, is the signal an interviewer is looking for.
 
 ---
 
-## How this maps to the framework
+## How This Maps to the Framework
 
 During a design, this library feeds mainly two steps:
 

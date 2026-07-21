@@ -2,12 +2,12 @@
 
 At the senior level and above, the behavioural round is frequently a hard gate, not a formality. It
 is where interviewers assess ownership, judgment under ambiguity, and how you operate with other
-people, none of which the coding or system design rounds directly test. Treat this track with the
-same rigor as the technical ones, and note that this is the round where preparing to the Staff bar
+people, none of which the coding or system design rounds directly test. This track requires the same
+preparation rigor as the technical tracks, and note that this is the round where preparing to the Staff bar
 pays off most directly. The scope, influence, and leadership stories that read as merely "good" for
 a Senior candidate are exactly what pushes an evaluation from lean hire to strong hire.
 
-## What's actually being evaluated
+## What's Actually Being Evaluated
 
 Across most top companies, behavioural interviewers are scoring some subset of the following.
 
@@ -38,7 +38,7 @@ If you're targeting a specific company, it helps to map your stories to their la
   people-development story ready (rows 4 and 14 below), not only delivery stories.
 - For most other companies, prepare for the general list above; it covers the common ground.
 
-## The STAR framework, and how to not sound robotic doing it
+## The STAR Framework, and How to Not Sound Robotic Doing It
 
 - **Situation**: one or two sentences of context. Don't over-explain the org chart.
 - **Task**: what specifically was your responsibility, or the problem you decided to own.
@@ -53,10 +53,10 @@ Aim for 90 seconds to two and a half minutes per story unless the interviewer di
 follow-ups. Rehearse out loud, not just in your head; writing a story and being able to tell it
 fluently under pressure are different skills.
 
-## Handling follow-up probing
+## Handling Follow-Up Probing
 
-The initial STAR answer is the easy part. At the senior level and above, the signal lives in the
-follow-ups, and a rehearsed monologue that can't survive probing reads as coached rather than lived.
+The initial STAR answer establishes the baseline. At the senior level and above, the signal comes from
+the follow-ups, and a rehearsed monologue that cannot survive probing reads as coached rather than lived.
 Interviewers push on the *reasoning*, not the events. Prepare for these shapes on every story:
 
 - **"Why did you choose that over the alternative?"** Have the option you rejected and the reason
@@ -74,7 +74,7 @@ Interviewers push on the *reasoning*, not the events. Prepare for these shapes o
 The trap is over-rehearsing the wording until you can only recite the happy path. Rehearse the
 *content and the reasoning* so you can answer an unexpected angle in your own words, not a script.
 
-## Interview-type specifics
+## Interview-Type Specifics
 
 Not every behavioural conversation is the same round, and preparing them identically is a common
 miss.
@@ -92,7 +92,7 @@ miss.
   on judgment calls where values traded off against each other (shipping vs quality, speed vs
   consensus).
 
-## Story bank: build eight to ten stories that cover these situations
+## Story Bank Coverage
 
 Aim for real projects, ideally from the last two or three years, ideally with quantifiable
 impact. One story can often answer multiple question types, so tag each story against the
@@ -150,11 +150,11 @@ Which questions this answers: ("Tell me about a conflict...", "Tell me about a f
 Keep the filled-in versions in a private `stories.md` alongside this file, ideally excluded from
 version history if it contains anything sensitive; the table above serves as the index.
 
-For rows 11 to 20, [strong_vs_lean.md](./strong_vs_lean.md) spells out what a strong-hire answer
+For rows 11 to 20, [strong hire versus lean hire](./strong_vs_lean.md) spells out what a strong-hire answer
 demonstrates versus what the lean-hire version sounds like, plus the follow-up probe that separates
 them. Use it to pressure-test each drafted story before you rehearse it.
 
-## Standard narrative pieces to pre-build
+## Standard Narrative Pieces to Pre-Build
 
 - **"Tell me about yourself,"** answered in 60 to 90 seconds, structured around where you are
   now, the through-line of your career, and why you're looking now. This should not be a
@@ -168,7 +168,7 @@ them. Use it to pressure-test each drafted story before you rehearse it.
   too. The canonical list, organized by interview type, lives in
   [Company Prep](./company_prep.md); build from there rather than keeping a second copy here.
 
-## Practice cadence
+## Practice Cadence
 
 - In the first one to two weeks of your overall schedule, draft the story index and two or three
   full stories.
@@ -176,7 +176,7 @@ them. Use it to pressure-test each drafted story before you rehearse it.
 - Once you have a full bank, run at least three or four mock behavioural rounds (see [mocks](../schedule/mocks.md)).
   This is the only way to find out which stories don't land, or run too long, in practice.
 
-## Anti-patterns to avoid
+## Anti-Patterns to Avoid
 
 - Speaking in "we" the whole time. Interviewers need to know your specific contribution.
 - Giving no result and no quantification. Always close the loop.

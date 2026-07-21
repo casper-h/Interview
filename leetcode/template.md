@@ -6,7 +6,7 @@ memorized, and maintaining a bank of skeletons is busywork that does not survive
 Instead, this file is a list of pattern *names*. The point of working through the [coding tracker](./README.md) is
 that, after enough reps, you can picture the shape of each pattern from its name alone.
 
-## How to use it
+## How to Use It
 
 Before a mock or a real interview, read down the list and, for each name, ask: **can I picture the
 shape (the core loop, the state I maintain, the termination condition) without looking anything
@@ -19,7 +19,7 @@ If you *want* a written note for a pattern whose edge cases keep tripping you (s
 boundary conditions in binary search), keep it in your own words, kept short, and only for the
 handful that actually need it: not as a completionist exercise across the whole list.
 
-## The patterns
+## The Patterns
 
 - Two pointers, converging from both ends
 - Sliding window, fixed size
@@ -46,7 +46,7 @@ handful that actually need it: not as a completionist exercise across the whole 
 - Two heaps (a max-heap and a min-heap balanced for the running median)
 - Sweep line (sort the interval endpoints into events, then sweep maintaining an active set)
 
-## The point, restated
+## The Point, Restated
 
 Reviewing this list is a fast diagnostic you can run in five minutes before a session. The blanks
 tell you where to spend a rep or two. The ones you can picture confidently, you leave alone.

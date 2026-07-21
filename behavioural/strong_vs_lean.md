@@ -1,4 +1,4 @@
-# Strong hire versus lean hire, on the Staff-scope rows
+# Strong Hire Versus Lean Hire, on the Staff-Scope Rows
 
 Rows 1 to 10 of the [story bank](./README.md) cover the individual-contributor baseline; rows 11 to
 20 are the scope, influence, and leadership stories that push an evaluation from lean hire to strong

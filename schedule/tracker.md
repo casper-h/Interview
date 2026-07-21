@@ -20,7 +20,7 @@ the log useful; replace or delete it once you have your own entries.
 | 2026-01-06 | Parking lot | 45 min | Design broke on follow-up | Modeled spot sizes as Vehicle subclasses, so "add EV spots with charging" forced edits across the hierarchy. Should have used a SpotType field plus composition. Under-engineered the extension point. | 2026-01-13 |
 | | | | | | |
 
-## System Design (practice designs)
+## System Design (Practice Designs)
 
 | Date | Design | Time taken | Framework followed fully? | Weakest part of the answer | Re-attempt date |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@ the log useful; replace or delete it once you have your own entries.
 | 2026-01-09 | Conflict with a peer (row 2) | 3 min 10 s | Ran long, and spoke in "we" for the resolution so my specific contribution was unclear. Tighten the situation, use "I" in the action. | Yes |
 | | | | | |
 
-## Mock interviews
+## Mock Interviews
 
 | Date | Format (coding, high-level design, low-level design, behavioural, or full loop) | Interviewer or peer | Self or peer rating | Key gaps identified | Follow-up action |
 |---|---|---|---|---|---|

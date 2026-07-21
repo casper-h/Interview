@@ -14,14 +14,34 @@ The **supplement** material below (the long white-paper tail and the optional te
 **optional depth**: valuable if you lack production distributed-systems experience, but not something
 to grind through by default.
 
-## How the reading is tiered
+## Reading Priority
 
-The priority here follows the roadmap at [./roadmap.md](./roadmap.md), which transcribes the durable content of the roadmap image for the upper-Senior and lower-Staff band. The tiers matter because time is the binding constraint, and the wrong reading order spends it on low-return material.
+Time is the binding constraint, so the order below puts the highest-return material first. The
+[concepts-by-level reference](./concepts_by_level.md) maps system design concepts to hiring bands and
+informs this priority.
 
-- **S-tier concepts spine (read for depth).** *Designing Data-Intensive Applications* (DDIA) is the center of gravity. *Database Internals* by Alex Petrov is core, not optional, at this band: it is where the storage-engine and distributed-transaction internals live. The MIT 6.824 and CMU 15-445 lecture series are primary sources here, watched alongside the reading rather than deferred.
-- **A-tier and S-tier depth for the Staff edge.** *Specifying Systems* (S-tier secondary) and the TLA+ material for reasoning about correctness formally, and jepsen.io (A-tier) for how consistency claims fail under real partitions. These separate a strong answer from a competent one when a deep dive turns to correctness.
-- **A-tier applied warm-up, not the spine.** *System Design Interview* Volumes 1 and 2 (Alex Xu) are useful for problem shape and vocabulary early on, and Volume 2 has a few worthwhile worked designs. Treat them as a warm-up for the practice designs, not as core reading. The chapter pointers to them below are optional and can be skipped once you are fluent in the framework; do not let them displace the primary spine.
-- **B-tier supporting material.** *Understanding Distributed Systems* gives the concept scaffolding, and Donne Martin's System Design Primer is a useful applied reference. Both are supporting material, not the primary spine.
+- **The concepts spine (read for depth).** *Designing Data-Intensive Applications* (DDIA) is the
+  center of gravity. *Database Internals* by Alex Petrov is core, not optional, at this band: it is
+  where the storage-engine and distributed-transaction internals live. The MIT 6.824 and CMU 15-445
+  lecture series are primary sources, watched alongside the reading rather than deferred.
+- **Depth for the Staff edge.** *Specifying Systems* and the TLA+ material for reasoning about
+  correctness formally, and jepsen.io for how consistency claims fail under real partitions. These
+  separate a strong answer from a competent one when a deep dive turns to correctness.
+- **Applied warm-up, not the spine.** *System Design Interview* Volumes 1 and 2 (Alex Xu) are useful
+  for problem shape and vocabulary early on, and Volume 2 has a few worthwhile worked designs. Treat
+  them as a warm-up for the practice designs, not as core reading. The chapter pointers to them below
+  are optional and can be skipped once you are fluent in the framework.
+- **Supporting material.** *Understanding Distributed Systems* gives the concept scaffolding, and
+  Donne Martin's System Design Primer is a useful applied reference. Both are supporting material,
+  not the primary spine.
+
+**A note on the chapter and lecture references.** The paper links and the CMU 15-445 lecture topics
+below are verified. The DDIA and Site Reliability Engineering chapter numbers were corrected against
+the published tables of contents. The MIT 6.824 lecture topics follow the current published schedule
+at https://pdos.csail.mit.edu/6.824/schedule.html, whose numbering shifts year to year, so confirm
+the numbers against the live schedule. The *Database Internals* and *Understanding Distributed
+Systems* chapter mappings could not be confirmed against a public table of contents; verify them
+against your copy.
 
 **Minimum viable pass.** If you are short on time, the following is enough to be ready for a Senior
 loop at most product companies: DDIA's interview-relevant chapters, the eight core white papers in
@@ -91,6 +111,8 @@ Read them when a mock surfaces a specific gap, not as a prerequisite.
 **Goal:** Move from architecture reasoning to internal design: storage, consensus, replication, and consistency models.
 
 **Primary Reading**
+- **Designing Data-Intensive Applications (DDIA)**
+  - Ch. 7-9: Transactions, The Trouble with Distributed Systems, Consistency and Consensus
 - **Understanding Distributed Systems**
   - Ch. 6-10: Replication, Partitioning, Consensus, Consistency
 - **System Design Interview (Vol. 1)**
@@ -107,7 +129,7 @@ Read them when a mock surfaces a specific gap, not as a prerequisite.
   Core at the upper-Senior and Staff band, not optional: this is the storage-engine and
   distributed-systems internals reading DDIA only summarizes.
 - CMU 15-445 Lectures 3-10: Storage, Compression, Memory Management, Indexes & Filters. Primary source.
-- MIT 6.824 Lectures 4-6: Primary-Backup, Fault Tolerance, Raft. Primary source.
+- MIT 6.824 Lectures 4 and 6-7: Paxos, then Fault Tolerance with Raft. Primary source. Lecture numbering shifts year to year; confirm against the live schedule.
 - **Database System Concepts** (Ch. 12-16: Storage, Indexing, Concurrency Control): a university
   textbook that largely overlaps DDIA and Database Internals; optional, for the academic treatment.
 - Optional systems theory papers: Consistency Availability and Convergence, Life Beyond Distributed Transactions, Eventually Consistent - Revisited, Avoiding Two-Phase Commit, The Log. See the [white paper catalog](../white_paper.md) optional tier under Systems Theory.
@@ -146,9 +168,9 @@ Read them when a mock surfaces a specific gap, not as a prerequisite.
 
 **Primary Reading**
 - **Designing Data-Intensive Applications (DDIA)**
-  - Ch. 7-9: Batch and Stream Processing
+  - Ch. 10-11: Batch and Stream Processing
 - **Site Reliability Engineering (SRE)**
-  - Ch. 3-5: SLIs, SLOs, Monitoring, Incident Response
+  - Ch. 3-4: Embracing Risk, Service Level Objectives; Ch. 6: Monitoring Distributed Systems; Ch. 13-15: Emergency Response, Managing Incidents, Postmortem Culture
 - **Understanding Distributed Systems**
   - Ch. 11-13: Fault Tolerance, Backpressure, Orchestration
 - **System Design Interview (Vol. 1)**
@@ -159,7 +181,7 @@ Read them when a mock surfaces a specific gap, not as a prerequisite.
   - Sections: Asynchronism, Message Queues, Microservices, Service Discovery, Reverse Proxy
 
 **Lectures (primary spine)** and **supplementary papers (optional depth)**
-- MIT 6.824 Lectures 7-10: MapReduce, Fault-Tolerant Services, Transactions, Dremel. Primary source.
+- MIT 6.824: MapReduce (Lab 1) and the fault-tolerance and distributed-transaction lectures. Primary source.
 - CMU 15-445 Lectures 11-16: Sorting, Joins, Execution, Concurrency. Primary source.
 - Optional papers: Megastore, Principles of Robust Timing over the Internet. See the [white paper catalog](../white_paper.md) optional tier under Database and Systems Theory.
 
@@ -198,7 +220,7 @@ Read them when a mock surfaces a specific gap, not as a prerequisite.
 
 **Primary Reading**
 - **Designing Data-Intensive Applications (DDIA)**
-  - Ch. 10-12: Dataflow, Real-Time Systems
+  - Ch. 12: The Future of Data Systems (dataflow, integration, and derived data)
 - **Understanding Distributed Systems**
   - Ch. 14-15: Complex Systems, Performance Tuning
 - **System Design Interview (Vol. 1)**
@@ -206,12 +228,12 @@ Read them when a mock surfaces a specific gap, not as a prerequisite.
 - **System Design Interview (Vol. 2)**
   - Ch. 10-13: Real-Time Leaderboard, Payment System, Digital Wallet, Stock Exchange
 - **Site Reliability Engineering (SRE)**
-  - Ch. 6-10: Production Practices, Scalability, and Architecture Reliability
+  - Ch. 7-9: Automation, Release Engineering, Simplicity; and the Part III production-practices chapters (Ch. 10 onward)
 
 **Primary spine (this part), plus optional case studies**
 - **Database Internals** Ch. 10-12: Distributed Transactions, Coordination, Recovery. Core at this
   band for reasoning about commit protocols and recovery.
-- MIT 6.824 Lectures 11-12: Fault-Tolerant Key-Value Stores. Primary source.
+- MIT 6.824 Lectures 11-12: Distributed Transactions and Spanner. Primary source.
 - CMU 15-445 Lectures 20-24: Logging, Recovery, Distributed Databases. Primary source.
 - Meta TAO, Uber Michelangelo, Netflix TechBlog
 - Optional papers: Building on Quicksand, Distributed Computing Economics. See the [white paper catalog](../white_paper.md) optional tier under Systems Theory.

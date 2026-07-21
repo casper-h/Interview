@@ -1,15 +1,10 @@
 # Integrated Study Schedule
 
-This is a phase-based plan rather than a calendar-locked one. There is no hard deadline driving
-this, so the guidance below is: don't compress depth to hit an artificial date, but also don't let
-any one track (especially System Design, which has the most existing material) run so long in
-isolation that Coding or Behavioural prep atrophies. As a rough sizing, expect the whole plan to
-take on the order of three to four months of consistent, interleaved effort (longer if a track
-needs it, and it's fine to move faster where you're already strong). That's a target to size your
-expectations against, not a deadline, and not an invitation to prepare indefinitely: the exit
-conditions, not the clock, tell you when to move on. The core principle stays the same regardless of
-total duration: interleave all tracks every week rather than finishing them in sequence. Skills that
-sit untouched for a month tend to decay before the real interview.
+This is a phase-based plan rather than a calendar-locked one. Expect the whole plan to take three to
+four months of consistent, interleaved effort (longer if a track needs it, faster if you are already
+strong in one). The exit conditions, not the clock, tell you when to move on. Interleave all tracks
+every week rather than finishing them in sequence: skills that sit untouched for a month tend to
+decay before the real interview.
 
 Each phase below has a rough minimum duration and an exit condition. Move to the next phase when
 you hit the exit condition, not when a calendar date arrives. If System Design needs longer, let
@@ -139,7 +134,7 @@ Roughly the final week before real interviews.
   for review and rest, not more material; if you catch yourself cramming to quiet the nerves, that
   is the signal to step back to review-only, since going in rested beats going in over-studied.
 
-## Notes on the relaxed timeline
+## Notes on the Relaxed Timeline
 
 - It's fine, and arguably beneficial, to let Phase 2 run long and use the extra time to keep more
   of the System Design optional deep-dive material (the fuller white paper list, the extra books)

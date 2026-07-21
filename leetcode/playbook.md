@@ -5,7 +5,7 @@ This is the process half of the [Coding](./README.md) anchor: the [pattern cover
 lists what to practice, the [template](./template.md) is the pattern-recall diagnostic, and this file
 is how you conduct yourself in the room once a problem is in front of you.
 
-## The core loop
+## The Core Loop
 
 - Repeat the question out loud, and make sure you understand what is actually being asked.
 - Ask clarifying questions before writing any code.
@@ -26,7 +26,7 @@ is how you conduct yourself in the room once a problem is in front of you.
 - Understand the time and space complexity of your solution, and be ready to state it and justify
   it without being asked.
 
-## What senior-level signal looks like, beyond the core loop
+## What Senior-Level Signal Looks Like, Beyond the Core Loop
 
 The core loop above is necessary but not sufficient at the senior level and above. Interviewers at
 this level are also grading how you drive the interview, not only whether you arrive at a correct
@@ -49,7 +49,7 @@ answer. A few things that distinguish stronger signal from adequate signal in a 
 - **Managing your own time.** Recognizing when an approach is not converging and being willing to
   step back and reconsider, rather than continuing to push on a path that is not working.
 
-## What to say out loud, phase by phase
+## What to Say Out Loud, Phase by Phase
 
 "Speak through your thought process" is the advice everyone gives and few operationalize. Solving
 the problem in silence and only narrating at the end reads as having got lucky, not as having
@@ -69,11 +69,11 @@ pressure.
   complexity without being asked. "Empty input returns zero, a single element returns one. Time is
   O(n), space is O(1) since I reuse the counts."
 
-## When you get stuck
+## When You Get Stuck
 
 Time-boxing an attempt only helps if you have something to do inside the box other than stare. When
 an approach stalls for more than a few minutes, work this loop out loud rather than going quiet,
-because a visible recovery is itself signal.
+because recovering under observation is part of the evaluation.
 
 - Re-read the prompt for a constraint you dropped or an assumption you never checked.
 - Work a small example by hand and find the exact step where your mental model and the correct output
@@ -86,7 +86,7 @@ because a visible recovery is itself signal.
   surfaces the gap, and it lets the interviewer give a hint that costs you far less signal than
   silence does.
 
-## Edge cases worth checking every time
+## Edge Cases Worth Checking Every Time
 
 Do not wait to be asked "what about edge cases?" Walking these before you declare a solution
 finished is part of the signal, and the specific list depends on the structure you are working with.
@@ -99,7 +99,7 @@ finished is part of the signal, and the specific list depends on the structure y
 - **Trees:** null root, a single node, and a fully skewed tree where height equals the node count.
 - **Graphs:** a disconnected component, a self-loop, and a cycle where the algorithm assumes a DAG.
 
-## Stating complexity so it survives a follow-up
+## Stating Complexity So It Survives a Follow-Up
 
 Stating complexity is expected; stating it wrong is worse than staying quiet, because the follow-up
 will find it. A few traps worth naming correctly:
@@ -116,7 +116,7 @@ will find it. A few traps worth naming correctly:
 - **Union-Find is near-constant, not constant.** With path compression and union by rank it is
   O(alpha(n)), effectively constant but not literally O(1); saying so is a fast senior signal.
 
-## A clarifying-question checklist for ambiguous prompts
+## A Clarifying-Question Checklist for Ambiguous Prompts
 
 Many prompts are deliberately left ambiguous to see whether you ask about the following before
 writing code.
@@ -133,7 +133,7 @@ Asking two or three of the most relevant questions from this list, rather than w
 all of them mechanically, is itself part of the signal: it shows judgment about which assumptions
 actually matter for the problem at hand.
 
-## Complexity reference
+## Complexity Reference
 
 Understanding time and space complexity is assumed at this level, not something to work out from
 scratch in the interview. See the Big O cheat sheet at

@@ -5,7 +5,7 @@ the repeatable structure that turns that knowledge into a coherent 45-to-60-minu
 performance instead of a rambling knowledge dump. Read this before doing any practice design, and
 review it weekly until the structure below becomes automatic.
 
-## The structure: use this every time, out loud, explicitly
+## The Structure
 
 1. **Clarify requirements (roughly 3-to-5 minutes).** Identify the functional requirements: what
    does the system actually need to do? List the core use cases and separate the critical few from
@@ -62,7 +62,7 @@ is expected. What is graded is that you have the structure and can navigate it, 
 exhaustively complete every step. If time is short, say so explicitly; for example, "given the
 time we have, I'd like to go deeper on X or Y. Which would you prefer I prioritize?"
 
-## Drawing it, and recovering when you go wrong
+## Drawing It, and Recovering When You Go Wrong
 
 The diagram is half the communication, so keep it legible: boxes for stateless services, cylinders
 for datastores, labeled arrows for the protocol and direction, and a rough left-to-right or
@@ -70,12 +70,12 @@ top-to-bottom flow from client to storage. Draw it incrementally as you narrate,
 few core components and leaving whitespace for what the deep dive will add, rather than crowding
 everything on at once.
 
-When the interviewer signals your approach is wrong, treat it as information, not as a verdict.
-Acknowledge it directly ("you're right, that breaks down under X"), state the constraint it exposed,
-and propose the correction concisely, then move. A clean pivot narrated out loud is a strong signal;
-what reads badly is defending a broken approach, or apologizing and spiraling instead of adjusting.
+When the interviewer signals an approach is wrong, treat it as information, not as a verdict.
+Acknowledge it directly, state the constraint it exposed, and propose the correction concisely,
+then move. A clean pivot narrated out loud is a strong signal; what reads badly is defending
+a broken approach, or apologizing and spiraling instead of adjusting.
 
-## Back-of-envelope estimation cheat sheet
+## Back-of-Envelope Estimation Cheat Sheet
 
 A few latency numbers are worth having memorized. The orders of magnitude matter more than the
 exact figures.
@@ -118,7 +118,7 @@ Interviewers care that your estimation process is sound and that you actually us
 drive a design decision, such as justifying caching, ruling out a single-leader relational
 database, or motivating geo-replication.
 
-## API design primer
+## API Design Primer
 
 - **REST versus gRPC versus GraphQL.** REST is simple, cacheable, and widely understood, making
   it a good default for public or external APIs. gRPC uses an efficient binary protocol with
@@ -137,7 +137,7 @@ database, or motivating geo-replication.
 - **Versioning.** Compare URL versioning, such as `/v1/...`, with header-based versioning, and
   mention backward compatibility as a constraint on any schema change.
 
-## Security and trust checklist
+## Security and Trust Checklist
 
 Weave these in briefly; they don't need to become a separate track.
 
@@ -152,7 +152,7 @@ Weave these in briefly; they don't need to become a separate track.
 - **PII and data retention.** If the system stores user data, briefly note retention and deletion
   considerations; this is increasingly expected without being prompted, at the senior level.
 
-## Adapting depth by company or team type
+## Adapting Depth by Company or Team Type
 
 - **Product companies, or consumer-facing feature teams,** tend to emphasize scale, latency,
   caching, API design, and user-facing trade-offs.

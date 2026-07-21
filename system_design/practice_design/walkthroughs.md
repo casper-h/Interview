@@ -1,4 +1,4 @@
-# Worked design walkthroughs
+# Worked Design Walkthroughs
 
 Four designs worked end to end against the [framework](../framework.md), chosen because each
 anchors a different core skill: read-heavy caching, key generation, and a metadata-versus-blob
@@ -81,7 +81,7 @@ A strong hire explains why base62-of-hash produces enough entropy for the sizing
 object-store split by access pattern unprompted, and deep-dives on collision handling plus
 custom-alias semantics; a lean hire stops at "we hash the input and store it."
 
-## Distributed cache
+## Distributed Cache
 
 This design exercises in-memory data structures for O(1) operations, eviction, and cluster-wide
 sharding. Begin with requirements. The system must cache query results for 10B queries per month
@@ -141,7 +141,7 @@ A strong hire explains why the hash map plus doubly linked list is O(1) per oper
 thundering-herd failure mode unprompted, and states request coalescing with its trade-offs; a lean
 hire stops at "we use an LRU cache and shard by hashing."
 
-## News feed and timeline
+## News Feed and Timeline
 
 This design exercises the read-heavy fanout problem and the hybrid push-pull model. Start with
 requirements. Establish that this is read-heavy (250B reads versus 15B writes per month, roughly 100K
@@ -196,7 +196,7 @@ for further reading.
 A strong hire names the hybrid model unprompted, quantifies the celebrity fanout bottleneck, and
 explains the re-order-at-serve-time fix for the race; a lean hire stops at pure fan-out-on-write.
 
-## Payment and digital wallet
+## Payment and Digital Wallet
 
 This design exercises correctness under failure and the exactly-once-effect pattern. Start with
 requirements. Functional: users fund a wallet from a bank account, send money to other users, and

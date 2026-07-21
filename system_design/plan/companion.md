@@ -364,7 +364,7 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 
 ---
 
-### Section 4: Logs & Messaging (Kafka, Dropbox, Slack, LinkedIn "Log" paper)
+### Section 4: Logs & Messaging (Kafka, Dropbox, Slack, LinkedIn "Log" Paper)
 
 #### Core Questions
 
@@ -404,7 +404,7 @@ Use these questions to deepen conceptual reasoning and validate your reading ins
 
 ### Section 5: Practice Designs
 
-#### Kafka-like Queue
+#### Kafka-Like Queue
 1. How would you design **log segmentation and offset management** for millions of messages/sec?  
 2. How does **consumer group rebalancing** affect message ordering and delivery guarantees?  
 3. How would you handle **message duplication** and exactly-once semantics?

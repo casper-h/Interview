@@ -5,7 +5,7 @@ opens a system design round or a phone screen. It is worth doing deliberately ra
 improvising in the moment, since a rambling project summary is a weaker opening than a tight one
 even when the underlying work is strong.
 
-## Rewriting your project bullets
+## Rewriting Your Project Bullets
 
 For each major project on your resume, rewrite the bullet in a form you could say out loud, not
 just read.
@@ -21,7 +21,7 @@ Aim for six to eight of these across your recent roles. These double as raw mate
 behavioural story bank in the [behavioural guide](./README.md), since a well-scoped project bullet often is the
 seed of a full STAR story.
 
-## The ninety-second project walkthrough
+## The Ninety-Second Project Walkthrough
 
 Pick your strongest or most complex recent project and prepare a walkthrough of roughly ninety
 seconds, structured as:
@@ -34,13 +34,13 @@ seconds, structured as:
 Rehearse this out loud until it flows without needing to check notes. This is frequently the
 first substantive thing you say in an interview, and it sets the tone for everything after it.
 
-## Tell me about yourself
+## The "Tell Me About Yourself" Answer
 
 Sixty to ninety seconds, structured around three things: where you are now, the through-line of
 your career that explains how you got here, and why you are looking now. This should read as a
 narrative with a point, not a chronological recitation of your resume.
 
-## Why this company, and questions to ask
+## Company Research and Interviewer Questions
 
 Both of these are self-narrative pieces, but they are research outputs rather than writing exercises,
 so they live with the rest of the pre-interview research and logistics in
