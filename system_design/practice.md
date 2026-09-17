@@ -33,7 +33,7 @@ For every prompt, use four passes:
 - **Prerequisites:** Caching, consistent hashing, replication, and failure detection.
 - **Tests:** Routing, eviction, consistency, stampedes, hot keys, membership changes, replication, and failure recovery.
 - **Mutation:** Lose an entire cache cluster while the source database has little spare capacity.
-- **References:** [Hello Interview Distributed Cache](https://www.hellointerview.com/learn/system-design/problem-breakdowns/distributed-cache); [Scaling Memcache at Facebook](https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala).
+- **References:** [Hello Interview Distributed Cache](https://www.hellointerview.com/learn/system-design/problem-breakdowns/distributed-cache); [Scaling Memcache at Facebook](https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf).
 
 ### P4: Key-Value Store
 
@@ -41,7 +41,7 @@ For every prompt, use four passes:
 - **Prerequisites:** Storage engines, replication, partitioning, consistency, and consensus.
 - **Tests:** API and data model, partition map, replication, quorum assumptions, conflict resolution, durability, repair, and resharding.
 - **Mutation:** Add compare-and-set with linearizable semantics for selected keys without imposing it on every operation.
-- **References:** [Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf); [Bigtable](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/); *System Design Interview*, Volume 1, “Design A Key-value Store.”
+- **References:** [Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf); [Bigtable](https://storage.googleapis.com/gweb-research2023-media/pubtools/4443.pdf); *System Design Interview*, Volume 1, “Design A Key-value Store.”
 
 ### P5: News Feed
 
@@ -49,7 +49,7 @@ For every prompt, use four passes:
 - **Prerequisites:** Data modeling, caching, partitioning, and asynchronous work.
 - **Tests:** Fanout-on-write versus fanout-on-read, celebrity skew, ranking, pagination, deletions, freshness, and cache invalidation.
 - **Mutation:** A privacy change must remove a post from every derived feed quickly and audibly.
-- **References:** [Hello Interview FB News Feed](https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed); [TAO](https://www.usenix.org/conference/atc13/technical-sessions/presentation/bronson).
+- **References:** [Hello Interview FB News Feed](https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed); [TAO](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf).
 
 ### P6: Chat
 
@@ -65,7 +65,7 @@ For every prompt, use four passes:
 - **Prerequisites:** Logs, replication, consumer state, and idempotency.
 - **Tests:** Queue versus log semantics, partitioning, ordering, acknowledgment, visibility, retention, retry, poison messages, replay, and backpressure.
 - **Mutation:** Add scheduled delivery and strict ordering per account without allowing one poison message to block unrelated accounts.
-- **References:** [Hello Interview Kafka](https://www.hellointerview.com/learn/system-design/deep-dives/kafka); [Kafka books and papers](https://kafka.apache.org/books-and-papers); *System Design Interview*, Volume 2, “Distributed Message Queue.”
+- **References:** [Hello Interview Kafka](https://www.hellointerview.com/learn/system-design/deep-dives/kafka); [Kafka paper](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf); *System Design Interview*, Volume 2, “Distributed Message Queue.”
 
 ### P8: Notification System
 
@@ -81,7 +81,7 @@ For every prompt, use four passes:
 - **Prerequisites:** Streams, aggregation, time-series storage, SLOs, and multi-tenancy.
 - **Tests:** Ingestion, cardinality, labels, rollups, retention, query fanout, alert evaluation, late data, and tenant isolation.
 - **Mutation:** Cut cost by 70 percent without weakening paging SLOs.
-- **References:** [Hello Interview Metrics Monitoring](https://www.hellointerview.com/learn/system-design/problem-breakdowns/metrics-monitoring); [Monarch](https://research.google/pubs/monarch-googles-planet-scale-in-memory-time-series-database/).
+- **References:** [Hello Interview Metrics Monitoring](https://www.hellointerview.com/learn/system-design/problem-breakdowns/metrics-monitoring); [Monarch](https://storage.googleapis.com/gweb-research2023-media/pubtools/6348.pdf).
 
 ### P10: Job Scheduler
 
@@ -113,12 +113,12 @@ Use these when a stage outcome or target role calls for them:
 
 | Prompt | Stage | Primary concepts | Suggested reference |
 |---|---:|---|---|
-| Blob or photo storage | 2 | Metadata, object placement, small files, CDN, repair | [Haystack](https://www.usenix.org/conference/osdi10/finding-needle-haystack-facebooks-photo-storage) |
+| Blob or photo storage | 2 | Metadata, object placement, small files, CDN, repair | [Haystack](https://www.usenix.org/legacy/events/osdi10/tech/full_papers/Beaver.pdf) |
 | Collaborative document | 2 or 4 | Concurrency, operation ordering, offline clients, history | [Hello Interview Google Docs](https://www.hellointerview.com/learn/system-design/problem-breakdowns/google-docs) |
 | Web crawler | 3 | Frontier scheduling, politeness, deduplication, retries, storage | [Primer Web Crawler](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/web_crawler) |
-| Real-time aggregation | 3 | Windows, watermarks, state, replay, correction | [MillWheel](https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/) |
+| Real-time aggregation | 3 | Windows, watermarks, state, replay, correction | [MillWheel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41378.pdf) |
 | Proximity service | 4 | Spatial indexes, partitioning, freshness, uneven density | [Hello Interview Proximity Search](https://www.hellointerview.com/learn/system-design/deep-dives/proximity-search) |
-| Authorization service | 4 | Relationship model, consistency, caching, audit | [Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/) |
+| Authorization service | 4 | Relationship model, consistency, caching, audit | [Zanzibar](https://storage.googleapis.com/gweb-research2023-media/pubtools/5068.pdf) |
 | ML training platform | 4 or 5 | Scheduling, quotas, checkpoints, data locality, control planes | [OpenAI Kubernetes](https://openai.com/index/scaling-kubernetes-to-7500-nodes/) |
 
 ## Staff-Depth Variants

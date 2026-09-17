@@ -33,3 +33,14 @@ Do not read the optional books cover to cover unless a target role or diagnosed 
 - Attempt its system design questions before reading the repository solutions.
 - Use object-oriented design questions only if the target loop includes low-level design (LLD). They are a parallel format, not HLD stages.
 - The three Anki decks can support spaced recall. Do not review solution cards before the corresponding cold attempt.
+
+## Optional Paper Notes
+
+[Stephen Holiday's paper notes](https://stephenholiday.com/notes/) provide concise secondary summaries of many foundational systems papers, including GFS, MapReduce, Bigtable, Dynamo, Cassandra, Raft, Spanner, Kafka, MillWheel, TAO, and Haystack. Use a note after reading the paper to compare interpretations or restore context. Do not substitute the notes for the primary paper or treat their older outbound links as the maintained source of record.
+
+The source roadmap's full paper and engineering-blog lists have been audited into
+[Primary Paper Path](./papers.md) and
+[Engineering Case Studies](./engineering_case_studies.md). Those files distinguish required
+material, targeted role-specific branches, deliberate omissions, curated articles, and discovery
+indexes. Frontier-lab preparation is a targeted branch under
+[Frontier AI Systems](./engineering_case_studies.md#frontier-ai-systems).

@@ -105,11 +105,11 @@ The path assumes roughly four to seven system design hours per week and commonly
 
 1. DDIA Chapters 5 to 9: “Replication,” “Partitioning,” “Transactions,” “The Trouble with Distributed Systems,” and “Consistency and Consensus.”
 2. *Database Internals*, Chapters 1 to 7 for storage engines, then Chapters 8 to 14 for distributed systems. Chapters 1 to 7 are required. Chapters 8 to 14 are required for storage or infrastructure roles and optional reinforcement for generalists.
-3. [The Google File System](https://research.google/pubs/the-google-file-system/), [Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf), [Bigtable](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/), [Raft](https://raft.github.io/raft.pdf), [Chubby](https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/), and the direct official PDF of [Spanner](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf), using the assigned entries in the [paper path](./papers.md).
+3. [The Google File System](https://storage.googleapis.com/gweb-research2023-media/pubtools/4446.pdf), [Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf), [Bigtable](https://storage.googleapis.com/gweb-research2023-media/pubtools/4443.pdf), [Raft](https://raft.github.io/raft.pdf), [Chubby](https://storage.googleapis.com/gweb-research2023-media/pubtools/4444.pdf), and [Spanner](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf), using the assigned entries in the [paper path](./papers.md).
 4. Read the historical [Cassandra paper](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf), then current Apache Cassandra documentation for [architecture](https://cassandra.apache.org/doc/latest/cassandra/architecture/overview.html), [guarantees](https://cassandra.apache.org/doc/latest/cassandra/architecture/guarantees.html), [storage engine](https://cassandra.apache.org/doc/latest/cassandra/architecture/storage-engine.html), and [repair](https://cassandra.apache.org/doc/latest/cassandra/managing/operating/repair.html). Product semantics belong to official documentation, not the historical paper or an interview summary.
 5. Hello Interview: [Cassandra](https://www.hellointerview.com/learn/system-design/deep-dives/cassandra), [DynamoDB](https://www.hellointerview.com/learn/system-design/deep-dives/dynamodb), [PostgreSQL](https://www.hellointerview.com/learn/system-design/deep-dives/postgres), [Scaling Reads](https://www.hellointerview.com/learn/system-design/patterns/scaling-reads), [Scaling Writes](https://www.hellointerview.com/learn/system-design/patterns/scaling-writes), and [Dealing with Contention](https://www.hellointerview.com/learn/system-design/patterns/dealing-with-contention).
 6. [Time, Clocks, and the Ordering of Events in a Distributed System](https://lamport.azurewebsites.net/pubs/time-clocks.pdf).
-7. Optional theory: [Paxos Made Simple](https://www.microsoft.com/en-us/research/publication/paxos-made-simple/).
+7. Optional theory: [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf).
 
 ### Understand
 
@@ -153,8 +153,8 @@ The path assumes roughly four to seven system design hours per week and commonly
 ### Read
 
 1. DDIA Chapters 10 and 11: “Batch Processing” and “Stream Processing.” Chapter 12, “The Future of Data Systems,” is optional synthesis.
-2. [Kafka paper and open references](https://kafka.apache.org/books-and-papers), followed by the current [Apache Kafka documentation](https://kafka.apache.org/documentation/). Product semantics belong to the versioned official documentation, not the historical paper or an interview summary.
-3. [MapReduce](https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/) and [MillWheel](https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/) from the [paper path](./papers.md).
+2. [Kafka paper](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf), followed by the current [Apache Kafka documentation](https://kafka.apache.org/documentation/). Product semantics belong to the versioned official documentation, not the historical paper or an interview summary.
+3. [MapReduce](https://storage.googleapis.com/gweb-research2023-media/pubtools/4449.pdf) and [MillWheel](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41378.pdf) from the [paper path](./papers.md).
 4. Hello Interview: [Kafka](https://www.hellointerview.com/learn/system-design/deep-dives/kafka), [Flink](https://www.hellointerview.com/learn/system-design/deep-dives/flink), [Real-time Updates](https://www.hellointerview.com/learn/system-design/patterns/realtime-updates), [Managing Long Running Tasks](https://www.hellointerview.com/learn/system-design/patterns/long-running-tasks), and [Multi-Step Processes](https://www.hellointerview.com/learn/system-design/patterns/multi-step-processes).
 5. Google SRE: [Service Level Objectives](https://sre.google/sre-book/service-level-objectives/), [Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/), [Handling Overload](https://sre.google/sre-book/handling-overload/), and [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/).
 6. Site Reliability Workbook: [Implementing SLOs](https://sre.google/workbook/implementing-slos/), [Alerting on SLOs](https://sre.google/workbook/alerting-on-slos/), and [Data Processing Pipelines](https://sre.google/workbook/data-processing/).
@@ -254,6 +254,8 @@ The path assumes roughly four to seven system design hours per week and commonly
 4. [Staff Engineer Archetypes](https://staffeng.com/guides/staff-archetypes/), [What Do Staff Engineers Actually Do?](https://staffeng.com/guides/what-do-staff-engineers-actually-do/), and [Being Glue](https://noidea.dog/glue).
 5. Revisit only the papers, case studies, and Hello Interview advanced topics connected to weak mock dimensions or the target role.
 6. Optional applied prompts: *System Design Interview*, Volume 2, selected by gap. Do not use it as a second curriculum.
+7. Optional frontier-lab roles: choose one branch from the
+   [frontier AI systems path](./engineering_case_studies.md#frontier-ai-systems).
 
 ### Understand
 

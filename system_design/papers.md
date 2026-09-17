@@ -6,7 +6,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### The Google File System
 
-- **Link:** [The Google File System](https://research.google/pubs/the-google-file-system/)
+- **Link:** [The Google File System PDF](https://storage.googleapis.com/gweb-research2023-media/pubtools/4446.pdf)
 - **Status:** Required, Stage 2.
 - **Problem:** Large distributed files on failure-prone commodity machines for Google's workloads.
 - **Prerequisites:** Files, replication, checksums, and remote procedure calls (RPCs).
@@ -16,7 +16,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### MapReduce: Simplified Data Processing on Large Clusters
 
-- **Link:** [MapReduce](https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/)
+- **Link:** [MapReduce PDF](https://storage.googleapis.com/gweb-research2023-media/pubtools/4449.pdf)
 - **Status:** Required, Stage 3.
 - **Problem:** Reliable parallel batch computation across large clusters.
 - **Prerequisites:** GFS, partitioning, and sorting.
@@ -26,7 +26,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Bigtable: A Distributed Storage System for Structured Data
 
-- **Link:** [Bigtable](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/)
+- **Link:** [Bigtable PDF](https://storage.googleapis.com/gweb-research2023-media/pubtools/4443.pdf)
 - **Status:** Required, Stage 2.
 - **Problem:** A scalable sorted data model for varied Google workloads.
 - **Prerequisites:** GFS, logs, SSTables, and partitioning.
@@ -78,7 +78,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Paxos Made Simple
 
-- **Link:** [Paxos Made Simple](https://www.microsoft.com/en-us/research/publication/paxos-made-simple/)
+- **Link:** [Paxos Made Simple PDF](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
 - **Status:** Targeted, Stage 2.
 - **Problem:** Agreement despite crash failures and delayed or lost messages.
 - **Prerequisites:** Quorums and state-machine replication.
@@ -88,7 +88,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### The Chubby Lock Service for Loosely-Coupled Distributed Systems
 
-- **Link:** [Chubby](https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/)
+- **Link:** [Chubby PDF](https://storage.googleapis.com/gweb-research2023-media/pubtools/4444.pdf)
 - **Status:** Required, Stage 2.
 - **Problem:** Reliable coarse-grained coordination and small metadata storage.
 - **Prerequisites:** Consensus, leases, and sessions.
@@ -110,7 +110,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Kafka: A Distributed Messaging System for Log Processing
 
-- **Link:** [Kafka books and papers](https://kafka.apache.org/books-and-papers); then [current Kafka documentation](https://kafka.apache.org/documentation/)
+- **Link:** [Kafka paper PDF](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf); then [current Kafka documentation](https://kafka.apache.org/documentation/)
 - **Status:** Required, Stage 3.
 - **Problem:** High-throughput distributed log ingestion and consumption at LinkedIn.
 - **Prerequisites:** Logs, partitioning, replication, and batching.
@@ -120,7 +120,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### MillWheel: Fault-Tolerant Stream Processing at Internet Scale
 
-- **Link:** [MillWheel](https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/)
+- **Link:** [MillWheel PDF](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41378.pdf)
 - **Status:** Required, Stage 3.
 - **Problem:** Low-latency stateful processing of unbounded data with fault tolerance.
 - **Prerequisites:** Kafka-like logs, checkpoints, event time, and distributed state.
@@ -132,7 +132,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Scaling Memcache at Facebook
 
-- **Link:** [Scaling Memcache at Facebook](https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala)
+- **Link:** [Scaling Memcache at Facebook PDF](https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf)
 - **Status:** Required when P3 is selected; otherwise targeted, Stages 2 and 3.
 - **Problem:** A distributed cache for extremely read-heavy, globally operated Facebook workloads.
 - **Prerequisites:** Cache-aside, sharding, replication, and invalidation.
@@ -142,7 +142,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Dapper, a Large-Scale Distributed Systems Tracing Infrastructure
 
-- **Link:** [Dapper](https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/)
+- **Link:** [Dapper PDF](https://research.google.com/archive/papers/dapper-2010-1.pdf)
 - **Status:** Required, Stage 3.
 - **Problem:** Low-overhead tracing across Google's large, multilingual service graph.
 - **Prerequisites:** Remote procedure calls (RPCs), context propagation, and sampling.
@@ -152,7 +152,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Monarch: Google's Planet-Scale In-Memory Time Series Database
 
-- **Link:** [Monarch](https://research.google/pubs/monarch-googles-planet-scale-in-memory-time-series-database/)
+- **Link:** [Monarch PDF](https://storage.googleapis.com/gweb-research2023-media/pubtools/6348.pdf)
 - **Status:** Targeted, Stage 3 or observability roles.
 - **Problem:** Regional ingestion and global querying for high-scale monitoring data.
 - **Prerequisites:** Time-series models, replication, aggregation, and multi-tenancy.
@@ -162,7 +162,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### The Tail at Scale
 
-- **Link:** [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/)
+- **Link:** [The Tail at Scale publication page](https://research.google/pubs/the-tail-at-scale/)
 - **Status:** Required, Stage 3.
 - **Problem:** Rare component delays become common at large fanout.
 - **Prerequisites:** Latency distributions, parallel requests, and overload.
@@ -174,7 +174,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Finding a Needle in Haystack: Facebook's Photo Storage
 
-- **Link:** [Haystack](https://www.usenix.org/conference/osdi10/finding-needle-haystack-facebooks-photo-storage)
+- **Link:** [Haystack PDF](https://www.usenix.org/legacy/events/osdi10/tech/full_papers/Beaver.pdf)
 - **Status:** Targeted, Stage 2.
 - **Problem:** Efficient serving of billions of photos while reducing filesystem metadata operations.
 - **Prerequisites:** Object storage, indexes, caching, and replication.
@@ -184,7 +184,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### TAO: Facebook's Distributed Data Store for the Social Graph
 
-- **Link:** [TAO](https://www.usenix.org/conference/atc13/technical-sessions/presentation/bronson)
+- **Link:** [TAO PDF](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf)
 - **Status:** Targeted, Stage 2.
 - **Problem:** High-volume object and association reads for the social graph.
 - **Prerequisites:** MySQL sharding, caching, graph access patterns, and eventual consistency.
@@ -194,7 +194,7 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Large-Scale Cluster Management at Google with Borg
 
-- **Link:** [Borg](https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/)
+- **Link:** [Borg PDF](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf)
 - **Status:** Targeted, Stage 4.
 - **Problem:** Scheduling and operating mixed production and batch workloads across large clusters.
 - **Prerequisites:** Containers, scheduling, quotas, and failure domains.
@@ -204,10 +204,94 @@ Read papers in prerequisite order. For each paper, write the workload, failure m
 
 ### Zanzibar: Google's Consistent, Global Authorization System
 
-- **Link:** [Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/)
+- **Link:** [Zanzibar PDF](https://storage.googleapis.com/gweb-research2023-media/pubtools/5068.pdf)
 - **Status:** Targeted, Stage 4.
 - **Problem:** Global relationship-based authorization with consistent decisions at high scale.
 - **Prerequisites:** Graph relations, caching, snapshots, causality, and global storage.
 - **Understand:** Relation tuples, namespaces, checks, expansion, zookies, consistency, and caching.
 - **Does not claim:** Authentication, identity proofing, policy governance, or a complete security program.
 - **Interview use:** Sharing, authorization, stale-permission prevention, and globally consistent metadata.
+
+## 6. Targeted Data and Processing Branches
+
+These papers from the broader roadmap are valuable for particular roles. They are not additional
+required stages.
+
+### Dremel: Interactive Analysis of Web-Scale Datasets
+
+- **Link:** [Dremel PDF](https://storage.googleapis.com/gweb-research2023-media/pubtools/3293.pdf)
+- **Status:** Targeted, Stage 3 for analytics and data-platform roles.
+- **Problem:** Interactive aggregation over nested, web-scale datasets.
+- **Prerequisites:** MapReduce, columnar storage, query planning, and trees.
+- **Understand:** Nested columnar representation, repetition and definition levels, column pruning,
+  multilevel serving trees, and aggregation.
+- **Does not claim:** To describe all current BigQuery behavior or general online transaction
+  processing.
+- **Interview use:** Data warehouses, OLTP versus OLAP, scan cost, nested schemas, and distributed
+  query execution.
+
+BigQuery is a current product descended from Dremel ideas, not the title of a single foundational
+paper. Pair Dremel with the [current BigQuery documentation](https://cloud.google.com/bigquery/docs/introduction)
+when product behavior matters.
+
+### Resilient Distributed Datasets
+
+- **Link:** [Resilient Distributed Datasets PDF](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf)
+- **Status:** Targeted, Stage 3 for data-platform roles.
+- **Problem:** Efficient reuse and fault recovery for iterative and interactive cluster computation.
+- **Prerequisites:** MapReduce, partitions, directed acyclic graphs, and deterministic transformations.
+- **Understand:** Lineage, narrow and wide dependencies, recomputation, persistence, and shuffle
+  boundaries.
+- **Does not claim:** To describe current Spark SQL, Structured Streaming, or every modern Spark
+  execution detail.
+- **Interview use:** Iterative computation, lineage versus replication, caching intermediate state,
+  and recovery cost.
+
+### ZooKeeper: Wait-Free Coordination for Internet-Scale Systems
+
+- **Link:** [ZooKeeper PDF](https://www.usenix.org/legacy/events/atc10/tech/full_papers/Hunt.pdf)
+- **Status:** Targeted comparison after Chubby, Stage 2.
+- **Problem:** A replicated coordination service with an API suitable for higher-level recipes.
+- **Prerequisites:** Consensus, sessions, linearizability, and watches.
+- **Understand:** Ordered updates, sessions, ephemeral nodes, watches, client caching, and the gap
+  between primitives and correct recipes.
+- **Does not claim:** That every operation is wait-free for every client or that a coordination
+  primitive makes a distributed lock safe without correct client behavior.
+- **Interview use:** Discovery, membership, election, configuration, and coordination API design.
+
+### Large-Scale Incremental Processing Using Distributed Transactions and Notifications
+
+- **Link:** [Percolator PDF](https://research.google.com/pubs/archive/36726.pdf)
+- **Status:** Targeted, Stage 3 for storage, search, and incremental-processing roles.
+- **Problem:** Incrementally update a large search index without rerunning full batch jobs.
+- **Prerequisites:** Bigtable, multiversion concurrency control, snapshot isolation, and MapReduce.
+- **Understand:** Distributed transactions over Bigtable, locks, timestamps, notifications,
+  observers, and incremental recomputation.
+- **Does not claim:** Serializable isolation for arbitrary workloads or a general stream processor.
+- **Interview use:** Incremental indexing, materialized views, change propagation, and transaction
+  recovery.
+
+### Apache Flink: Stream and Batch Processing in a Single Engine
+
+- **Link:** [Flink architecture PDF](https://asterios.katsifodimos.com/assets/publications/flink-deb.pdf)
+- **Status:** Targeted, Stage 3 for streaming roles.
+- **Problem:** Execute batch and low-latency stateful stream processing through one dataflow engine.
+- **Prerequisites:** Kafka, MillWheel, distributed snapshots, and event time.
+- **Understand:** Dataflow execution, state, checkpoints, watermarks, backpressure, and rescaling.
+- **Does not claim:** Current Flink product semantics. Pair it with the
+  [current Flink documentation](https://nightlies.apache.org/flink/flink-docs-stable/).
+- **Interview use:** Stateful streams, recovery, savepoints, rescaling, and batch-stream unification.
+
+## 7. Deliberate Roadmap Omissions
+
+The source roadmap also lists HDFS, Pregel, Photon, Mesa, and Earlybird. They remain optional because
+the required path already establishes their prerequisite design families:
+
+- HDFS largely extends the GFS branch for Hadoop-specific roles.
+- Pregel is useful for offline graph-processing roles after MapReduce.
+- Photon adds geographically distributed continuous joins after MillWheel.
+- Mesa adds geo-replicated analytical aggregation after Dremel.
+- Earlybird adds mutable inverted indexes and real-time search after indexing and fanout basics.
+
+Use [Stephen Holiday's notes](https://stephenholiday.com/notes/) to discover these branches, then
+follow the primary paper rather than relying on the note or its historical outbound link.
